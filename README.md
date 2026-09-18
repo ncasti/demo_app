@@ -15,6 +15,11 @@ already have those basics, so these scripts instead:
   rather than individual sounds.
 - End with a **role-play beat**: the listener has to construct their own response to a new
   prompt, not just repeat a line back.
+- Skip **proactive pronunciation coaching** entirely — no liaison notes, no "notice how these
+  sounds blend" cues. B1 listeners already know French phonetics. Pronunciation feedback becomes
+  a later, *retroactive* layer: once speech recognition is in the loop, we can detect actual
+  mispronunciations from what a learner said and flag them after the fact, instead of
+  front-loading generic phonetic instruction nobody asked for.
 
 ## Status
 

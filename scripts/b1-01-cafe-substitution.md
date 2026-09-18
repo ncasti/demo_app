@@ -87,17 +87,10 @@ Literally, "there's none of it left." That little word "en" is doing a lot of wo
 in for "pain au chocolat" so he doesn't have to repeat it.
 
 **Max**
-"Il n'en reste plus." [1 sec pause] Notice how "en" and "reste" almost blend together —
-"n'en reste."
+Il n'en reste plus.
 
 **Clara**
-n'en reste
-
-**Max**
-n'en reste [1 sec pause] il n'en reste plus
-
-**Clara**
-il n'en reste plus
+Il n'en reste plus.
 
 <END AUDIO FILE>
 
@@ -279,5 +272,10 @@ Au revoir !
 - **Pacing**: the dialogue clip should run at natural conversational speed the first time through
   (no slow re-read of the full exchange this lesson — B1 listeners should be pushed to parse
   natural speed, unlike the phoneme-drilling in the A1 scripts).
+- **No proactive pronunciation coaching**: unlike the A1 reference (liaison notes, "notice how
+  these sounds blend" cues), we assume B1 listeners already know French phonetics. Repeat-after
+  challenges stay in (fluency/production practice), but the hosts don't coach *how* to produce
+  the sounds. Pronunciation feedback becomes retroactive later, once we have speech recognition
+  in the loop to detect actual mispronunciations and flag them after the fact.
 - **[PAUSE ~5 SECONDS]** in the role-play beat is intentionally longer than the single-word
   speaking challenges — give listeners real time to construct a sentence, not just repeat one.
