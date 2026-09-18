@@ -3,7 +3,7 @@
 **Title:** "Ça fait un bail !" — Running into an old friend and making plans
 **Level:** B1 (intermediate)
 **Runtime target:** ~5 minutes
-**Hosts:** Estelle (FR/EN bilingual) & Paul (FR/EN bilingual)
+**Hosts:** Clara (FR/EN bilingual) & Max (FR/EN bilingual)
 **Scenario voices:** Léa & Camille — native French speakers, natural pace, warm/animated tone
 
 **B1 skill focus:** idiomatic small talk; inviting someone using the conditional; politely
@@ -14,17 +14,17 @@ declining and proposing an alternative; "ça marche" / "ça me va."
 <START AUDIO FILE>
 [INTRO MUSIC]
 
-**Paul**
-Bonjour, Estelle !
+**Max**
+Bonjour, Clara !
 
-**Estelle**
-Bonjour, Paul ! You know that moment when you bump into someone you haven't seen in
+**Clara**
+Bonjour, Max ! You know that moment when you bump into someone you haven't seen in
 ages, right in the street?
 
-**Paul**
+**Max**
 The "oh my god, IS THAT—" moment.
 
-**Estelle**
+**Clara**
 Exactly that one. Let's listen in.
 
 **Audio**
@@ -74,34 +74,34 @@ Génial. On se tient au courant.
 [2 second silence]
 
 <START AUDIO FILE>
-**Paul**
+**Max**
 Okay, that was fast and warm — very "old friends." Let's slow it down.
 
-**Estelle**
+**Clara**
 First line out of Léa's mouth: "Ça fait un bail !"
 
-**Paul**
+**Max**
 Literally, "bail" is a lease — like a rental lease. So this is really "it's been a whole lease
 term," which in English just means...
 
-**Estelle**
+**Clara**
 "It's been ages!" It's completely idiomatic — don't try to translate it word for word out loud,
 just learn the whole chunk.
 
-**Paul**
+**Max**
 Ça fait un bail [1 sec pause] ça fait un bail !
 
-**Estelle**
+**Clara**
 Ça fait un bail !
 <END AUDIO FILE>
 
 <START AUDIO FILE>
-**Paul [to listeners]**
-[EXERCISES ON] Repeat after Estelle, or say "not now."
+**Max [to listeners]**
+[EXERCISES ON] Repeat after Clara, or say "not now."
 <END AUDIO FILE>
 
 <START AUDIO FILE>
-[EXERCISES OFF] Repeat after Estelle.
+[EXERCISES OFF] Repeat after Clara.
 <END AUDIO FILE>
 
 [3 second silence]
@@ -109,7 +109,7 @@ just learn the whole chunk.
 ## Speaking challenge 1
 
 <START AUDIO FILE>
-**Estelle:** Ça fait un bail !
+**Clara:** Ça fait un bail !
 <END AUDIO FILE>
 
 [SPEAKER SFX]
@@ -119,22 +119,22 @@ just learn the whole chunk.
 [3 second silence]
 
 <START AUDIO FILE>
-**Paul**
+**Max**
 Great. Now, the natural follow-up question — the one you ask anyone you haven't seen in a
 while.
 
-**Estelle**
+**Clara**
 Qu'est-ce que tu deviens ?
 
-**Paul**
+**Max**
 Literally "what are you becoming," but it really means "what have you been up to?" — what's
 new in your life.
 
-**Estelle**
+**Clara**
 Qu'est-ce que tu deviens ? [1 sec pause] It's informal — the "tu" form — so save this one for
 friends, not your hotel manager.
 
-**Paul**
+**Max**
 Qu'est-ce que tu deviens ?
 <END AUDIO FILE>
 
@@ -143,7 +143,7 @@ Qu'est-ce que tu deviens ?
 ## Speaking challenge 2
 
 <START AUDIO FILE>
-**Estelle:** Qu'est-ce que tu deviens ?
+**Clara:** Qu'est-ce que tu deviens ?
 <END AUDIO FILE>
 
 [SPEAKER SFX]
@@ -153,31 +153,31 @@ Qu'est-ce que tu deviens ?
 [3 second silence]
 
 <START AUDIO FILE>
-**Paul**
+**Max**
 Excellent ! Now here's the part where they actually make a plan. Léa proposes something using
 the conditional — it's softer, more casual than a direct question.
 
-**Estelle**
+**Clara**
 On pourrait se voir un de ces jours.
 
-**Paul**
+**Max**
 "We could see each other one of these days." "Pourrait" is the conditional of "pouvoir" — "could."
 It makes the invitation feel relaxed, no pressure.
 
-**Estelle**
+**Clara**
 On pourrait se voir. [1 sec pause] And then Léa gets more specific...
 
-**Paul**
+**Max**
 Ça te dirait de dîner ensemble demain soir ?
 
-**Estelle**
+**Clara**
 "Ça te dirait de..." is probably the single most useful invitation phrase in casual French —
 "would you feel like...?" You can drop almost anything after it.
 
-**Paul**
+**Max**
 Ça te dirait de... [1 sec pause] ça te dirait de dîner ensemble ?
 
-**Estelle**
+**Clara**
 Ça te dirait de dîner ensemble ?
 <END AUDIO FILE>
 
@@ -186,7 +186,7 @@ On pourrait se voir. [1 sec pause] And then Léa gets more specific...
 ## Speaking challenge 3
 
 <START AUDIO FILE>
-**Estelle:** On pourrait se voir un de ces jours.
+**Clara:** On pourrait se voir un de ces jours.
 <END AUDIO FILE>
 
 [SPEAKER SFX]
@@ -196,7 +196,7 @@ On pourrait se voir. [1 sec pause] And then Léa gets more specific...
 [3 second silence]
 
 <START AUDIO FILE>
-**Estelle:** Ça te dirait de dîner ensemble demain soir ?
+**Clara:** Ça te dirait de dîner ensemble demain soir ?
 <END AUDIO FILE>
 
 [SPEAKER SFX]
@@ -206,35 +206,35 @@ On pourrait se voir. [1 sec pause] And then Léa gets more specific...
 [3 second silence]
 
 <START AUDIO FILE>
-**Paul**
+**Max**
 Magnifique ! Last piece — Camille can't do tomorrow, so she has to say no without shutting the
 door.
 
-**Estelle**
+**Clara**
 Demain je suis prise, malheureusement. Mais après-demain, ça marche ?
 
-**Paul**
+**Max**
 "Je suis prise" — "I'm busy," or literally "I'm taken." If you're a man saying it, drop the extra
 "e" — "je suis pris."
 
-**Estelle**
+**Clara**
 Je suis prise [1 sec pause] je suis prise, malheureusement.
 
-**Paul**
+**Max**
 And then instead of just leaving it there, she immediately offers a different day, and checks
 if it works with a very handy little phrase...
 
-**Estelle**
+**Clara**
 Ça marche ?
 
-**Paul**
+**Max**
 "Does that work?" — you'll hear "ça marche" constantly in French to mean "that works" or
 "deal." And Léa answers with its cousin...
 
-**Estelle**
+**Clara**
 Ça me va très bien.
 
-**Paul**
+**Max**
 "That works great for me." Same idea, slightly more personal — "va" as in "suits me."
 <END AUDIO FILE>
 
@@ -243,7 +243,7 @@ if it works with a very handy little phrase...
 ## Speaking challenge 4
 
 <START AUDIO FILE>
-**Estelle:** Je suis prise, malheureusement.
+**Clara:** Je suis prise, malheureusement.
 <END AUDIO FILE>
 
 [SPEAKER SFX]
@@ -253,7 +253,7 @@ if it works with a very handy little phrase...
 [3 second silence]
 
 <START AUDIO FILE>
-**Estelle:** Ça marche ?
+**Clara:** Ça marche ?
 <END AUDIO FILE>
 
 [SPEAKER SFX]
@@ -263,7 +263,7 @@ if it works with a very handy little phrase...
 [3 second silence]
 
 <START AUDIO FILE>
-**Paul**
+**Max**
 Fantastique !
 <END AUDIO FILE>
 
@@ -272,22 +272,22 @@ Fantastique !
 ## Your turn — join the conversation
 
 <START AUDIO FILE>
-**Paul [to listeners]**
+**Max [to listeners]**
 Now you try the other side of it. A friend just asked you: "Ça te dirait d'aller au cinéma
 vendredi ?" — but you're busy on Friday.
 
-**Estelle**
+**Clara**
 Decline politely, and suggest Saturday instead. Take a moment...
 
 [PAUSE ~5 SECONDS]
 
-**Paul**
+**Max**
 Here's one natural way to say it:
 
-**Estelle**
+**Clara**
 Vendredi je suis prise, mais samedi ça marche pour moi !
 
-**Paul**
+**Max**
 "I'm busy Friday, but Saturday works for me!" If you got close to that — even just "vendredi je
 suis prise" plus any day — you're exactly where you should be.
 <END AUDIO FILE>
@@ -295,31 +295,31 @@ suis prise" plus any day — you're exactly where you should be.
 [3 second silence]
 
 <START AUDIO FILE>
-**Estelle**
+**Clara**
 So — running into someone unexpectedly...
 
-**Paul**
+**Max**
 Ça fait un bail !
 
-**Estelle**
+**Clara**
 Catching up...
 
-**Paul**
+**Max**
 Qu'est-ce que tu deviens ?
 
-**Estelle**
+**Clara**
 Making — and adjusting — plans.
 
-**Paul**
+**Max**
 Ça te dirait de... and ça marche.
 
-**Estelle**
+**Clara**
 Next time, we'll actually go on that dinner and order for two.
 
-**Paul**
+**Max**
 Au revoir !
 
-**Estelle**
+**Clara**
 Au revoir !
 
 [OUTRO MUSIC]
@@ -331,6 +331,6 @@ Au revoir !
 - **Léa / Camille voices**: two distinct, energetic native French speakers — the scene should
   feel spontaneous and a little overlapping/excited, not clean and slow.
 - **Register note for producers**: this whole lesson stays in "tu" (informal) throughout, since
-  it's a friend-to-friend scene — worth flagging in-episode once (Estelle already does) so
+  it's a friend-to-friend scene — worth flagging in-episode once (Clara already does) so
   learners don't assume it transfers to formal contexts.
 - **[PAUSE ~5 SECONDS]** in the role-play beat: same as script 1 — give real composing time.

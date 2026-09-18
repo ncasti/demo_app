@@ -1,6 +1,6 @@
 # Bilingual TTS options for B1 Audio Lessons
 
-The core requirement: **Estelle and Paul each need to sound like one consistent person**
+The core requirement: **Clara and Max each need to sound like one consistent person**
 across English narration and French phrases in the same lesson — not two different voices
 stitched together, and not an English speaker doing a French accent. The scenario dialogue
 voices (Client/Boulanger, Léa/Camille) are a simpler problem — those are pure monolingual
@@ -25,7 +25,7 @@ Two vendors are actually built for this:
   pool of distinct native French voices for the dialogue-clip characters.
 - Price cut on Neural HD voices (~$22/1M characters as of March 2026) makes the premium tier
   cheaper than Google's equivalent.
-- **Best fit for**: Estelle & Paul's host lines, which are genuinely bilingual within a lesson.
+- **Best fit for**: Clara & Max's host lines, which are genuinely bilingual within a lesson.
 
 ### 2. ElevenLabs — multilingual model + expressive "audio tags"
 - Same voice ID produces consistent timbre across languages (multilingual model, not per-locale
@@ -49,7 +49,7 @@ Two vendors are actually built for this:
 
 ## Recommendation
 
-- **Hosts (Estelle & Paul):** start with **ElevenLabs** — the audio-tag support is a direct match
+- **Hosts (Clara & Max):** start with **ElevenLabs** — the audio-tag support is a direct match
   for this script's stage directions, and our line-level (not mid-word) language switching avoids
   its main weak spot. Azure's Multilingual/Dragon HD Omni voices are the strong second choice,
   and worth an A/B test if ElevenLabs' French pronunciation on a given line isn't clean.
@@ -64,7 +64,7 @@ Two vendors are actually built for this:
 ## Open questions for you
 1. Budget/volume expectations — this affects whether Azure's cheaper-per-character pricing or
    ElevenLabs' better expressiveness-per-dollar wins out at scale.
-2. Do you want to clone specific human voices for Estelle/Paul (both vendors support voice
+2. Do you want to clone specific human voices for Clara/Max (both vendors support voice
    cloning) or pick from stock voices?
 3. Who's doing the assembly/mixing — a DAW (Audacity/Reaction/Descript) or a script-driven
    pipeline (e.g., stitching clips with ffmpeg based on the `<START/END AUDIO FILE>` markers in
