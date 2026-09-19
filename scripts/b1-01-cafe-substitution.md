@@ -231,8 +231,7 @@ Here's one good way to say it:
 Pourquoi pas ! Ça a l'air délicieux.
 
 **Max**
-"Why not — that looks delicious." If you said something close to that, or even just
-"pourquoi pas," you nailed it.
+"Why not — that looks delicious."
 <END AUDIO FILE>
 
 [3 second silence]
@@ -276,5 +275,10 @@ Au revoir !
   challenges stay in (fluency/production practice), but the hosts don't coach *how* to produce
   the sounds. Pronunciation feedback becomes retroactive later, once we have speech recognition
   in the loop to detect actual mispronunciations and flag them after the fact.
+- **No hedging on the free-response role-play beat**: the host just states the model answer
+  ("Pourquoi pas ! Ça a l'air délicieux.") rather than guessing at what the listener said
+  ("if you said something close to that..."). Once speech recognition is wired in, the app
+  will actually know what was said and can judge it directly — a scripted guess in the audio
+  itself is redundant with that and reads oddly once the real feedback layer exists.
 - **[PAUSE ~5 SECONDS]** in the role-play beat is intentionally longer than the single-word
   speaking challenges — give listeners real time to construct a sentence, not just repeat one.

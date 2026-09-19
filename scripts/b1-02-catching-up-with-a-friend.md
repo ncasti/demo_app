@@ -288,8 +288,7 @@ Here's one natural way to say it:
 Vendredi je suis prise, mais samedi ça marche pour moi !
 
 **Max**
-"I'm busy Friday, but Saturday works for me!" If you got close to that — even just "vendredi je
-suis prise" plus any day — you're exactly where you should be.
+"I'm busy Friday, but Saturday works for me!"
 <END AUDIO FILE>
 
 [3 second silence]
@@ -334,3 +333,6 @@ Au revoir !
   it's a friend-to-friend scene — worth flagging in-episode once (Clara already does) so
   learners don't assume it transfers to formal contexts.
 - **[PAUSE ~5 SECONDS]** in the role-play beat: same as script 1 — give real composing time.
+- **No hedging on the free-response role-play beat**: same rationale as script 1 — the host
+  states the model answer directly instead of guessing what the listener said. That judgment
+  belongs to speech recognition once it's wired in, not a scripted guess in the audio.
