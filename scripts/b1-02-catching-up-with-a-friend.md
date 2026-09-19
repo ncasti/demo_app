@@ -277,7 +277,7 @@ Now you try the other side of it. A friend just asked you: "Ça te dirait d'alle
 vendredi ?" — but you're busy on Friday.
 
 **Clara**
-Decline politely, and suggest Saturday instead. Take a moment...
+Decline politely, and suggest Saturday instead.
 
 [PAUSE ~5 SECONDS]
 

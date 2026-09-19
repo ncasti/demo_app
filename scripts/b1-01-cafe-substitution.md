@@ -220,8 +220,7 @@ Imagine you're at the counter. You wanted une tarte aux fraises, but the baker j
 éclair au chocolat ?"
 
 **Clara**
-Accept his suggestion, enthusiastically, in French. Pause the audio if you need a moment...
-then listen for our answer.
+Accept his suggestion, enthusiastically, in French.
 
 [PAUSE ~5 SECONDS]
 
