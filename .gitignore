@@ -1,0 +1,5 @@
+audio-gen/out/
+*.mp3
+*.wav
+.env
+.elevenlabs_key
