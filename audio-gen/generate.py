@@ -25,7 +25,12 @@ API_KEY = os.environ.get("ELEVENLABS_API_KEY")
 # Short/ambiguous tokens (e.g. a bare "en" or "va") need this to land correctly.
 TTS_MODEL_ID = "eleven_turbo_v2_5"
 DEFAULT_SPEED = 0.92  # slightly slower than natural, for learner processing time
-CHUNK_GAP = 0.45      # pause between language-switched chunks within one line
+# Gap between language-switched chunks within one line is asymmetric on purpose:
+# short going INTO a non-English chunk (don't make the listener wait through dead
+# air before the French/Italian plays), longer coming OUT of one (give processing
+# time afterward). Keyed off which language just finished, not which is next.
+GAP_BEFORE_TARGET = 0.15
+GAP_AFTER_TARGET = 0.55
 
 
 def _post(url, payload, out_path, max_retries=4):
@@ -103,8 +108,21 @@ def make_silence(seconds, out_path):
     )
 
 
-def to_wav(in_path, out_path, gain_db=None):
-    af = ["-af", f"volume={gain_db}dB"] if gain_db else []
+def to_wav(in_path, out_path, gain_db=None, trim_silence=False):
+    af_parts = []
+    if trim_silence:
+        # Strip whatever leading/trailing silence the TTS call itself baked in,
+        # so pacing is controlled entirely by our own explicit gaps, not by
+        # unpredictable padding that stacks on top of them.
+        af_parts.append(
+            "silenceremove=start_periods=1:start_duration=0:start_threshold=-45dB:start_silence=0.05,"
+            "areverse,"
+            "silenceremove=start_periods=1:start_duration=0:start_threshold=-45dB:start_silence=0.05,"
+            "areverse"
+        )
+    if gain_db:
+        af_parts.append(f"volume={gain_db}dB")
+    af = ["-af", ",".join(af_parts)] if af_parts else []
     subprocess.run(
         ["ffmpeg", "-y", "-i", in_path, "-ar", "44100", "-ac", "1", *af, out_path],
         check=True, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL,
@@ -141,11 +159,12 @@ def gen_line_wav(speaker, chunks, voices, out_dir, tag):
             if not tts(t, voice_id, lang, mp3_path):
                 return None
             time.sleep(0.3)
-        to_wav(mp3_path, wav_path)
+        to_wav(mp3_path, wav_path, trim_silence=True)
         chunk_wavs.append(wav_path)
         if j < len(chunks) - 1:
             gap_path = os.path.join(out_dir, f"{tag}_{j}_gap.wav")
-            make_silence(CHUNK_GAP, gap_path)
+            gap = GAP_AFTER_TARGET if lang != "en" else GAP_BEFORE_TARGET
+            make_silence(gap, gap_path)
             chunk_wavs.append(gap_path)
     combo_path = os.path.join(out_dir, f"{tag}_combo.wav")
     concat_wavs(chunk_wavs, combo_path)

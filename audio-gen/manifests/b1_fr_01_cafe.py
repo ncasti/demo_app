@@ -50,9 +50,9 @@ SEGMENTS = [
     ("speech", "Clara", "Right, and instead of just leaving, she rolled with it. That's the move we're practicing today — staying in the conversation instead of freezing up.", "en"),
     ("speech_multi", "Max", [("en", "Let's break down what the baker said first:"), ("fr", "il n'en reste plus.")]),
     ("speech_multi", "Clara", [
-        ("en", "Literally, \"there's none of it left.\" That little word"),
+        ("en", "Literally, \"there's none of it left.\" Listen for that little word \"en\" — you'll hear it right here:"),
         ("fr", "n'en reste plus"),
-        ("en", "is doing a lot of work — it's standing in for"),
+        ("en", "it's doing a lot of work — it's standing in for"),
         ("fr", "pain au chocolat"),
         ("en", "so he doesn't have to repeat it."),
     ]),
@@ -80,9 +80,9 @@ SEGMENTS = [
     ("speech", "Max", "Qu'est-ce que vous en pensez de...", "fr"),
     ("speech_multi", "Clara", [
         ("fr", "Qu'est-ce que vous en pensez de..."),
-        ("en", "And notice — that's the same"),
+        ("en", "And notice — that's the same word \"en\" again, right here in"),
         ("fr", "vous en pensez"),
-        ("en", "again, standing in for the thing you're suggesting."),
+        ("en", "— standing in for the thing you're suggesting."),
     ]),
     ("speech_multi", "Max", [
         ("en", "Good ear. And when the customer likes the idea, she doesn't say"),

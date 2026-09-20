@@ -69,9 +69,9 @@ SEGMENTS = [
     ("speech", "Max", "Literally \"what are you becoming,\" but it really means \"what have you been up to?\" — what's new in your life.", "en"),
     ("speech_multi", "Clara", [
         ("fr", "Qu'est-ce que tu deviens ?"),
-        ("en", "It's informal — the"),
+        ("en", "It's informal — that's the \"tu\" form, right here in"),
         ("fr", "tu deviens"),
-        ("en", "form — so save this one for friends, not your hotel manager."),
+        ("en", "— so save this one for friends, not your hotel manager."),
     ]),
     ("speech", "Max", "Qu'est-ce que tu deviens ?", "fr"),
     ("silence", 3.5),

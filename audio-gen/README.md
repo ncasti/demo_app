@@ -25,8 +25,18 @@ Each file in `manifests/` defines three things:
   - `("speech_multi", speaker, [(lang, text), ...])` — one line that mixes
     languages (e.g. an English sentence with a French phrase embedded).
     Each chunk is a separate TTS call in its own language, stitched back
-    together with a short gap — this is what fixes cross-language
-    mispronunciation versus letting the model guess from mixed-language text.
+    together — this is what fixes cross-language mispronunciation versus
+    letting the model guess from mixed-language text. Each chunk's own
+    leading/trailing silence is trimmed before stitching (TTS output pads
+    unpredictably otherwise), then a deliberate gap is inserted: short
+    (`GAP_BEFORE_TARGET`) going into a non-English chunk so there's no dead
+    air before it, longer (`GAP_AFTER_TARGET`) coming out of one so there's
+    processing time afterward. When writing the English text around a
+    chunk, don't refer to it as "that word" if the chunk is actually a
+    multi-word phrase (e.g. "en" surfacing as "n'en reste plus") — name the
+    target word explicitly in the English narration, then introduce the
+    audio as "right here in ..." so it's clear the phrase, not the word
+    alone, is what plays.
   - `("silence", seconds)` — a pause
   - `("sfx", key, prompt, duration)` — a short generated sound effect,
     cached by `key` so repeated cues (e.g. the correct-answer chime) are only
