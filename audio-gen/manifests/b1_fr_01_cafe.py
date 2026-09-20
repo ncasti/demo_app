@@ -51,7 +51,7 @@ SEGMENTS = [
     ("speech_multi", "Max", [("en", "Let's break down what the baker said first:"), ("fr", "il n'en reste plus.")]),
     ("speech_multi", "Clara", [
         ("en", "Literally, \"there's none of it left.\" That little word"),
-        ("fr", "en"),
+        ("fr", "n'en reste plus"),
         ("en", "is doing a lot of work — it's standing in for"),
         ("fr", "pain au chocolat"),
         ("en", "so he doesn't have to repeat it."),
@@ -81,7 +81,7 @@ SEGMENTS = [
     ("speech_multi", "Clara", [
         ("fr", "Qu'est-ce que vous en pensez de..."),
         ("en", "And notice — that's the same"),
-        ("fr", "en"),
+        ("fr", "vous en pensez"),
         ("en", "again, standing in for the thing you're suggesting."),
     ]),
     ("speech_multi", "Max", [

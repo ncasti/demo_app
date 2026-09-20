@@ -51,7 +51,7 @@ SEGMENTS = [
     ("speech_multi", "Clara", [("en", "First line out of Léa's mouth:"), ("fr", "Ça fait un bail !")]),
     ("speech_multi", "Max", [
         ("en", "Literally,"),
-        ("fr", "bail"),
+        ("fr", "un bail"),
         ("en", "is a lease — like a rental lease. So this is really \"it's been a whole lease term,\" which in English just means..."),
     ]),
     ("speech", "Clara", "\"It's been ages!\" It's completely idiomatic — don't try to translate it word for word out loud, just learn the whole chunk.", "en"),
@@ -70,7 +70,7 @@ SEGMENTS = [
     ("speech_multi", "Clara", [
         ("fr", "Qu'est-ce que tu deviens ?"),
         ("en", "It's informal — the"),
-        ("fr", "tu"),
+        ("fr", "tu deviens"),
         ("en", "form — so save this one for friends, not your hotel manager."),
     ]),
     ("speech", "Max", "Qu'est-ce que tu deviens ?", "fr"),
@@ -124,7 +124,7 @@ SEGMENTS = [
         ("en", "constantly in French to mean \"that works\" or \"deal.\" And Léa answers with its cousin..."),
     ]),
     ("speech", "Clara", "Ça me va très bien.", "fr"),
-    ("speech_multi", "Max", [("en", "\"That works great for me.\" Same idea, slightly more personal —"), ("fr", "va"), ("en", "as in \"suits me.\"")]),
+    ("speech_multi", "Max", [("en", "\"That works great for me.\" Same idea, slightly more personal —"), ("fr", "ça me va"), ("en", "as in \"suits me.\"")]),
     ("silence", 3.0),
     ("speech", "Clara", "Je suis prise, malheureusement.", "fr"),
     ("sfx", "SPEAKER_SFX", "", 0.7),

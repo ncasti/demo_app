@@ -40,8 +40,34 @@ Each file in `manifests/` defines three things:
 
 Uses `eleven_turbo_v2_5` with an explicit `language_code` per call, not
 `eleven_multilingual_v2`'s auto-detection — auto-detect is unreliable on short
-or ambiguous tokens (a bare "en", a bare "va") embedded in the other
-language's sentence. Forcing the language explicitly fixed that.
+or ambiguous tokens embedded in the other language's sentence. `language_code`
+alone wasn't enough, though: forcing the language on a *bare single word*
+("en", "va", "tu", "bail") still isn't reliable, because the model has too
+little signal to know what it's saying even once it knows what language it's
+in. Fixing that isn't about the API — ElevenLabs does support IPA/CMU
+pronunciation dictionaries, but only on `eleven_flash_v2`/`eleven_v3`, and
+non-English languages require `eleven_v3` specifically. That's a real option,
+but authoring correct IPA for a language you can't personally proofread by
+ear is its own risk, and it doesn't reduce the real problem.
+
+**The actual rule: never isolate a chunk below 2-3 words.** Every
+`speech_multi` chunk should be pulled from a natural phrase that already
+appears (or naturally could appear) elsewhere in the script — e.g. don't
+isolate "en", use "n'en reste plus" or "vous en pensez"; don't isolate "va",
+use "ça me va". Full phrases carry enough context for the model to get right
+every time; single words don't, no matter what language you force.
+
+This constraint does **not** apply to the A1-style phoneme/syllable
+breakdown pattern (e.g. "buon-" / "-giorno") used for true-beginner scripts —
+that's a different, harder problem. The original reference script's A1
+lessons were voiced by real bilingual actors who could deliberately hit an
+isolated fragment on request; an AI TTS model doesn't have that same
+context-free control. Don't assume a syllable-fragment manifest (see
+`a1_it_01_bar.py`) will render cleanly via direct TTS the same way a
+full-phrase one does -- it may need a different production method (e.g.
+synthesize the *whole* word once, then trim the syllable boundary out of that
+single clean take in post, rather than asking the model to speak a bare
+fragment on its own).
 
 ## Adding a new language/lesson
 
