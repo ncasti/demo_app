@@ -40,7 +40,20 @@ Each file in `manifests/` defines three things:
   - `("silence", seconds)` — a pause
   - `("sfx", key, prompt, duration)` — a short generated sound effect,
     cached by `key` so repeated cues (e.g. the correct-answer chime) are only
-    generated once
+    generated once. A key can instead be backed by a fixed local file (see
+    `FIXED_SFX_ASSETS` near the top of `generate.py`) instead of a generation
+    prompt -- used for `SPEAKER_SFX`, which is a specific sound the user
+    picked from A/B'd options, not something to regenerate from a prompt.
+  - **"Listen in" transition convention**: any time the script cuts from the
+    hosts to native-speaker-only audio *that isn't already wrapped in a
+    `scene`* (e.g. a quick montage of different voices saying the same
+    phrase), insert a short `sfx` cue right before it — a brief ambient
+    swell, like tuning into a real conversation — so the listener gets an
+    audible signal that they've left the "teaching booth" and are now
+    listening in on real people. `scene` blocks already get this via their
+    own start/end accent sounds; standalone voice-montage moments don't, so
+    they need it added explicitly. See `LISTEN_IN_STING` in
+    `a1_it_01_bar.py` for the pattern.
   - `("scene", scene_dict)` — a block of back-and-forth dialogue with
     **persistent background ambience** mixed underneath it for the scene's
     full duration (not just bookend stingers), plus a short accent sound at

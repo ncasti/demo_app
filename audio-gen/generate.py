@@ -20,6 +20,16 @@ import urllib.error
 
 API_KEY = os.environ.get("ELEVENLABS_API_KEY")
 
+ASSETS_DIR = os.path.join(os.path.dirname(os.path.abspath(__file__)), "assets")
+# SFX keys backed by a fixed, hand-picked asset file instead of a generation
+# prompt. Chosen by the user from A/B'd AI-generated options plus a trimmed
+# uploaded reference; this is a stock sound file they supplied, so licensing
+# for real product use hasn't been independently verified -- flagged to the
+# user at pick time, their call to proceed.
+FIXED_SFX_ASSETS = {
+    "SPEAKER_SFX": os.path.join(ASSETS_DIR, "sfx", "speaker_cue.mp3"),
+}
+
 # eleven_v3 with an explicit language_code actually produces correct French
 # phonetics. turbo_v2_5 accepted the same language_code param without error
 # but silently ignored it for pronunciation purposes -- confirmed by direct
@@ -90,6 +100,12 @@ def sound_fx(prompt, duration, out_path):
 
 
 def get_sfx(key, prompt, duration, sfx_cache):
+    if key in FIXED_SFX_ASSETS:
+        asset_path = FIXED_SFX_ASSETS[key]
+        if not os.path.exists(asset_path):
+            print(f"    FAILED: fixed asset for '{key}' not found at {asset_path}")
+            return None
+        return asset_path
     os.makedirs(sfx_cache, exist_ok=True)
     cached_mp3 = os.path.join(sfx_cache, f"{key}.mp3")
     if not os.path.exists(cached_mp3):
@@ -275,7 +291,7 @@ def build_script(name, segments, voices, out_dir):
                 print(f"!!! Stopping {name} at segment {idx}: SFX '{key}' failed.")
                 return False
             wav_path = os.path.join(out_dir, f"{idx}_sfx_{key}.wav")
-            gain = 9 if key in ("SPEAKER_SFX", "CORRECT_SFX") else None
+            gain = 4 if key == "SPEAKER_SFX" else (9 if key == "CORRECT_SFX" else None)
             to_wav(mp3, wav_path, gain_db=gain)
             wav_parts.append(wav_path)
 

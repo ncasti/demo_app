@@ -5,3 +5,6 @@ audio-gen/out/
 .elevenlabs_key
 __pycache__/
 *.pyc
+
+# Curated production assets are checked in, unlike generated/rough-pass audio
+!audio-gen/assets/**

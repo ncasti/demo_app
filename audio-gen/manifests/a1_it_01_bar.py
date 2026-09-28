@@ -87,6 +87,7 @@ SEGMENTS = [
     ("silence", 1.8),
 
     ("speech", "Clara", "Bravo! Let's hear a few more people say it around the bar.", "en"),
+    ("sfx", "LISTEN_IN_STING", "brief soft transition sound, a quick swell of ambient crowd murmur fading in, like tuning into a real conversation, no music, no words", 1.0),
     ("speech", "Voice1", "Buongiorno !", "it"),
     ("speech", "Voice2", "Buongiorno, buongiorno !", "it"),
     ("speech", "Barista", "Buongiorno, signora !", "it"),
