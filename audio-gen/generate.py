@@ -20,10 +20,13 @@ import urllib.error
 
 API_KEY = os.environ.get("ELEVENLABS_API_KEY")
 
-# turbo_v2_5 supports an explicit language_code that FORCES pronunciation for
-# that language, unlike multilingual_v2 which only auto-detects from content.
-# Short/ambiguous tokens (e.g. a bare "en" or "va") need this to land correctly.
-TTS_MODEL_ID = "eleven_turbo_v2_5"
+# eleven_v3 with an explicit language_code actually produces correct French
+# phonetics. turbo_v2_5 accepted the same language_code param without error
+# but silently ignored it for pronunciation purposes -- confirmed by direct
+# A/B listening comparison, not just by the request succeeding. Don't
+# downgrade this without re-verifying by ear; a 200 response proves nothing
+# about which language actually came out.
+TTS_MODEL_ID = "eleven_v3"
 DEFAULT_SPEED = 0.92  # slightly slower than natural, for learner processing time
 # Gap between language-switched chunks within one line is asymmetric on purpose:
 # short going INTO a non-English chunk (don't make the listener wait through dead
@@ -218,7 +221,7 @@ def build_scene(scene, voices, out_dir, idx, sfx_cache):
 
     out_path = os.path.join(out_dir, f"{idx:03d}_{key}_scene.wav")
     filter_complex = (
-        f"[0:a]volume=0.16,afade=t=in:st=0:d=1,afade=t=out:st={max(total - 1, 0):.2f}:d=1[amb];"
+        f"[0:a]volume=0.28,afade=t=in:st=0:d=1,afade=t=out:st={max(total - 1, 0):.2f}:d=1[amb];"
         f"[1:a]volume=0.9,adelay=0|0[start];"
         f"[2:a]volume=0.9,adelay={int(end_offset * 1000)}|{int(end_offset * 1000)}[end];"
         f"[3:a]volume=1.0,adelay={int(lead * 1000)}|{int(lead * 1000)}[dlg];"

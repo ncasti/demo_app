@@ -48,17 +48,32 @@ Each file in `manifests/` defines three things:
 
 ## Notes on model choice
 
-Uses `eleven_turbo_v2_5` with an explicit `language_code` per call, not
+Uses `eleven_v3` with an explicit `language_code` per call, not
 `eleven_multilingual_v2`'s auto-detection — auto-detect is unreliable on short
-or ambiguous tokens embedded in the other language's sentence. `language_code`
-alone wasn't enough, though: forcing the language on a *bare single word*
-("en", "va", "tu", "bail") still isn't reliable, because the model has too
-little signal to know what it's saying even once it knows what language it's
-in. Fixing that isn't about the API — ElevenLabs does support IPA/CMU
-pronunciation dictionaries, but only on `eleven_flash_v2`/`eleven_v3`, and
-non-English languages require `eleven_v3` specifically. That's a real option,
-but authoring correct IPA for a language you can't personally proofread by
-ear is its own risk, and it doesn't reduce the real problem.
+or ambiguous tokens embedded in the other language's sentence.
+
+**History, because this took two wrong turns to get right:**
+1. Started on `eleven_multilingual_v2`, relying on its auto-detection. Worked
+   for full sentences, mispronounced short embedded words as English (e.g. a
+   bare "en" read with English phonetics).
+2. Switched to `eleven_turbo_v2_5` with an explicit `language_code` field,
+   assuming that would force correct pronunciation. It didn't: the API
+   accepted the parameter and returned 200 every time, but a direct A/B
+   listening comparison (turbo vs. v3 vs. a native voice, same line) showed
+   turbo was still not using French phonetics — the field was silently
+   ignored for pronunciation purposes. **A successful response proves
+   nothing about which language actually came out; only listening does.**
+3. `eleven_v3` with the same `language_code` field actually respects it —
+   confirmed by ear, not just by the request succeeding.
+
+Forcing the language alone still wasn't enough for a *bare single word*
+("en", "va", "tu", "bail") — the model has too little signal to know what
+it's saying even once it knows what language it's in. ElevenLabs does
+support IPA/CMU pronunciation dictionaries for this (only on
+`eleven_flash_v2`/`eleven_v3`; non-English requires `eleven_v3`
+specifically), but authoring correct IPA for a language you can't personally
+proofread by ear is its own risk, and doesn't fix the underlying problem the
+way just not isolating a bare word does.
 
 **The actual rule: never isolate a chunk below 2-3 words.** Every
 `speech_multi` chunk should be pulled from a natural phrase that already
