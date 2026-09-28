@@ -1,14 +1,23 @@
 # A1 Audio Lesson — Sample Script (Italian)
 
-**Title:** "Buongiorno al bar" — Greeting the barista
+**Title:** "Al bar" — Ordering a coffee
 **Level:** A1 (total beginner)
 **Runtime target:** ~5 minutes
 **Hosts:** Clara (IT/EN bilingual) & Max (IT/EN bilingual)
 **Scenario voices:** Barista (man), Cliente (woman) — native Italian speakers, natural pace
 
-**A1 skill focus:** this is a true beginner lesson, so — unlike the B1 French scripts — it
-DOES use proactive, phoneme-level pronunciation coaching, matching the original reference
-script's approach. One target phrase only: "Buongiorno."
+**A1 skill focus:** a complete real transaction — greeting, ordering, thanking — not just one
+word. Three repertoire phrases: "Buongiorno," "Un caffè, per favore," and "Grazie" / "Prego."
+
+**Pedagogy note (revised from the first draft):** no proactive pronunciation coaching, at any
+level — this drops the phoneme-by-phoneme drilling the first draft of this script used, and
+brings A1 in line with the B1 French scripts' policy. A true beginner still needs *more
+repetition* than a B1 learner, so this script leans harder on speaking challenges and native
+voice examples than the French ones — just without narrating *how* to produce the sounds.
+Pronunciation feedback is a later, retroactive layer: once a learner's own audio comes back
+through speech recognition, we can tell them what actually went wrong instead of front-loading
+generic phonetic instruction before they've said a word. Time saved on explanation goes into
+more Italian content instead: three repertoire phrases this episode instead of one.
 
 ---
 
@@ -16,18 +25,11 @@ script's approach. One target phrase only: "Buongiorno."
 [INTRO MUSIC]
 
 **Clara**
-Bonjour... oh wait, wrong language! Ciao, Max!
+Ciao, Max!
 
 **Max**
-Ciao, Clara! Today we're starting something new — Italian.
-
-**Clara**
-That's right. And we're going to practice with a scene everyone in Italy knows by heart:
-standing at the counter of a bar, first thing in the morning.
-
-**Max**
-Not "bar" like a nightclub — in Italy, "il bar" is where you grab your morning coffee,
-standing up, usually in about ninety seconds flat.
+Ciao, Clara! Today: a scene every visitor to Italy runs into on day one — standing at the
+counter of a bar, ordering your coffee.
 
 **Clara**
 Let's listen in.
@@ -39,7 +41,16 @@ Let's listen in.
 Buongiorno !
 
 **Cliente**
-Buongiorno !
+Buongiorno ! Un caffè, per favore.
+
+**Barista**
+Ecco a lei.
+
+**Cliente**
+Grazie !
+
+**Barista**
+Prego !
 
 **Audio**
 [coffee cup set down on a saucer]
@@ -50,43 +61,20 @@ Buongiorno !
 
 <START AUDIO FILE>
 **Max**
-That word you heard twice — "buongiorno" — is the single most useful word you'll say in
-Italy before noon.
+Three things in there you'll use every single day in Italy. Let's take them one at a time.
 
 **Clara**
-Let's break it down. It's actually two pieces stuck together: "buon-" and "-giorno."
-
-**Max**
-Buon- [1 sec pause] means "good."
-
-**Clara**
-Buon-
-
-**Max [mimicking her pace]**
-Buon-
-
-**Clara**
-Good. Now, that "uo" in the middle isn't two separate sounds like in English "duo" — in
-Italian it glides together into one smooth syllable. [1 sec pause] buon- [gliding the "uo"]
-
-**Max**
-buon-
-
-**Clara**
-And the "n" at the end — just a light, clean "n," no nasal trick like in French. Straightforward.
-
-**Max**
-buon-
+First — "Buongiorno." You'll hear it constantly, any time from morning until early evening.
+It just means "good day."
 <END AUDIO FILE>
 
 <START AUDIO FILE>
 **Clara [to listeners]**
-[EXERCISES ON] Here comes your first speaking exercise. Wait for the bell, then repeat after
-Max. You can always say "Not Now" or tap the skip button.
+[EXERCISES ON] Repeat after Max, or say "not now."
 <END AUDIO FILE>
 
 <START AUDIO FILE>
-[EXERCISES OFF] Here comes your first speaking exercise. Wait for the bell, then repeat after Max.
+[EXERCISES OFF] Repeat after Max.
 <END AUDIO FILE>
 
 [3 second silence]
@@ -94,65 +82,7 @@ Max. You can always say "Not Now" or tap the skip button.
 ## Speaking challenge 1
 
 <START AUDIO FILE>
-**Max:** buon-
-<END AUDIO FILE>
-
-[SPEAKER SFX]
-[PAUSE ~2 SECONDS]
-[CORRECT SFX]
-
-[3 second silence]
-
-<START AUDIO FILE>
-**Clara**
-Bravo ! Now the second half — "-giorno."
-
-**Max**
--giorno [1 sec pause] Notice that "gi" at the start — in Italian, "g" before "i" or "e" sounds
-like the English "j" in "jump." Not a hard "g" like in "go."
-
-**Clara**
--giorno [emphasizing the soft "g"] [1 sec pause] giorno [1 sec pause] Try it.
-
-**Max**
--giorno
-
-**Clara**
-And "-orno" at the end — round, open vowels, nothing swallowed. Every vowel in Italian gets
-its full, clear sound. [1 sec pause] -orno
-
-**Max**
--orno [1 sec pause] giorno
-<END AUDIO FILE>
-
-[3 second silence]
-
-<START AUDIO FILE>
-**Clara [to listeners]**
-Time for another speaking exercise! Put everything together and repeat after Max, or say
-"not now."
-<END AUDIO FILE>
-
-<START AUDIO FILE>
-Time for another speaking exercise! Put everything together and repeat after Max.
-<END AUDIO FILE>
-
-[3 second silence]
-
-## Speaking challenge 2
-
-<START AUDIO FILE>
-**Max:** buon-
-<END AUDIO FILE>
-
-[SPEAKER SFX]
-[PAUSE ~2 SECONDS]
-[CORRECT SFX]
-
-[3 second silence]
-
-<START AUDIO FILE>
-**Max:** -giorno
+**Max:** Buongiorno !
 <END AUDIO FILE>
 
 [SPEAKER SFX]
@@ -173,28 +103,7 @@ Time for another speaking exercise! Put everything together and repeat after Max
 
 <START AUDIO FILE>
 **Clara**
-Ottimo !
-<END AUDIO FILE>
-
-[3 second silence]
-
-<START AUDIO FILE>
-**Max**
-One more thing before we go — in Italian, the stress matters a lot. It's not BUON-giorno
-and it's not buon-GIOR-no dragged out...
-
-**Clara**
-It's buonGIORno — a clean, even push right on that middle syllable. [1 sec pause]
-buonGIORno
-
-**Max**
-buonGIORno
-
-**Clara**
-Let's hear it a few more times, from different voices around the bar.
-
-**Audio**
-[bar ambience continues]
+Bravo ! Let's hear a few more people say it around the bar.
 
 **Voice 1 [older man]**
 Buongiorno !
@@ -204,15 +113,135 @@ Buongiorno, buongiorno !
 
 **Voice 3 [barista, warmly]**
 Buongiorno, signora !
+<END AUDIO FILE>
 
+[3 second silence]
+
+<START AUDIO FILE>
 **Max**
-Now you know how to walk into any bar in Italy and sound like you belong there.
+Second — how she ordered. "Un caffè, per favore." "Un caffè" is simply "a coffee." And
+"per favore" means "please" — you can stick it onto almost anything you order.
 
 **Clara**
-And next time... we'll actually order that coffee. Two words: "un caffè."
+Un caffè, per favore.
+<END AUDIO FILE>
+
+<START AUDIO FILE>
+**Max [to listeners]**
+Your turn. Repeat after Clara.
+<END AUDIO FILE>
+
+[3 second silence]
+
+## Speaking challenge 2
+
+<START AUDIO FILE>
+**Clara:** Un caffè, per favore.
+<END AUDIO FILE>
+
+[SPEAKER SFX]
+[PAUSE ~2 SECONDS]
+[CORRECT SFX]
+
+[3 second silence]
+
+<START AUDIO FILE>
+**Clara:** Un caffè, per favore.
+<END AUDIO FILE>
+
+[SPEAKER SFX]
+[PAUSE ~2 SECONDS]
+[CORRECT SFX]
+
+[3 second silence]
+
+<START AUDIO FILE>
+**Max**
+Ottimo ! And whatever you order, just add "per favore" at the end — it works everywhere.
+<END AUDIO FILE>
+
+[3 second silence]
+
+<START AUDIO FILE>
+**Clara**
+Third — after the barista hands it over, she says "Grazie." Thank you.
 
 **Max**
-Can't wait.
+And he answers "Prego" — you're welcome. That pair goes together everywhere in Italy, not
+just at the bar.
+
+**Clara**
+Grazie.
+
+**Max**
+Prego.
+<END AUDIO FILE>
+
+<START AUDIO FILE>
+**Clara [to listeners]**
+Repeat after Max.
+<END AUDIO FILE>
+
+[3 second silence]
+
+## Speaking challenge 3
+
+<START AUDIO FILE>
+**Max:** Grazie !
+<END AUDIO FILE>
+
+[SPEAKER SFX]
+[PAUSE ~2 SECONDS]
+[CORRECT SFX]
+
+[3 second silence]
+
+<START AUDIO FILE>
+**Max:** Prego !
+<END AUDIO FILE>
+
+[SPEAKER SFX]
+[PAUSE ~2 SECONDS]
+[CORRECT SFX]
+
+[3 second silence]
+
+<START AUDIO FILE>
+**Clara**
+Perfetto !
+<END AUDIO FILE>
+
+[3 second silence]
+
+## Your turn — join the conversation
+
+<START AUDIO FILE>
+**Max [to listeners]**
+Now put it together. You walk up to the bar. Greet the barista, and order a coffee, politely.
+
+[PAUSE ~5 SECONDS]
+
+**Clara**
+Here's one way to say it:
+
+**Max**
+Buongiorno ! Un caffè, per favore.
+<END AUDIO FILE>
+
+[3 second silence]
+
+<START AUDIO FILE>
+**Clara**
+So today: Buongiorno to greet...
+
+**Max**
+Un caffè, per favore to order, politely...
+
+**Clara**
+And Grazie — Prego to finish it off.
+
+**Max**
+Next time, we'll handle the part everyone forgets to learn — asking what something costs.
 
 **Clara**
 Ciao !
@@ -228,11 +257,10 @@ Ciao !
 ## Production notes
 - **Barista / Cliente voices**: distinct native Italian speakers, not Clara/Max — same
   "real world clip vs. teaching booth" separation used in the French scripts.
-- **This lesson intentionally uses proactive phonetic coaching** (unlike the B1 French
-  scripts) because A1 learners have no existing base to draw on — this mirrors the original
-  reference script's own approach for its A1 content (phoneme → syllable → word, native
-  speaker examples, two speaking challenges).
-- **Scope**: deliberately narrow — one word, thoroughly taught — matching how tightly scoped
-  the original reference's own Lesson 1 was (just "bonjour").
+- **No proactive pronunciation coaching** — revised from the first draft. See the pedagogy
+  note above; this matches the B1 French scripts' policy, now applied at every level.
+- **Scope**: three repertoire phrases forming one complete transaction (greet → order →
+  thank), not one isolated greeting — a full real exchange a beginner can actually use, with
+  more repetition per phrase than a B1 script needs.
 - **Scene**: a standing coffee bar, not a walk-and-talk street scene, to keep the sample
   distinct from the French scripts' scenarios rather than just re-skinning the same setup.
