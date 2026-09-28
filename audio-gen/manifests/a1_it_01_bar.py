@@ -72,7 +72,7 @@ SEGMENTS = [
         ("it", "Buongiorno."),
         ("en", "You'll hear it constantly, any time from morning until early evening. It just means \"good day.\""),
     ]),
-    ("speech", "Clara", "Repeat after Max, or say \"not now.\"", "en"),
+    ("speech", "Clara", "Repeat after Max.", "en"),
     ("silence", 3.0),
 
     ("speech", "Max", "Buongiorno !", "it"),

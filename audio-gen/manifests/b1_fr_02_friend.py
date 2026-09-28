@@ -57,7 +57,7 @@ SEGMENTS = [
     ("speech", "Clara", "\"It's been ages!\" It's completely idiomatic — don't try to translate it word for word out loud, just learn the whole chunk.", "en"),
     ("speech", "Max", "Ça fait un bail. Ça fait un bail !", "fr"),
     ("speech", "Clara", "Ça fait un bail !", "fr"),
-    ("speech", "Max", "Repeat after Clara, or say \"not now.\"", "en"),
+    ("speech", "Max", "Repeat after Clara.", "en"),
     ("silence", 3.5),
     ("speech", "Clara", "Ça fait un bail !", "fr"),
     ("sfx", "SPEAKER_SFX", "loud clear electronic beep, short attention tone, like a recording-start alert, bright and audible", 0.7),

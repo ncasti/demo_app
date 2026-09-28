@@ -96,11 +96,7 @@ Il n'en reste plus.
 
 <START AUDIO FILE>
 **Clara [to listeners]**
-[EXERCISES ON] Your turn. Repeat after Max, or say "not now."
-<END AUDIO FILE>
-
-<START AUDIO FILE>
-[EXERCISES OFF] Your turn. Repeat after Max.
+Your turn. Repeat after Max.
 <END AUDIO FILE>
 
 [3 second silence]

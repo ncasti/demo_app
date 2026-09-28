@@ -60,7 +60,7 @@ SEGMENTS = [
     ("silence", 0.6),
     ("speech", "Clara", "Il n'en reste plus.", "fr"),
     ("silence", 0.6),
-    ("speech", "Clara", "Your turn. Repeat after Max, or say \"not now.\"", "en"),
+    ("speech", "Clara", "Your turn. Repeat after Max.", "en"),
     ("silence", 3.5),
     ("speech", "Max", "il n'en reste plus", "fr"),
     ("sfx", "SPEAKER_SFX", "loud clear electronic beep, short attention tone, like a recording-start alert, bright and audible", 0.7),

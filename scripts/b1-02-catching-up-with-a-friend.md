@@ -97,11 +97,7 @@ just learn the whole chunk.
 
 <START AUDIO FILE>
 **Max [to listeners]**
-[EXERCISES ON] Repeat after Clara, or say "not now."
-<END AUDIO FILE>
-
-<START AUDIO FILE>
-[EXERCISES OFF] Repeat after Clara.
+Repeat after Clara.
 <END AUDIO FILE>
 
 [3 second silence]

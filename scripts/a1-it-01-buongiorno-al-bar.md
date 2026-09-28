@@ -70,11 +70,7 @@ It just means "good day."
 
 <START AUDIO FILE>
 **Clara [to listeners]**
-[EXERCISES ON] Repeat after Max, or say "not now."
-<END AUDIO FILE>
-
-<START AUDIO FILE>
-[EXERCISES OFF] Repeat after Max.
+Repeat after Max.
 <END AUDIO FILE>
 
 [3 second silence]
