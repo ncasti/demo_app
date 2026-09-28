@@ -12,6 +12,15 @@ python3 generate.py manifests/b1_fr_01_cafe.py --out-dir out/
 
 Requires `ffmpeg` on `PATH`. Output lands at `out/<script-name>.mp3`.
 
+**Caution when editing a manifest you've already generated once:** per-segment cache files
+are keyed by position (`out/<script-name>/<index>_...`), not by content. If you insert,
+remove, or reorder a segment and rerun without clearing `out/<script-name>/` first, later
+segments can silently reuse a stale cached clip from the old position instead of regenerating
+-- this happened while fixing episode 1's cue order (the fix produced zero new API calls
+until the stale directory was deleted). `rm -rf out/<script-name> out/<script-name>.mp3`
+before rerunning after any structural edit; a pure text/wording tweak to an existing segment
+is safe to rerun without clearing, since that segment's own cache file just gets overwritten.
+
 ## How a manifest works
 
 Each file in `manifests/` defines three things:
@@ -141,6 +150,13 @@ fragment on its own).
    element across languages; the underlying voice doesn't have to be, the
    same way a recurring character gets a different voice actor per
    language in dubbing.
-3. Write a manifest in `manifests/` mirroring an existing one.
+3. Write a manifest in `manifests/`, building the repeat-after-me /
+   reverse-translate / round-trip drill blocks with `lesson_segments.py`'s
+   `speaking_challenge()`, `reverse_translate_item()`, and `roundtrip_step()`
+   rather than hand-copying the segment tuples -- that module's docstring
+   explains why (episodes 1-2 shipped with a real bug in those shapes before
+   they were centralized). Everything else in a manifest -- intro banter,
+   scene dialogue, phrase-breakdown narration, recap -- is unique content
+   and stays hand-written.
 4. Run it. Cached SFX/lines mean a failed run resumes cheaply -- rerunning
    only regenerates what's missing from `out/<name>/`.

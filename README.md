@@ -4,9 +4,9 @@ Short conversational-language audio lessons, inspired by the Duolingo-style audi
 format: bilingual hosts introduce a real-life dialogue, break down key phrases, have the
 listener repeat them, then have the listener actually participate in the conversation.
 
-Started as B1 French; now also includes a 5-episode A1 Italian arc (one scenario episode plus
-a spaced-repetition practice episode after every 2-3 new ones) to test that the format and
-production pipeline generalize across level, language, and episode count.
+Started as B1 French; now also includes a 20-episode A1 Italian arc (new-scenario episodes
+plus a spaced-repetition practice episode after every 2-3 new ones) to test that the format
+and production pipeline generalize across level, language, and episode count.
 
 ## Pedagogy: no proactive phonetics, at any level
 
@@ -41,17 +41,24 @@ The policy that replaced it, now applied at **every** level:
 ## Status
 
 - [x] Step 1 — sample scripts drafted (`scripts/`)
-- [x] Step 2 — audio generation pipeline built and working (`audio-gen/`) for all seven
-      scripts (2 French + 5 Italian): bilingual hosts, native-language dialogue voices,
-      explicit per-chunk language locking on `eleven_v3` (fixes cross-language
-      mispronunciation), persistent scene ambience
+- [x] Step 2 — audio generation pipeline built and working (`audio-gen/`) for all 22 scripts
+      (2 French + 20 Italian): bilingual hosts, native-language dialogue voices, explicit
+      per-chunk language locking on `eleven_v3` (fixes cross-language mispronunciation),
+      persistent scene ambience
 - [x] Italian A1 episode rendered — first real test of the pipeline on a new language,
       confirmed working end to end
-- [x] Scaling test — 4 more Italian episodes (introductions, market, a spaced-repetition
-      practice episode, directions), written and rendered in one pass applying every lesson
-      from episode 1 up front (voice `verified_languages` checked before writing dialogue,
-      correct speak/reveal cue ordering, no bare-word isolation) instead of finding them by
-      ear afterward
+- [x] Scaling test, round 1 — 4 more Italian episodes (introductions, market, a
+      spaced-repetition practice episode, directions), applying every lesson from episode 1
+      up front (voice `verified_languages` checked before writing dialogue, correct
+      speak/reveal cue ordering, no bare-word isolation)
+- [x] Scaling test, round 2 — 15 more Italian episodes (6-20: 10 new scenarios + 5 practice
+      episodes), all generated in one pass. Factored the repeat-after-me / reverse-translate
+      / round-trip block shapes into `audio-gen/lesson_segments.py` once the pattern proved
+      stable across 5 episodes, rather than hand-copying them 15 more times — the shared
+      module is also where the episode-1/2 SPEAKER_SFX-ordering bug got fixed once instead of
+      per episode. Character voices reused across scenarios (a small recurring native cast)
+      rather than researching new ones per episode. Full run used ~51k of a 121k/month
+      character quota, so quota is not the constraint on scaling further.
 - [ ] Sound effects/ambience: basic version done (persistent scene ambience, cue chimes,
       intro/outro sting) — not yet mixed/ducked professionally
 - [ ] Later — exercises + porting into an interactive app
@@ -70,8 +77,14 @@ The policy that replaced it, now applied at **every** level:
 - `scripts/a1-it-04-practice-uno.md` — A1 Italian: first spaced-repetition practice episode,
   recombining episodes 1-3 into one "day in Italy" with no new vocabulary.
 - `scripts/a1-it-05-scusi-dove.md` — A1 Italian: "Scusi, dov'è...?," asking for directions.
-- `audio-gen/` — the generation pipeline (ElevenLabs TTS + sound-generation) and one manifest
-  per script. See `audio-gen/README.md` for how it works and how to add a new language/lesson.
+- `scripts/a1-it-06-che-ore-sono.md` through `a1-it-20-practice-sei.md` — 15 more A1 Italian
+  episodes (time, restaurant, weather, asking for help, phone calls, train tickets, clothes
+  shopping, likes/dislikes, hotel check-in, small talk, and five practice episodes spaced
+  through the run) — see each script's Production notes for scenario-specific choices.
+- `audio-gen/` — the generation pipeline (ElevenLabs TTS + sound-generation), one manifest per
+  script, and `lesson_segments.py` (shared speaking-challenge / reverse-translate /
+  round-trip block builders, factored out once the pattern proved stable). See
+  `audio-gen/README.md` for how it works and how to add a new language/lesson.
 - `research/tts-options.md` — bilingual TTS vendor research from before we settled on
   ElevenLabs.
 
