@@ -46,19 +46,33 @@ BAR_SCENE = {
 
 SEGMENTS = [
     ("sfx", "INTRO_STING", "podcast intro jingle: bright acoustic guitar and light mandolin melody, warm Italian morning cafe feel, cheerful and inviting, no vocals", 3.5),
-    ("speech", "Clara", "Bonjour... oh wait, wrong language! Ciao, Max!", "en"),
-    ("speech", "Max", "Ciao, Clara! Today we're starting something new — Italian.", "en"),
+    ("speech_multi", "Clara", [("en", "Bonjour... oh wait, wrong language!"), ("it", "Ciao, Max!")]),
+    ("speech_multi", "Max", [("it", "Ciao, Clara!"), ("en", "Today we're starting something new — Italian.")]),
     ("speech", "Clara", "That's right. And we're going to practice with a scene everyone in Italy knows by heart: standing at the counter of a bar, first thing in the morning.", "en"),
-    ("speech", "Max", "Not \"bar\" like a nightclub — in Italy, \"il bar\" is where you grab your morning coffee, standing up, usually in about ninety seconds flat.", "en"),
+    ("speech_multi", "Max", [
+        ("en", "Not \"bar\" like a nightclub — in Italy,"),
+        ("it", "il bar"),
+        ("en", "is where you grab your morning coffee, standing up, usually in about ninety seconds flat."),
+    ]),
     ("speech", "Clara", "Let's listen in.", "en"),
     ("silence", 0.8),
 
     ("scene", BAR_SCENE),
 
     ("silence", 2.0),
-    ("speech", "Max", "That word you heard twice — \"buongiorno\" — is the single most useful word you'll say in Italy before noon.", "en"),
-    ("speech", "Clara", "Let's break it down. It's actually two pieces stuck together: \"buon,\" meaning good, and \"giorno,\" meaning day.", "en"),
-    ("speech", "Max", "That second piece — \"giorno\" — is a real word all on its own, so let's start there.", "en"),
+    ("speech_multi", "Max", [
+        ("en", "That word you heard twice —"),
+        ("it", "buongiorno"),
+        ("en", "— is the single most useful word you'll say in Italy before noon."),
+    ]),
+    ("speech_multi", "Clara", [
+        ("en", "Let's break it down. It's actually two pieces stuck together:"),
+        ("it", "buon"),
+        ("en", ", meaning good, and"),
+        ("it", "giorno"),
+        ("en", ", meaning day."),
+    ]),
+    ("speech_multi", "Max", [("en", "That second piece —"), ("it", "giorno"), ("en", "— is a real word all on its own, so let's start there.")]),
     ("speech", "Clara", "giorno", "it"),
     ("speech", "Max", "Notice that \"gi\" at the start — in Italian, \"g\" before \"i\" or \"e\" sounds like the English \"j\" in \"jump.\" Not a hard \"g\" like in \"go.\"", "en"),
     ("speech", "Clara", "giorno", "it"),
@@ -72,8 +86,12 @@ SEGMENTS = [
     ("sfx", "CORRECT_SFX", "bright cheerful bell chime, unmistakably a correct-answer ding, loud and clear, upbeat", 0.7),
     ("silence", 1.8),
 
-    ("speech", "Clara", "Bravo! Now let's put \"buon\" in front of it.", "en"),
-    ("speech", "Max", "That \"uo\" in \"buon\" isn't two separate sounds like in English \"duo\" — in Italian it glides together into one smooth syllable. And the \"n\" at the end is just a light, clean \"n,\" no nasal trick like in French.", "en"),
+    ("speech_multi", "Clara", [("en", "Bravo! Now let's put"), ("it", "buon"), ("en", "in front of it.")]),
+    ("speech_multi", "Max", [
+        ("en", "That \"uo\" in"),
+        ("it", "buon"),
+        ("en", "isn't two separate sounds like in English \"duo\" — in Italian it glides together into one smooth syllable. And the \"n\" at the end is just a light, clean \"n,\" no nasal trick like in French."),
+    ]),
     ("speech", "Clara", "Buongiorno", "it"),
     ("speech", "Max", "Buongiorno", "it"),
     ("speech", "Clara", "One more time, together.", "en"),
@@ -88,7 +106,7 @@ SEGMENTS = [
     ("speech", "Clara", "Ottimo !", "it"),
     ("silence", 3.0),
 
-    ("speech", "Max", "One more thing before we go — in Italian, the stress matters a lot. It's not BUON-giorno, and it's not buon-GIOR-no dragged out either — it's an even push right on that middle syllable: buon-GIOR-no.", "en"),
+    ("speech", "Max", "One more thing before we go — in Italian, the stress matters a lot. It's not on the first part, and it's not spread out evenly either — it's a clear, even push right in the middle.", "en"),
     ("speech", "Clara", "Listen for it.", "en"),
     ("speech", "Clara", "Buongiorno", "it"),
     ("speech", "Max", "Buongiorno", "it"),
@@ -98,7 +116,7 @@ SEGMENTS = [
     ("speech", "Voice2", "Buongiorno, buongiorno !", "it"),
     ("speech", "Barista", "Buongiorno, signora !", "it"),
     ("speech", "Max", "Now you know how to walk into any bar in Italy and sound like you belong there.", "en"),
-    ("speech", "Clara", "And next time... we'll actually order that coffee. Two words: \"un caffè.\"", "en"),
+    ("speech_multi", "Clara", [("en", "And next time... we'll actually order that coffee. Two words:"), ("it", "un caffè.")]),
     ("speech", "Max", "Can't wait.", "en"),
     ("speech", "Clara", "Ciao !", "it"),
     ("speech", "Max", "Ciao !", "it"),

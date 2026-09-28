@@ -34,6 +34,11 @@ DEFAULT_SPEED = 0.92  # slightly slower than natural, for learner processing tim
 # time afterward). Keyed off which language just finished, not which is next.
 GAP_BEFORE_TARGET = 0.15
 GAP_AFTER_TARGET = 0.55
+# Minimum breathing room between two consecutive dialogue turns (different
+# speakers or the same one) that don't already have an explicit "silence"
+# segment between them in the manifest -- prevents back-to-back lines from
+# sounding mashed together now that each clip's own padding is trimmed.
+MIN_TURN_GAP = 0.35
 
 
 def _post(url, payload, out_path, max_retries=4):
@@ -221,7 +226,7 @@ def build_scene(scene, voices, out_dir, idx, sfx_cache):
 
     out_path = os.path.join(out_dir, f"{idx:03d}_{key}_scene.wav")
     filter_complex = (
-        f"[0:a]volume=0.28,afade=t=in:st=0:d=1,afade=t=out:st={max(total - 1, 0):.2f}:d=1[amb];"
+        f"[0:a]volume=0.42,afade=t=in:st=0:d=1,afade=t=out:st={max(total - 1, 0):.2f}:d=1[amb];"
         f"[1:a]volume=0.9,adelay=0|0[start];"
         f"[2:a]volume=0.9,adelay={int(end_offset * 1000)}|{int(end_offset * 1000)}[end];"
         f"[3:a]volume=1.0,adelay={int(lead * 1000)}|{int(lead * 1000)}[dlg];"
@@ -241,11 +246,22 @@ def build_script(name, segments, voices, out_dir):
     sfx_cache = os.path.join(out_dir, "sfx_cache")
     os.makedirs(out_dir, exist_ok=True)
     wav_parts = []
+    prev_kind = None
     print(f"=== {name}: {len(segments)} segments ===")
 
     for i, seg in enumerate(segments):
         idx = f"{i:03d}"
         kind = seg[0]
+
+        # Two consecutive dialogue turns with no explicit silence/sfx/scene
+        # between them used to rely on leftover TTS padding for a natural
+        # breath -- now that each clip is silence-trimmed, that padding is
+        # gone, so back-to-back turns need an explicit minimum gap or they
+        # sound mashed together.
+        if kind in ("speech", "speech_multi") and prev_kind in ("speech", "speech_multi"):
+            gap_path = os.path.join(out_dir, f"{idx}_min_turn_gap.wav")
+            make_silence(MIN_TURN_GAP, gap_path)
+            wav_parts.append(gap_path)
 
         if kind == "silence":
             wav_path = os.path.join(out_dir, f"{idx}_silence.wav")
@@ -293,6 +309,8 @@ def build_script(name, segments, voices, out_dir):
 
         else:
             raise ValueError(f"unknown segment kind: {kind}")
+
+        prev_kind = kind
 
     final_wav = os.path.join(out_dir, f"{name}.wav")
     concat_wavs(wav_parts, final_wav)

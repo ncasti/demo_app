@@ -82,6 +82,19 @@ isolate "en", use "n'en reste plus" or "vous en pensez"; don't isolate "va",
 use "ça me va". Full phrases carry enough context for the model to get right
 every time; single words don't, no matter what language you force.
 
+**Second rule, easy to miss on a first pass: a target-language word quoted
+inside an English-tagged chunk still gets read with English phonetics.**
+The chunk's `lang` governs the *whole* chunk, so `("en", "That word you
+heard — \"buongiorno\" — means...")` mispronounces "buongiorno" exactly the
+same way an isolated bare word does, even though it's sitting inside a much
+longer sentence. This bit the Italian script even after the bare-word rule
+above was already applied there — every English narration line needs a
+pass to find quoted target-language words/phrases and pull each one out
+into its own `("it", ...)` (or whatever the language is) chunk via
+`speech_multi`, the same way the French scripts do it. Do this pass on the
+whole script before generating, not reactively per complaint — it's the
+same fix every time.
+
 This constraint does **not** apply to the A1-style phoneme/syllable
 breakdown pattern (e.g. "buon-" / "-giorno") used for true-beginner scripts —
 that's a different, harder problem. The original reference script's A1
