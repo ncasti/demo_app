@@ -1,12 +1,19 @@
 """Manifest for scripts/a1-it-01-buongiorno-al-bar.md
 
-NOT YET RENDERED -- this is ready to run (`python3 generate.py
-audio-gen/manifests/a1_it_01_bar.py`) but hasn't been executed, so the cast
-below hasn't been ear-tested for Italian the way the French casts have.
+Adapted from the .md script's syllable-by-syllable breakdown ("buon-" /
+"-giorno") to avoid isolating bare fragments in TTS -- per audio-gen/README.md,
+that pattern works when voiced by a human actor but not reliably via AI TTS
+(confirmed by the same failure mode on French bare words like "en"/"va").
+Every Italian audio chunk here is either a complete real word ("giorno",
+"Buongiorno", "Ciao") or the full phrase -- the syllable teaching now happens
+entirely in English narration, illustrated by repeating the full word rather
+than by isolating an unpronounceable fragment.
+
+Uses eleven_v3 (the model confirmed by ear to handle French phonetics
+correctly, unlike turbo_v2_5) with an explicit language_code="it" per call.
 Clara/Max reuse the same voice IDs as the French scripts for brand
-consistency across languages; Matilda is ElevenLabs-verified for Italian,
-Chris isn't explicitly verified for it (still likely fine via the
-multilingual model, but worth an A/B listen before trusting it).
+consistency; Matilda is ElevenLabs-verified for Italian, Chris isn't
+explicitly verified for it -- worth an A/B listen before trusting it fully.
 """
 
 NAME = "a1_it_01_bar"
@@ -50,44 +57,29 @@ SEGMENTS = [
 
     ("silence", 2.0),
     ("speech", "Max", "That word you heard twice — \"buongiorno\" — is the single most useful word you'll say in Italy before noon.", "en"),
-    ("speech", "Clara", "Let's break it down. It's actually two pieces stuck together: \"buon-\" and \"-giorno.\"", "en"),
-    ("speech", "Max", "Buon- means \"good.\"", "en"),
-    ("speech", "Clara", "Buon-", "it"),
-    ("speech", "Max", "Buon-", "it"),
-    ("speech", "Clara", "Good. Now, that \"uo\" in the middle isn't two separate sounds like in English \"duo\" — in Italian it glides together into one smooth syllable.", "en"),
-    ("speech", "Clara", "buon-", "it"),
-    ("speech", "Max", "buon-", "it"),
-    ("speech", "Clara", "And the \"n\" at the end — just a light, clean \"n,\" no nasal trick like in French. Straightforward.", "en"),
-    ("speech", "Max", "buon-", "it"),
+    ("speech", "Clara", "Let's break it down. It's actually two pieces stuck together: \"buon,\" meaning good, and \"giorno,\" meaning day.", "en"),
+    ("speech", "Max", "That second piece — \"giorno\" — is a real word all on its own, so let's start there.", "en"),
+    ("speech", "Clara", "giorno", "it"),
+    ("speech", "Max", "Notice that \"gi\" at the start — in Italian, \"g\" before \"i\" or \"e\" sounds like the English \"j\" in \"jump.\" Not a hard \"g\" like in \"go.\"", "en"),
+    ("speech", "Clara", "giorno", "it"),
+    ("speech", "Clara", "Try it.", "en"),
+    ("speech", "Max", "giorno", "it"),
     ("silence", 3.5),
 
-    ("speech", "Max", "buon-", "it"),
+    ("speech", "Max", "giorno", "it"),
     ("sfx", "SPEAKER_SFX", "loud clear electronic beep, short attention tone, like a recording-start alert, bright and audible", 0.7),
     ("silence", 2.5),
     ("sfx", "CORRECT_SFX", "bright cheerful bell chime, unmistakably a correct-answer ding, loud and clear, upbeat", 0.7),
     ("silence", 1.8),
 
-    ("speech", "Clara", "Bravo! Now the second half — \"-giorno.\"", "en"),
-    ("speech", "Max", "-giorno. Notice that \"gi\" at the start — in Italian, \"g\" before \"i\" or \"e\" sounds like the English \"j\" in \"jump.\" Not a hard \"g\" like in \"go.\"", "en"),
-    ("speech", "Clara", "-giorno", "it"),
-    ("speech", "Clara", "Try it.", "en"),
-    ("speech", "Max", "-giorno", "it"),
-    ("speech", "Clara", "And \"-orno\" at the end — round, open vowels, nothing swallowed. Every vowel in Italian gets its full, clear sound.", "en"),
-    ("speech", "Clara", "-orno", "it"),
-    ("speech", "Max", "-orno", "it"),
-    ("speech", "Max", "giorno", "it"),
+    ("speech", "Clara", "Bravo! Now let's put \"buon\" in front of it.", "en"),
+    ("speech", "Max", "That \"uo\" in \"buon\" isn't two separate sounds like in English \"duo\" — in Italian it glides together into one smooth syllable. And the \"n\" at the end is just a light, clean \"n,\" no nasal trick like in French.", "en"),
+    ("speech", "Clara", "Buongiorno", "it"),
+    ("speech", "Max", "Buongiorno", "it"),
+    ("speech", "Clara", "One more time, together.", "en"),
+    ("speech", "Max", "Buongiorno !", "it"),
     ("silence", 3.5),
 
-    ("speech", "Max", "buon-", "it"),
-    ("sfx", "SPEAKER_SFX", "", 0.7),
-    ("silence", 2.5),
-    ("sfx", "CORRECT_SFX", "", 0.7),
-    ("silence", 1.8),
-    ("speech", "Max", "-giorno", "it"),
-    ("sfx", "SPEAKER_SFX", "", 0.7),
-    ("silence", 2.5),
-    ("sfx", "CORRECT_SFX", "", 0.7),
-    ("silence", 1.8),
     ("speech", "Max", "Buongiorno !", "it"),
     ("sfx", "SPEAKER_SFX", "", 0.7),
     ("silence", 2.5),
@@ -96,10 +88,10 @@ SEGMENTS = [
     ("speech", "Clara", "Ottimo !", "it"),
     ("silence", 3.0),
 
-    ("speech", "Max", "One more thing before we go — in Italian, the stress matters a lot. It's not BUON-giorno and it's not buon-GIOR-no dragged out...", "en"),
-    ("speech", "Clara", "It's buonGIORno — a clean, even push right on that middle syllable.", "en"),
-    ("speech", "Clara", "buonGIORno", "it"),
-    ("speech", "Max", "buonGIORno", "it"),
+    ("speech", "Max", "One more thing before we go — in Italian, the stress matters a lot. It's not BUON-giorno, and it's not buon-GIOR-no dragged out either — it's an even push right on that middle syllable: buon-GIOR-no.", "en"),
+    ("speech", "Clara", "Listen for it.", "en"),
+    ("speech", "Clara", "Buongiorno", "it"),
+    ("speech", "Max", "Buongiorno", "it"),
     ("speech", "Clara", "Let's hear it a few more times, from different voices around the bar.", "en"),
     ("silence", 0.6),
     ("speech", "Voice1", "Buongiorno !", "it"),

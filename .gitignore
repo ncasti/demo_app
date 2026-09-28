@@ -3,3 +3,5 @@ audio-gen/out/
 *.wav
 .env
 .elevenlabs_key
+__pycache__/
+*.pyc

@@ -12,7 +12,14 @@ production pipeline generalize across level and language.
 The original reference script (A1 French: bonjour/bonsoir/au revoir) uses phoneme-level
 drilling — single sounds, then syllables, then words, with proactive pronunciation coaching
 ("notice how these sounds blend"). That's the right call for true beginners with no base to
-draw on, so the Italian A1 script keeps it.
+draw on, so the Italian A1 script keeps that teaching approach. The *audio production* of it
+had to adapt, though: the reference script's fragments ("bon-" / "-jour") were voiced by real
+bilingual actors who could deliberately hit an isolated syllable on request. AI TTS can't do
+that reliably — confirmed the hard way on the French scripts (a bare "en" read with English
+phonetics even when the language was forced), then designed around it for Italian from the
+start: every Italian audio chunk is a complete real word ("giorno," "Buongiorno") and the
+syllable-by-syllable teaching happens in English narration around it, not as isolated
+fragments.
 
 At B1, learners already know the phonetics, so the French B1 scripts instead:
 - Play the dialogue once at **natural conversational speed** (no slow first pass).
@@ -28,11 +35,12 @@ At B1, learners already know the phonetics, so the French B1 scripts instead:
 ## Status
 
 - [x] Step 1 — sample scripts drafted (`scripts/`)
-- [x] Step 2 — audio generation pipeline built and working (`audio-gen/`) for the two French
-      scripts: bilingual hosts, native-language dialogue voices, explicit per-chunk language
-      locking (fixes cross-language mispronunciation), persistent scene ambience
-- [ ] Italian A1 script written but **not yet rendered to audio** — ready to run, unverified
-      by ear
+- [x] Step 2 — audio generation pipeline built and working (`audio-gen/`) for all three
+      scripts (2 French + 1 Italian): bilingual hosts, native-language dialogue voices,
+      explicit per-chunk language locking on `eleven_v3` (fixes cross-language
+      mispronunciation), persistent scene ambience
+- [x] Italian A1 episode rendered — first real test of the pipeline on a new language,
+      confirmed working end to end
 - [ ] Sound effects/ambience: basic version done (persistent scene ambience, cue chimes,
       intro/outro sting) — not yet mixed/ducked professionally
 - [ ] Later — exercises + porting into an interactive app
@@ -52,8 +60,8 @@ At B1, learners already know the phonetics, so the French B1 scripts instead:
 
 ## Next steps
 
-1. Listen to the Italian sample script's audio once rendered (`audio-gen/manifests/a1_it_01_bar.py`)
-   and confirm the shared Clara/Max host voices hold up in a third language.
+1. Confirm the shared Clara/Max host voices hold up in Italian by ear (Chris/Max isn't
+   explicitly ElevenLabs-verified for Italian, unlike Matilda/Clara).
 2. Decide whether ambience should duck under dialogue (lower automatically while a host/
    character is speaking) rather than sit at a constant background level.
 3. Design the actual speaking-exercise grading/interactivity layer (speech recognition +
