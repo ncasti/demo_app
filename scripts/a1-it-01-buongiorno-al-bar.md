@@ -231,49 +231,43 @@ Italian.
 **Clara:** How do you greet someone, before evening?
 <END AUDIO FILE>
 
-[PAUSE ~3.5 SECONDS]
-
-<START AUDIO FILE>
-**Max:** Buongiorno !
-<END AUDIO FILE>
-
 [SPEAKER SFX]
-[PAUSE ~2 SECONDS]
+[PAUSE ~3 SECONDS]
 [CORRECT SFX]
 
-[3 second silence]
+<START AUDIO FILE>
+**Max:** That's right — Buongiorno !
+<END AUDIO FILE>
+
+[2 second silence]
 
 <START AUDIO FILE>
 **Clara:** How do you order a coffee, politely?
 <END AUDIO FILE>
 
-[PAUSE ~3.5 SECONDS]
-
-<START AUDIO FILE>
-**Max:** Un caffè, per favore.
-<END AUDIO FILE>
-
 [SPEAKER SFX]
-[PAUSE ~2 SECONDS]
+[PAUSE ~3 SECONDS]
 [CORRECT SFX]
 
-[3 second silence]
+<START AUDIO FILE>
+**Max:** That's right — Un caffè, per favore.
+<END AUDIO FILE>
+
+[2 second silence]
 
 <START AUDIO FILE>
 **Clara:** And how do you say thank you?
 <END AUDIO FILE>
 
-[PAUSE ~3.5 SECONDS]
-
-<START AUDIO FILE>
-**Max:** Grazie !
-<END AUDIO FILE>
-
 [SPEAKER SFX]
-[PAUSE ~2 SECONDS]
+[PAUSE ~3 SECONDS]
 [CORRECT SFX]
 
-[3 second silence]
+<START AUDIO FILE>
+**Max:** That's right — Grazie !
+<END AUDIO FILE>
+
+[2 second silence]
 
 ## Your turn — join the conversation
 
@@ -286,7 +280,9 @@ Now put it all together — you're at the bar, and this time you're in the conve
 **Max:** Greet the barista.
 <END AUDIO FILE>
 
-[PAUSE ~4 SECONDS]
+[SPEAKER SFX]
+[PAUSE ~3.5 SECONDS]
+[CORRECT SFX]
 
 <START AUDIO FILE>
 **Clara:** Buongiorno !
@@ -304,7 +300,9 @@ Buongiorno !
 **Max:** Now order a coffee, politely.
 <END AUDIO FILE>
 
-[PAUSE ~4 SECONDS]
+[SPEAKER SFX]
+[PAUSE ~3.5 SECONDS]
+[CORRECT SFX]
 
 <START AUDIO FILE>
 **Clara:** Un caffè, per favore.
@@ -322,7 +320,9 @@ Ecco a lei.
 **Max:** What do you say?
 <END AUDIO FILE>
 
-[PAUSE ~3 SECONDS]
+[SPEAKER SFX]
+[PAUSE ~2.5 SECONDS]
+[CORRECT SFX]
 
 <START AUDIO FILE>
 **Clara:** Grazie !
@@ -404,3 +404,9 @@ Ciao !
   actually verified for Italian.
 - Fixed two `he`/`she` slips in the closing round-trip section — the Barista is voiced by a
   man (Alessandro), and the narration had briefly called him "she."
+- **Reordered the reverse-translate and round-trip sections**: SPEAKER SFX now comes right
+  after the prompt, before any pause — it's a cue to speak, not a cue that speaking is
+  already over. The earlier draft played the model answer before SPEAKER SFX ever fired,
+  handing the listener the answer before they'd had a chance to attempt it. Fixed order:
+  prompt → SPEAKER SFX → pause (attempt) → CORRECT SFX → answer (a host's "That's right —
+  ..." for reverse-translate, Clara's in-scene line for the round-trip).

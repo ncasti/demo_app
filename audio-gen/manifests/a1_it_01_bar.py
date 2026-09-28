@@ -57,6 +57,15 @@ Two later revisions:
   per the project's own isolation rule -- these were incidental narration
   insertions, not core teaching content, so doubling them costs nothing
   pedagogically while giving the model more signal.
+- Reordered the reverse-translate and round-trip sections: SPEAKER_SFX now
+  comes right after the prompt (before any silence), so it functions as a
+  cue to speak, not a cue that speaking is already over. The old order
+  played the model answer before SPEAKER_SFX ever fired, which gave the
+  answer away before the listener had a chance to attempt it. New order is
+  prompt -> SPEAKER_SFX -> silence (attempt) -> CORRECT_SFX -> answer
+  (a host's "That's right -- ..." for reverse-translate, Clara's in-scene
+  line for the round-trip, since the barista's response depends on it
+  having been said).
 """
 
 NAME = "a1_it_01_bar"
@@ -205,48 +214,51 @@ SEGMENTS = [
     ("speech", "Max", "Now let's test what you remember — but backwards. I'll say it in English, you say it in Italian.", "en"),
 
     ("speech", "Clara", "How do you greet someone, before evening?", "en"),
-    ("silence", 3.5),
-    ("speech", "Max", "Buongiorno !", "it"),
     ("sfx", "SPEAKER_SFX", "", 0.7),
-    ("silence", 2.5),
+    ("silence", 3.0),
     ("sfx", "CORRECT_SFX", "", 0.7),
+    ("speech_multi", "Max", [("en", "That's right —"), ("it", "Buongiorno !")]),
     ("silence", 1.8),
 
     ("speech", "Clara", "How do you order a coffee, politely?", "en"),
-    ("silence", 3.5),
-    ("speech", "Max", "Un caffè, per favore.", "it"),
     ("sfx", "SPEAKER_SFX", "", 0.7),
-    ("silence", 2.5),
+    ("silence", 3.0),
     ("sfx", "CORRECT_SFX", "", 0.7),
+    ("speech_multi", "Max", [("en", "That's right —"), ("it", "Un caffè, per favore.")]),
     ("silence", 1.8),
 
     ("speech", "Clara", "And how do you say thank you?", "en"),
-    ("silence", 3.5),
-    ("speech", "Max", "Grazie !", "it"),
     ("sfx", "SPEAKER_SFX", "", 0.7),
-    ("silence", 2.5),
+    ("silence", 3.0),
     ("sfx", "CORRECT_SFX", "", 0.7),
+    ("speech_multi", "Max", [("en", "That's right —"), ("it", "Grazie !")]),
     ("silence", 2.0),
 
     ("speech", "Clara", "Now put it all together — you're at the bar, and this time you're in the conversation.", "en"),
     ("silence", 1.0),
 
     ("speech", "Max", "Greet the barista.", "en"),
-    ("silence", 4.0),
+    ("sfx", "SPEAKER_SFX", "", 0.7),
+    ("silence", 3.5),
+    ("sfx", "CORRECT_SFX", "", 0.7),
     ("speech", "Clara", "Buongiorno !", "it"),
     ("speech", "Max", "And the barista greets you back:", "en"),
     ("speech", "Barista", "Buongiorno !", "it"),
     ("silence", 1.2),
 
     ("speech", "Max", "Now order a coffee, politely.", "en"),
-    ("silence", 4.0),
+    ("sfx", "SPEAKER_SFX", "", 0.7),
+    ("silence", 3.5),
+    ("sfx", "CORRECT_SFX", "", 0.7),
     ("speech", "Clara", "Un caffè, per favore.", "it"),
     ("speech", "Max", "He gets it ready and hands it over:", "en"),
     ("speech", "Barista", "Ecco a lei.", "it"),
     ("silence", 1.2),
 
     ("speech", "Max", "What do you say?", "en"),
-    ("silence", 3.0),
+    ("sfx", "SPEAKER_SFX", "", 0.7),
+    ("silence", 2.5),
+    ("sfx", "CORRECT_SFX", "", 0.7),
     ("speech", "Clara", "Grazie !", "it"),
     ("speech", "Max", "And he answers:", "en"),
     ("speech", "Barista", "Prego !", "it"),
