@@ -127,8 +127,20 @@ fragment on its own).
 2. Pick voices: ElevenLabs' `/v1/shared-voices?language=<code>` search
    surfaces native voices for dialogue characters. Reuse the existing
    Clara/Max voice IDs for hosts where possible, for brand consistency
-   across lessons -- check `verified_languages` on `/v2/voices` first,
-   and spot-check by ear if a language isn't explicitly verified.
+   across lessons -- but check `verified_languages` on `/v2/voices` for the
+   target language code **before** committing to that voice, don't just spot
+   check after the fact. This bit the Italian episode: Chris (used for Max
+   in French) has no `it` entry in `verified_languages` at all, and his
+   Italian lines -- especially bare words like "Prego" -- intermittently
+   came out with English phonetics, confirmed by ear. Missing
+   `verified_languages` for a language isn't a soft risk to keep an eye on,
+   it's a real predictor of wrong-language pronunciation. If a host's
+   regular voice isn't verified for the new language, don't ship it and
+   hope -- swap in a voice that is (see `a1_it_01_bar.py`'s Max, swapped to
+   Vittorio for Italian). The character name is the consistent brand
+   element across languages; the underlying voice doesn't have to be, the
+   same way a recurring character gets a different voice actor per
+   language in dubbing.
 3. Write a manifest in `manifests/` mirroring an existing one.
 4. Run it. Cached SFX/lines mean a failed run resumes cheaply -- rerunning
    only regenerates what's missing from `out/<name>/`.

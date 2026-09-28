@@ -32,6 +32,10 @@ Ciao, Clara! Today: a scene every visitor to Italy runs into on day one — stan
 counter of a bar, ordering your coffee.
 
 **Clara**
+Quick note — an Italian "bar" isn't an English one. No alcohol required; it's just their
+word for a café.
+
+**Clara**
 Let's listen in.
 
 **Audio**
@@ -306,7 +310,7 @@ Buongiorno !
 **Clara:** Un caffè, per favore.
 
 **Max**
-She gets it ready and hands it over:
+He gets it ready and hands it over:
 
 **Barista**
 Ecco a lei.
@@ -324,7 +328,7 @@ Ecco a lei.
 **Clara:** Grazie !
 
 **Max**
-And she answers:
+And he answers:
 
 **Barista**
 Prego !
@@ -383,3 +387,20 @@ Ciao !
   the listener produces each phrase in turn and then hears the Barista's actual in-character
   response, so by the end they've played both sides of the complete transaction, not just
   recalled isolated phrases.
+- **"Bar" false-friend note**: added a one-line aside right when the scene is introduced —
+  Italian "bar" means café, not an English pub. Worth calling out explicitly rather than
+  leaving it implicit, since it's exactly the kind of real-world vocabulary gap a learner
+  would otherwise hit unprepared.
+- **SPEAKER/CORRECT SFX**: both user-picked from uploaded reference files, not AI-generated
+  (see `FIXED_SFX_ASSETS` in `audio-gen/generate.py`). An `INCORRECT_SFX` asset is also
+  registered from the same upload batch but isn't used by this script yet — there's no live
+  grading branch to trigger it on; it's there for when app-side/ASR grading can call it.
+- **Max's voice**: swapped from Chris to Vittorio for this script. Chris has no Italian
+  `verified_languages` entry at all, which explains the intermittent English-phonetics
+  readings on his Italian lines (most noticeably on bare words like "Prego") that listening
+  feedback caught. "Max" stays the consistent on-air character; the voice behind him is now
+  picked per language for verified competency, the same way a dubbed character gets a
+  different voice actor per language. Clara stays Matilda in both French and Italian — she's
+  actually verified for Italian.
+- Fixed two `he`/`she` slips in the closing round-trip section — the Barista is voiced by a
+  man (Alessandro), and the narration had briefly called him "she."

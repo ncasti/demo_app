@@ -32,14 +32,39 @@ Two later revisions:
   challenges) followed by a full round-trip "join the conversation" section
   where the listener produces each phrase and then hears the Barista's actual
   in-character response, covering the whole greet/order/thank transaction.
+- Added a one-line "bar" false-friend note right when the scene is
+  introduced -- Italian "bar" means cafe, not an English pub.
+- SPEAKER_SFX and CORRECT_SFX are both user-picked fixed assets now (see
+  FIXED_SFX_ASSETS in generate.py), not AI-generated. An INCORRECT_SFX asset
+  is registered from the same upload but isn't referenced by SEGMENTS yet --
+  this script has no live grading branch to trigger it on.
+- Max's voice was swapped from Chris to Vittorio (nH7uLS5UdEnvKEOAXtlQ).
+  Chris has no Italian verified_languages entry at all (checked via
+  /v2/voices -- only en/fr/ar/pt/sv/hi), which is almost certainly why his
+  Italian lines, especially bare words like "Prego", intermittently came out
+  with English phonetics -- confirmed by ear. Vittorio is verified in
+  exactly en+it. This breaks strict voice-ID consistency with the French
+  Max (Chris still voices Max there), but "Max" the character stays
+  consistent; the underlying voice per language is now picked for verified
+  competency in that language first, like dubbing a recurring character
+  with a different voice actor per language. Clara stays Matilda in both --
+  she's actually it-verified, unlike Chris.
+- Fixed two he/she mismatches: the narration called the Barista "she" in the
+  closing round-trip section even though Barista is voiced by a male native
+  speaker (Alessandro).
+- Lengthened two bare single-word Italian chunks inside speech_multi
+  narration ("Ottimo !" -> "Ottimo, ottimo !", "Prego" -> "Prego, prego !")
+  per the project's own isolation rule -- these were incidental narration
+  insertions, not core teaching content, so doubling them costs nothing
+  pedagogically while giving the model more signal.
 """
 
 NAME = "a1_it_01_bar"
 
 CAST = {
     "Clara":    "XrExE9yKIg1WjnnlVkGX",  # Matilda - warm, professional host (F, IT-verified, multilingual)
-    "Max":      "iP95p4xoKVk53GoZ742B",  # Chris - charming, down-to-earth host (M, multilingual, IT not verified -- spot check)
-    "Barista":  "JfznbVXrGXYh0gZo9Lcp",  # Antonio - natural, balanced, calm (M, native Italian)
+    "Max":      "nH7uLS5UdEnvKEOAXtlQ",  # Vittorio - "Believable, Friendly and Rich" (M, verified in exactly en+it)
+    "Barista":  "JfznbVXrGXYh0gZo9Lcp",  # Alessandro - natural, balanced, calm (M, native Italian)
     "Cliente":  "litDcG1avVppv4R90BLu",  # Carla - natural, reflective, narrative (F, native Italian)
     "Voice1":   "CEZqCqfrPU34IkHzkV30",  # Stefano Ca - energetic & friendly (M, native Italian, "older man" line)
     "Voice2":   "Z9LM7NBnQ8aOZKIXkd5S",  # Carlotta - fresh, fun (F, native Italian, "young woman" line)
@@ -90,6 +115,7 @@ SEGMENTS = [
         ("it", "Ciao, Clara!"),
         ("en", "Today: a scene every visitor to Italy runs into on day one — standing at the counter of a bar, ordering your coffee."),
     ]),
+    ("speech", "Clara", "Quick note — an Italian \"bar\" isn't an English one. No alcohol required; it's just their word for a café.", "en"),
     ("speech", "Clara", "Let's listen in.", "en"),
     ("silence", 0.8),
 
@@ -141,7 +167,7 @@ SEGMENTS = [
     ("silence", 1.8),
 
     ("speech_multi", "Max", [
-        ("it", "Ottimo !"),
+        ("it", "Ottimo, ottimo !"),
         ("en", "And whatever you order, just add"),
         ("it", "per favore"),
         ("en", "at the end — it works everywhere."),
@@ -155,7 +181,7 @@ SEGMENTS = [
     ]),
     ("speech_multi", "Max", [
         ("en", "And he answers"),
-        ("it", "Prego"),
+        ("it", "Prego, prego !"),
         ("en", "— you're welcome. That pair goes together everywhere in Italy, not just at the bar."),
     ]),
     ("speech", "Clara", "Grazie.", "it"),
@@ -215,14 +241,14 @@ SEGMENTS = [
     ("speech", "Max", "Now order a coffee, politely.", "en"),
     ("silence", 4.0),
     ("speech", "Clara", "Un caffè, per favore.", "it"),
-    ("speech", "Max", "She gets it ready and hands it over:", "en"),
+    ("speech", "Max", "He gets it ready and hands it over:", "en"),
     ("speech", "Barista", "Ecco a lei.", "it"),
     ("silence", 1.2),
 
     ("speech", "Max", "What do you say?", "en"),
     ("silence", 3.0),
     ("speech", "Clara", "Grazie !", "it"),
-    ("speech", "Max", "And she answers:", "en"),
+    ("speech", "Max", "And he answers:", "en"),
     ("speech", "Barista", "Prego !", "it"),
     ("silence", 2.0),
 

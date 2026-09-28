@@ -28,6 +28,12 @@ ASSETS_DIR = os.path.join(os.path.dirname(os.path.abspath(__file__)), "assets")
 # user at pick time, their call to proceed.
 FIXED_SFX_ASSETS = {
     "SPEAKER_SFX": os.path.join(ASSETS_DIR, "sfx", "speaker_cue.mp3"),
+    "CORRECT_SFX": os.path.join(ASSETS_DIR, "sfx", "correct_cue.mp3"),
+    # Not referenced by any manifest yet -- today's scripts are linear
+    # playback with no live grading, so there's no "wrong answer" branch to
+    # cue. Registered now for when app-side/ASR grading can actually trigger
+    # it, so it doesn't need to be re-picked later.
+    "INCORRECT_SFX": os.path.join(ASSETS_DIR, "sfx", "incorrect_cue.mp3"),
 }
 
 # eleven_v3 with an explicit language_code actually produces correct French
