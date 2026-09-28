@@ -101,14 +101,20 @@ Repeat after Max.
 **Clara**
 Bravo ! Let's hear a few more people say it around the bar.
 
+**Audio**
+[bar ambience swells in — the listener is now hearing real voices, not the hosts]
+
 **Voice 1 [older man]**
 Buongiorno !
 
 **Voice 2 [young woman]**
 Buongiorno, buongiorno !
 
-**Voice 3 [barista, warmly]**
+**Barista [warmly]**
 Buongiorno, signora !
+
+**Audio**
+[bar ambience continues under all three lines, then fades back down]
 <END AUDIO FILE>
 
 [3 second silence]
@@ -209,22 +215,129 @@ Perfetto !
 
 [3 second silence]
 
+## Reverse-translate challenge — English to Italian
+
+<START AUDIO FILE>
+**Max**
+Now let's test what you remember — but backwards. I'll say it in English, you say it in
+Italian.
+<END AUDIO FILE>
+
+<START AUDIO FILE>
+**Clara:** How do you greet someone, before evening?
+<END AUDIO FILE>
+
+[PAUSE ~3.5 SECONDS]
+
+<START AUDIO FILE>
+**Max:** Buongiorno !
+<END AUDIO FILE>
+
+[SPEAKER SFX]
+[PAUSE ~2 SECONDS]
+[CORRECT SFX]
+
+[3 second silence]
+
+<START AUDIO FILE>
+**Clara:** How do you order a coffee, politely?
+<END AUDIO FILE>
+
+[PAUSE ~3.5 SECONDS]
+
+<START AUDIO FILE>
+**Max:** Un caffè, per favore.
+<END AUDIO FILE>
+
+[SPEAKER SFX]
+[PAUSE ~2 SECONDS]
+[CORRECT SFX]
+
+[3 second silence]
+
+<START AUDIO FILE>
+**Clara:** And how do you say thank you?
+<END AUDIO FILE>
+
+[PAUSE ~3.5 SECONDS]
+
+<START AUDIO FILE>
+**Max:** Grazie !
+<END AUDIO FILE>
+
+[SPEAKER SFX]
+[PAUSE ~2 SECONDS]
+[CORRECT SFX]
+
+[3 second silence]
+
 ## Your turn — join the conversation
 
 <START AUDIO FILE>
-**Max [to listeners]**
-Now put it together. You walk up to the bar. Greet the barista, and order a coffee, politely.
-
-[PAUSE ~5 SECONDS]
-
 **Clara**
-Here's one way to say it:
-
-**Max**
-Buongiorno ! Un caffè, per favore.
+Now put it all together — you're at the bar, and this time you're in the conversation.
 <END AUDIO FILE>
 
-[3 second silence]
+<START AUDIO FILE>
+**Max:** Greet the barista.
+<END AUDIO FILE>
+
+[PAUSE ~4 SECONDS]
+
+<START AUDIO FILE>
+**Clara:** Buongiorno !
+
+**Max**
+And the barista greets you back:
+
+**Barista**
+Buongiorno !
+<END AUDIO FILE>
+
+[1 second silence]
+
+<START AUDIO FILE>
+**Max:** Now order a coffee, politely.
+<END AUDIO FILE>
+
+[PAUSE ~4 SECONDS]
+
+<START AUDIO FILE>
+**Clara:** Un caffè, per favore.
+
+**Max**
+She gets it ready and hands it over:
+
+**Barista**
+Ecco a lei.
+<END AUDIO FILE>
+
+[1 second silence]
+
+<START AUDIO FILE>
+**Max:** What do you say?
+<END AUDIO FILE>
+
+[PAUSE ~3 SECONDS]
+
+<START AUDIO FILE>
+**Clara:** Grazie !
+
+**Max**
+And she answers:
+
+**Barista**
+Prego !
+<END AUDIO FILE>
+
+[2 second silence]
+
+<START AUDIO FILE>
+**Clara**
+That's it — you just had your first real conversation in Italian.
+<END AUDIO FILE>
+
+[2 second silence]
 
 <START AUDIO FILE>
 **Clara**
@@ -260,3 +373,13 @@ Ciao !
   more repetition per phrase than a B1 script needs.
 - **Scene**: a standing coffee bar, not a walk-and-talk street scene, to keep the sample
   distinct from the French scripts' scenarios rather than just re-skinning the same setup.
+- **"Hear it around town" montage**: the Voice 1 / Voice 2 / Barista lines get the same
+  persistent-ambience treatment as the opening bar scene, not just a lead-in transition
+  sound — the bar chatter now stays underneath all three lines and fades out afterward, so
+  the listener never drops into silence mid-montage.
+- **Ending, redesigned in two parts**: a "reverse-translate challenge" (English prompt →
+  Italian recall, for all three phrases, reusing the same speaker/correct SFX cues as the
+  earlier repeat-after-me challenges) followed by a full "join the conversation" round-trip —
+  the listener produces each phrase in turn and then hears the Barista's actual in-character
+  response, so by the end they've played both sides of the complete transaction, not just
+  recalled isolated phrases.

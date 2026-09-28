@@ -20,6 +20,18 @@ confirmed by ear to handle target-language phonetics correctly, unlike
 turbo_v2_5). Clara/Max reuse the same voice IDs as the French scripts for
 brand consistency; Matilda is ElevenLabs-verified for Italian, Chris isn't
 explicitly verified for it -- worth an A/B listen before trusting it fully.
+
+Two later revisions:
+- The "hear it around town" Voice1/Voice2/Barista montage was a standalone
+  sting + bare lines with no ambience under them. Replaced with VOICES_SCENE,
+  a proper `scene` block, so the bar ambience persists under all three lines
+  instead of dropping to silence.
+- The ending was redesigned into two parts: a reverse-translate challenge
+  section (English prompt -> Italian recall, all three phrases, same
+  SPEAKER_SFX/CORRECT_SFX cue pattern as the earlier repeat-after-me
+  challenges) followed by a full round-trip "join the conversation" section
+  where the listener produces each phrase and then hears the Barista's actual
+  in-character response, covering the whole greet/order/thank transaction.
 """
 
 NAME = "a1_it_01_bar"
@@ -31,6 +43,24 @@ CAST = {
     "Cliente":  "litDcG1avVppv4R90BLu",  # Carla - natural, reflective, narrative (F, native Italian)
     "Voice1":   "CEZqCqfrPU34IkHzkV30",  # Stefano Ca - energetic & friendly (M, native Italian, "older man" line)
     "Voice2":   "Z9LM7NBnQ8aOZKIXkd5S",  # Carlotta - fresh, fun (F, native Italian, "young woman" line)
+}
+
+VOICES_SCENE = {
+    "key": "BAR_VOICES",
+    "lang": "it",
+    "ambience_prompt": "continuous loopable ambience inside a small Italian coffee bar, espresso machine hiss, cups clinking on saucers, quiet morning chatter, no music, no words",
+    "start_prompt": "brief soft transition sound, a quick swell of ambient crowd murmur fading in, like tuning into a real conversation, no music, no words",
+    "end_prompt": "quick fade of crowd murmur, brief soft transition back to a quiet studio, no music, no words",
+    "start_dur": 1.2,
+    "end_dur": 1.0,
+    "lead": 0.6,
+    "tail": 0.8,
+    "turn_gap": 0.35,
+    "lines": [
+        ("Voice1", "Buongiorno !"),
+        ("Voice2", "Buongiorno, buongiorno !"),
+        ("Barista", "Buongiorno, signora !"),
+    ],
 }
 
 BAR_SCENE = {
@@ -87,10 +117,7 @@ SEGMENTS = [
     ("silence", 1.8),
 
     ("speech", "Clara", "Bravo! Let's hear a few more people say it around the bar.", "en"),
-    ("sfx", "LISTEN_IN_STING", "brief soft transition sound, a quick swell of ambient crowd murmur fading in, like tuning into a real conversation, no music, no words", 1.0),
-    ("speech", "Voice1", "Buongiorno !", "it"),
-    ("speech", "Voice2", "Buongiorno, buongiorno !", "it"),
-    ("speech", "Barista", "Buongiorno, signora !", "it"),
+    ("scene", VOICES_SCENE),
     ("silence", 2.0),
 
     ("speech_multi", "Max", [
@@ -149,11 +176,58 @@ SEGMENTS = [
     ("speech", "Clara", "Perfetto !", "it"),
     ("silence", 3.0),
 
-    ("speech", "Max", "Now put it together. You walk up to the bar. Greet the barista, and order a coffee, politely.", "en"),
-    ("silence", 5.0),
-    ("speech", "Clara", "Here's one way to say it:", "en"),
-    ("speech", "Max", "Buongiorno ! Un caffè, per favore.", "it"),
+    ("speech", "Max", "Now let's test what you remember — but backwards. I'll say it in English, you say it in Italian.", "en"),
+
+    ("speech", "Clara", "How do you greet someone, before evening?", "en"),
+    ("silence", 3.5),
+    ("speech", "Max", "Buongiorno !", "it"),
+    ("sfx", "SPEAKER_SFX", "", 0.7),
+    ("silence", 2.5),
+    ("sfx", "CORRECT_SFX", "", 0.7),
+    ("silence", 1.8),
+
+    ("speech", "Clara", "How do you order a coffee, politely?", "en"),
+    ("silence", 3.5),
+    ("speech", "Max", "Un caffè, per favore.", "it"),
+    ("sfx", "SPEAKER_SFX", "", 0.7),
+    ("silence", 2.5),
+    ("sfx", "CORRECT_SFX", "", 0.7),
+    ("silence", 1.8),
+
+    ("speech", "Clara", "And how do you say thank you?", "en"),
+    ("silence", 3.5),
+    ("speech", "Max", "Grazie !", "it"),
+    ("sfx", "SPEAKER_SFX", "", 0.7),
+    ("silence", 2.5),
+    ("sfx", "CORRECT_SFX", "", 0.7),
+    ("silence", 2.0),
+
+    ("speech", "Clara", "Now put it all together — you're at the bar, and this time you're in the conversation.", "en"),
+    ("silence", 1.0),
+
+    ("speech", "Max", "Greet the barista.", "en"),
+    ("silence", 4.0),
+    ("speech", "Clara", "Buongiorno !", "it"),
+    ("speech", "Max", "And the barista greets you back:", "en"),
+    ("speech", "Barista", "Buongiorno !", "it"),
+    ("silence", 1.2),
+
+    ("speech", "Max", "Now order a coffee, politely.", "en"),
+    ("silence", 4.0),
+    ("speech", "Clara", "Un caffè, per favore.", "it"),
+    ("speech", "Max", "She gets it ready and hands it over:", "en"),
+    ("speech", "Barista", "Ecco a lei.", "it"),
+    ("silence", 1.2),
+
+    ("speech", "Max", "What do you say?", "en"),
     ("silence", 3.0),
+    ("speech", "Clara", "Grazie !", "it"),
+    ("speech", "Max", "And she answers:", "en"),
+    ("speech", "Barista", "Prego !", "it"),
+    ("silence", 2.0),
+
+    ("speech", "Clara", "That's it — you just had your first real conversation in Italian.", "en"),
+    ("silence", 2.5),
 
     ("speech_multi", "Clara", [("en", "So today:"), ("it", "Buongiorno"), ("en", "to greet...")]),
     ("speech_multi", "Max", [("it", "Un caffè, per favore"), ("en", "to order, politely...")]),
