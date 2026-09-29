@@ -4,7 +4,7 @@ Short conversational-language audio lessons, inspired by the Duolingo-style audi
 format: bilingual hosts introduce a real-life dialogue, break down key phrases, have the
 listener repeat them, then have the listener actually participate in the conversation.
 
-Started as B1 French; now also includes a 20-episode A1 Italian arc (new-scenario episodes
+Started as B1 French; now also includes a 25-episode A1 Italian arc (new-scenario episodes
 plus a spaced-repetition practice episode after every 2-3 new ones) to test that the format
 and production pipeline generalize across level, language, and episode count.
 
@@ -41,8 +41,8 @@ The policy that replaced it, now applied at **every** level:
 ## Status
 
 - [x] Step 1 — sample scripts drafted (`scripts/`)
-- [x] Step 2 — audio generation pipeline built and working (`audio-gen/`) for all 22 scripts
-      (2 French + 20 Italian): bilingual hosts, native-language dialogue voices, explicit
+- [x] Step 2 — audio generation pipeline built and working (`audio-gen/`) for all 27 scripts
+      (2 French + 25 Italian): bilingual hosts, native-language dialogue voices, explicit
       per-chunk language locking on `eleven_v3` (fixes cross-language mispronunciation),
       persistent scene ambience
 - [x] Italian A1 episode rendered — first real test of the pipeline on a new language,
@@ -57,8 +57,11 @@ The policy that replaced it, now applied at **every** level:
       stable across 5 episodes, rather than hand-copying them 15 more times — the shared
       module is also where the episode-1/2 SPEAKER_SFX-ordering bug got fixed once instead of
       per episode. Character voices reused across scenarios (a small recurring native cast)
-      rather than researching new ones per episode. Full run used ~51k of a 121k/month
-      character quota, so quota is not the constraint on scaling further.
+      rather than researching new ones per episode.
+- [x] Scaling test, round 3 — 5 more Italian episodes (21-25: clarification phrases, family,
+      a practice episode, age/birthdays, taxis), same process as round 2. Total run across all
+      three rounds used ~56k of a 121k/month character quota, so quota is not the constraint
+      on scaling further.
 - [ ] Sound effects/ambience: basic version done (persistent scene ambience, cue chimes,
       intro/outro sting) — not yet mixed/ducked professionally
 - [ ] Later — exercises + porting into an interactive app
@@ -81,6 +84,8 @@ The policy that replaced it, now applied at **every** level:
   episodes (time, restaurant, weather, asking for help, phone calls, train tickets, clothes
   shopping, likes/dislikes, hotel check-in, small talk, and five practice episodes spaced
   through the run) — see each script's Production notes for scenario-specific choices.
+- `scripts/a1-it-21-non-capisco.md` through `a1-it-25-prendo-un-taxi.md` — 5 more A1 Italian
+  episodes (clarification phrases, family, a practice episode, age/birthdays, taxis).
 - `audio-gen/` — the generation pipeline (ElevenLabs TTS + sound-generation), one manifest per
   script, and `lesson_segments.py` (shared speaking-challenge / reverse-translate /
   round-trip block builders, factored out once the pattern proved stable). See
