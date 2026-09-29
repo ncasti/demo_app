@@ -47,7 +47,7 @@ PIAZZA_SCENE = {
 }
 
 SEGMENTS = [
-    ("sfx", "INTRO_STING", "podcast intro jingle: bright acoustic guitar and light mandolin melody, warm Italian morning cafe feel, cheerful and inviting, no vocals", 3.5),
+    ("sfx", "INTRO_STING", "podcast intro jingle: a single short bright acoustic guitar and light mandolin phrase, played once only, does not loop or repeat, warm Italian morning cafe feel, cheerful and inviting, no vocals", 3.5),
     ("speech", "Max", "Ciao, Clara!", "it"),
     ("speech_multi", "Clara", [
         ("it", "Ciao, Max!"),
@@ -66,7 +66,6 @@ SEGMENTS = [
         ("en", "followed by your name. It literally means \"I call myself,\" but it's just how you say \"my name is.\""),
     ]),
     ("speech", "Clara", "Repeat after Max.", "en"),
-    ("silence", 3.0),
 
     ("speech", "Max", "Mi chiamo Max.", "it"),
     ("sfx", "SPEAKER_SFX", "", 0.7),
@@ -86,7 +85,6 @@ SEGMENTS = [
     ]),
     ("speech", "Clara", "Piacere.", "it"),
     ("speech", "Max", "Your turn. Repeat after Clara.", "en"),
-    ("silence", 3.0),
 
     ("speech", "Clara", "Piacere !", "it"),
     ("sfx", "SPEAKER_SFX", "", 0.7),
@@ -106,7 +104,6 @@ SEGMENTS = [
     ]),
     ("speech", "Max", "Io sono Max.", "it"),
     ("speech", "Clara", "Repeat after Max.", "en"),
-    ("silence", 3.0),
 
     ("speech", "Max", "Io sono Max.", "it"),
     ("sfx", "SPEAKER_SFX", "", 0.7),
@@ -172,5 +169,5 @@ SEGMENTS = [
     ("speech", "Max", "Next time: shopping at the market, and asking how much something costs.", "en"),
     ("speech", "Clara", "Ciao !", "it"),
     ("speech", "Max", "Ciao !", "it"),
-    ("sfx", "OUTRO_STING", "podcast outro jingle: same bright acoustic guitar and mandolin melody as the intro, but winding down gently, warm Italian morning cafe feel, friendly close, no vocals", 3.5),
+    ("sfx", "OUTRO_STING", "podcast outro jingle: a single short bright acoustic guitar and mandolin phrase like the intro, played once only, does not loop or repeat, winding down gently, warm Italian morning cafe feel, friendly close, no vocals", 3.5),
 ]

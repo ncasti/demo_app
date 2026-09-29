@@ -35,7 +35,7 @@ BAKERY_SCENE = {
 }
 
 SEGMENTS = [
-    ("sfx", "INTRO_STING", "podcast intro jingle: bright acoustic guitar and light accordion melody, warm French cafe feel, cheerful and inviting, no vocals", 3.5),
+    ("sfx", "INTRO_STING", "podcast intro jingle: a single short bright acoustic guitar and light accordion phrase, played once only, does not loop or repeat, warm French cafe feel, cheerful and inviting, no vocals", 3.5),
     ("speech", "Clara", "Bonjour, Max !", "fr"),
     ("speech", "Max", "Bonjour, Clara ! Alors, qu'est-ce qu'on fait aujourd'hui ?", "fr"),
     ("speech", "Clara", "Today we're tackling something every traveler runs into eventually: you walk into a bakery, you know exactly what you want...", "en"),
@@ -61,7 +61,6 @@ SEGMENTS = [
     ("speech", "Clara", "Il n'en reste plus.", "fr"),
     ("silence", 0.6),
     ("speech", "Clara", "Your turn. Repeat after Max.", "en"),
-    ("silence", 3.5),
     ("speech", "Max", "il n'en reste plus", "fr"),
     ("sfx", "SPEAKER_SFX", "loud clear electronic beep, short attention tone, like a recording-start alert, bright and audible", 0.7),
     ("silence", 2.5),
@@ -137,5 +136,5 @@ SEGMENTS = [
     ("speech_multi", "Clara", [("en", "Ooh,"), ("fr", "à emporter."), ("en", "Can't wait.")]),
     ("speech", "Max", "Au revoir !", "fr"),
     ("speech", "Clara", "Au revoir !", "fr"),
-    ("sfx", "OUTRO_STING", "podcast outro jingle: same bright acoustic guitar and accordion melody as the intro, but winding down gently, warm French cafe feel, friendly close, no vocals", 3.5),
+    ("sfx", "OUTRO_STING", "podcast outro jingle: a single short bright acoustic guitar and accordion phrase like the intro, played once only, does not loop or repeat, winding down gently, warm French cafe feel, friendly close, no vocals", 3.5),
 ]

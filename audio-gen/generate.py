@@ -141,14 +141,29 @@ def make_silence(seconds, out_path):
 def to_wav(in_path, out_path, gain_db=None, trim_silence=False):
     af_parts = []
     if trim_silence:
-        # Strip whatever leading/trailing silence the TTS call itself baked in,
-        # so pacing is controlled entirely by our own explicit gaps, not by
-        # unpredictable padding that stacks on top of them.
+        # Strip leading dead air the TTS call baked in, so pacing into a line
+        # is controlled by our own explicit gaps, not unpredictable padding.
+        #
+        # This used to ALSO trim trailing silence, via the same filter run a
+        # second time on the reversed signal. Investigated a "last sound cut
+        # off" report by measuring rather than guessing: at matched
+        # pixels-per-second, spectrograms of raw vs. trailing-trimmed short
+        # clips showed real energy running right up to the edge in BOTH --
+        # meaning eleven_v3 often doesn't render a fade-out tail for a short
+        # or isolated word, it just stops. With no safety margin to trim into,
+        # any trailing trim risks shaving into the last audible sound, and a
+        # short/bare-word clip (exactly the "one-off word" case reported) has
+        # the least margin of all. A longer line with a real decay tail
+        # (checked separately) wasn't meaningfully affected by trailing trim
+        # either way, since duration=0 only ever removed ~15-30ms. So trailing
+        # trim was doing little for pacing while carrying real cutoff risk --
+        # removed rather than tuned. Pacing after a line is still controlled
+        # by GAP_AFTER_TARGET/GAP_BEFORE_TARGET and MIN_TURN_GAP as before;
+        # worst case a line now carries a bit of untrimmed raw tail (observed
+        # up to ~600ms on one long-decay sample) rather than any risk of a
+        # clipped ending.
         af_parts.append(
-            "silenceremove=start_periods=1:start_duration=0:start_threshold=-45dB:start_silence=0.05,"
-            "areverse,"
-            "silenceremove=start_periods=1:start_duration=0:start_threshold=-45dB:start_silence=0.05,"
-            "areverse"
+            "silenceremove=start_periods=1:start_duration=0:start_threshold=-45dB:start_silence=0.05"
         )
     if gain_db:
         af_parts.append(f"volume={gain_db}dB")

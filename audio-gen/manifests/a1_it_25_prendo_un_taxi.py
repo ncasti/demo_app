@@ -40,7 +40,7 @@ TAXI_SCENE = {
 }
 
 SEGMENTS = [
-    ("sfx", "INTRO_STING", "podcast intro jingle: bright acoustic guitar and light mandolin melody, warm Italian morning cafe feel, cheerful and inviting, no vocals", 3.5),
+    ("sfx", "INTRO_STING", "podcast intro jingle: a single short bright acoustic guitar and light mandolin phrase, played once only, does not loop or repeat, warm Italian morning cafe feel, cheerful and inviting, no vocals", 3.5),
     ("speech", "Max", "Ciao, Clara!", "it"),
     ("speech_multi", "Clara", [
         ("it", "Ciao, Max!"),
@@ -59,7 +59,6 @@ SEGMENTS = [
         ("en", "\"Can you take me to...?\" Swap in any destination."),
     ]),
     ("speech", "Clara", "Repeat after Max.", "en"),
-    ("silence", 3.0),
     *speaking_challenge("Max", "Mi porta all'aeroporto ?", "it"),
 
     ("speech_multi", "Max", [
@@ -69,7 +68,6 @@ SEGMENTS = [
     ]),
     ("speech", "Clara", "Quanto ci vuole ?", "it"),
     ("speech", "Max", "Your turn. Repeat after Clara.", "en"),
-    ("silence", 3.0),
     *speaking_challenge("Clara", "Quanto ci vuole ?", "it"),
 
     ("speech_multi", "Clara", [
@@ -79,7 +77,6 @@ SEGMENTS = [
     ]),
     ("speech", "Max", "Può aspettare ?", "it"),
     ("speech", "Clara", "Repeat after Max.", "en"),
-    ("silence", 3.0),
     *speaking_challenge("Max", "Può aspettare ?", "it"),
     ("speech", "Clara", "Perfetto !", "it"),
     ("silence", 3.0),
@@ -106,5 +103,5 @@ SEGMENTS = [
     ("speech_multi", "Clara", [("en", "And"), ("it", "Può aspettare"), ("en", "— to ask him to wait.")]),
     ("speech", "Max", "Ciao !", "it"),
     ("speech", "Clara", "Ciao !", "it"),
-    ("sfx", "OUTRO_STING", "podcast outro jingle: same bright acoustic guitar and mandolin melody as the intro, but winding down gently, warm Italian morning cafe feel, friendly close, no vocals", 3.5),
+    ("sfx", "OUTRO_STING", "podcast outro jingle: a single short bright acoustic guitar and mandolin phrase like the intro, played once only, does not loop or repeat, winding down gently, warm Italian morning cafe feel, friendly close, no vocals", 3.5),
 ]

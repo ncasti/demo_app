@@ -37,7 +37,7 @@ STREET_SCENE = {
 }
 
 SEGMENTS = [
-    ("sfx", "INTRO_STING", "podcast intro jingle: bright acoustic guitar and light accordion melody, warm French cafe feel, cheerful and inviting, no vocals", 3.5),
+    ("sfx", "INTRO_STING", "podcast intro jingle: a single short bright acoustic guitar and light accordion phrase, played once only, does not loop or repeat, warm French cafe feel, cheerful and inviting, no vocals", 3.5),
     ("speech", "Max", "Bonjour, Clara !", "fr"),
     ("speech", "Clara", "Bonjour, Max ! You know that moment when you bump into someone you haven't seen in ages, right in the street?", "en"),
     ("speech", "Max", "The \"oh my god, IS THAT—\" moment.", "en"),
@@ -58,7 +58,6 @@ SEGMENTS = [
     ("speech", "Max", "Ça fait un bail. Ça fait un bail !", "fr"),
     ("speech", "Clara", "Ça fait un bail !", "fr"),
     ("speech", "Max", "Repeat after Clara.", "en"),
-    ("silence", 3.5),
     ("speech", "Clara", "Ça fait un bail !", "fr"),
     ("sfx", "SPEAKER_SFX", "loud clear electronic beep, short attention tone, like a recording-start alert, bright and audible", 0.7),
     ("silence", 2.5),
@@ -158,5 +157,5 @@ SEGMENTS = [
     ("speech", "Clara", "Next time, we'll actually go on that dinner and order for two.", "en"),
     ("speech", "Max", "Au revoir !", "fr"),
     ("speech", "Clara", "Au revoir !", "fr"),
-    ("sfx", "OUTRO_STING", "podcast outro jingle: same bright acoustic guitar and accordion melody as the intro, but winding down gently, warm French cafe feel, friendly close, no vocals", 3.5),
+    ("sfx", "OUTRO_STING", "podcast outro jingle: a single short bright acoustic guitar and accordion phrase like the intro, played once only, does not loop or repeat, winding down gently, warm French cafe feel, friendly close, no vocals", 3.5),
 ]

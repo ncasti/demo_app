@@ -40,7 +40,7 @@ HOTEL_SCENE = {
 }
 
 SEGMENTS = [
-    ("sfx", "INTRO_STING", "podcast intro jingle: bright acoustic guitar and light mandolin melody, warm Italian morning cafe feel, cheerful and inviting, no vocals", 3.5),
+    ("sfx", "INTRO_STING", "podcast intro jingle: a single short bright acoustic guitar and light mandolin phrase, played once only, does not loop or repeat, warm Italian morning cafe feel, cheerful and inviting, no vocals", 3.5),
     ("speech", "Max", "Ciao, Clara!", "it"),
     ("speech_multi", "Clara", [
         ("it", "Ciao, Max!"),
@@ -59,7 +59,6 @@ SEGMENTS = [
         ("en", "\"I have a reservation.\" The first thing to say at any front desk."),
     ]),
     ("speech", "Clara", "Repeat after Max.", "en"),
-    ("silence", 3.0),
     *speaking_challenge("Max", "Ho una prenotazione.", "it"),
 
     ("speech_multi", "Max", [
@@ -69,7 +68,6 @@ SEGMENTS = [
     ]),
     ("speech", "Clara", "A nome Clara.", "it"),
     ("speech", "Max", "Your turn. Repeat after Clara.", "en"),
-    ("silence", 3.0),
     *speaking_challenge("Clara", "A nome Clara.", "it"),
 
     ("speech_multi", "Clara", [
@@ -79,7 +77,6 @@ SEGMENTS = [
     ]),
     ("speech", "Max", "A che piano ?", "it"),
     ("speech", "Clara", "Repeat after Max.", "en"),
-    ("silence", 3.0),
     *speaking_challenge("Max", "A che piano ?", "it"),
     ("speech", "Clara", "Perfetto !", "it"),
     ("silence", 3.0),
@@ -126,5 +123,5 @@ SEGMENTS = [
     ("speech", "Max", "Next time: small talk, and how are you feeling.", "en"),
     ("speech", "Clara", "Ciao !", "it"),
     ("speech", "Max", "Ciao !", "it"),
-    ("sfx", "OUTRO_STING", "podcast outro jingle: same bright acoustic guitar and mandolin melody as the intro, but winding down gently, warm Italian morning cafe feel, friendly close, no vocals", 3.5),
+    ("sfx", "OUTRO_STING", "podcast outro jingle: a single short bright acoustic guitar and mandolin phrase like the intro, played once only, does not loop or repeat, winding down gently, warm Italian morning cafe feel, friendly close, no vocals", 3.5),
 ]

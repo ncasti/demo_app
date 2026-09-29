@@ -20,6 +20,41 @@ segments can silently reuse a stale cached clip from the old position instead of
 until the stale directory was deleted). `rm -rf out/<script-name> out/<script-name>.mp3`
 before rerunning after any structural edit; a pure text/wording tweak to an existing segment
 is safe to rerun without clearing, since that segment's own cache file just gets overwritten.
+The same applies to `sfx_cache/INTRO_STING.mp3`/`OUTRO_STING.mp3` specifically: the cache key
+is the fixed filename, not the prompt text, so changing the prompt (e.g. the anti-repeat
+wording added below) does nothing on a rerun unless that cached file is deleted too.
+
+## Known fixes worth knowing about
+
+- **Dead air after "Repeat after Max/Clara."**: episodes 1 through 25 all had a manually
+  inserted `("silence", 3.0)` (3.5 in the French scripts) directly after that instruction
+  line, before Max/Clara actually modeled the phrase again. That's pure dead air -- nothing
+  happens between the instruction and the model saying the phrase. Removed across every
+  manifest; the instruction line and the modeled phrase are both `speech` segments with
+  nothing explicit between them now, so `MIN_TURN_GAP` (0.35s) provides the breath instead of
+  a 3-second silence.
+- **Intro/outro stings sounding like they play twice**: the AI-generated jingle prompt never
+  said the phrase should play only once, and a ~3.5s "podcast intro jingle" prompt often came
+  back as a short musical phrase repeated within the clip -- confirmed by eye on a waveform
+  (two near-identical swells of amplitude). Prompt now explicitly says "played once only,
+  does not loop or repeat." Existing episodes won't pick this up without clearing their cached
+  `INTRO_STING.mp3`/`OUTRO_STING.mp3` first (see caution above) and rerunning.
+- **Trailing silence trim risked cutting the last sound off a word**: `to_wav(...,
+  trim_silence=True)` used to run the same `silenceremove` filter on both ends (trimming the
+  tail via the reverse-trim-reverse trick). Investigated a "word gets cut off" report by
+  measuring rather than guessing -- swept `start_duration`/`start_threshold`/`start_silence`
+  against real cached clips, and at matched pixels-per-second, spectrograms of raw vs.
+  trailing-trimmed short clips showed real energy running right up to the edge in both: a
+  short or isolated word from eleven_v3 often doesn't render a fade-out tail, it just stops.
+  With no safety margin to trim into, trailing trim risked shaving into the last audible
+  sound, worst on exactly the short/bare-word clips that were reported as cut off. A
+  longer line with a real decay tail (checked separately) wasn't meaningfully affected by
+  trailing trim either way, since it only ever removed ~15-45ms. So trailing trim was doing
+  little for pacing while carrying real cutoff risk on the clips most likely to need every
+  millisecond -- removed rather than tuned; only leading silence is trimmed now. Pacing after
+  a line is still controlled by `GAP_AFTER_TARGET`/`GAP_BEFORE_TARGET`/`MIN_TURN_GAP`, so a
+  line may now carry a little untrimmed raw tail (observed up to ~600ms on one long-decay
+  sample) instead of any risk of a clipped ending.
 
 ## How a manifest works
 

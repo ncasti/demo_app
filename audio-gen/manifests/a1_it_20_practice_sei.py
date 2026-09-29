@@ -21,7 +21,7 @@ CAST = {
 }
 
 SEGMENTS = [
-    ("sfx", "INTRO_STING", "podcast intro jingle: bright acoustic guitar and light mandolin melody, warm Italian morning cafe feel, cheerful and inviting, no vocals", 3.5),
+    ("sfx", "INTRO_STING", "podcast intro jingle: a single short bright acoustic guitar and light mandolin phrase, played once only, does not loop or repeat, warm Italian morning cafe feel, cheerful and inviting, no vocals", 3.5),
     ("speech", "Max", "Ciao, Clara!", "it"),
     ("speech", "Clara", "Ciao, Max! Last one for this run — hotel, small talk, and then a proper victory lap.", "en"),
     ("speech", "Max", "Fast round first.", "en"),
@@ -77,5 +77,5 @@ SEGMENTS = [
     ("speech", "Clara", "That's the sample. From here — real feedback, real speech recognition, and a full curriculum.", "en"),
     ("speech", "Max", "Ciao !", "it"),
     ("speech", "Clara", "Ciao !", "it"),
-    ("sfx", "OUTRO_STING", "podcast outro jingle: same bright acoustic guitar and mandolin melody as the intro, but winding down gently, warm Italian morning cafe feel, friendly close, no vocals", 3.5),
+    ("sfx", "OUTRO_STING", "podcast outro jingle: a single short bright acoustic guitar and mandolin phrase like the intro, played once only, does not loop or repeat, winding down gently, warm Italian morning cafe feel, friendly close, no vocals", 3.5),
 ]

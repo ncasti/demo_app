@@ -41,7 +41,7 @@ STATION_SCENE = {
 }
 
 SEGMENTS = [
-    ("sfx", "INTRO_STING", "podcast intro jingle: bright acoustic guitar and light mandolin melody, warm Italian morning cafe feel, cheerful and inviting, no vocals", 3.5),
+    ("sfx", "INTRO_STING", "podcast intro jingle: a single short bright acoustic guitar and light mandolin phrase, played once only, does not loop or repeat, warm Italian morning cafe feel, cheerful and inviting, no vocals", 3.5),
     ("speech", "Clara", "Ciao, Max!", "it"),
     ("speech_multi", "Max", [
         ("it", "Ciao, Clara!"),
@@ -60,7 +60,6 @@ SEGMENTS = [
         ("en", "\"A ticket to Rome, please.\" Swap in any city."),
     ]),
     ("speech", "Clara", "Repeat after Max.", "en"),
-    ("silence", 3.0),
     *speaking_challenge("Max", "Un biglietto per Roma, per favore.", "it"),
 
     ("speech_multi", "Max", [
@@ -70,7 +69,6 @@ SEGMENTS = [
     ]),
     ("speech", "Clara", "Solo andata.", "it"),
     ("speech", "Max", "Your turn. Repeat after Clara.", "en"),
-    ("silence", 3.0),
     *speaking_challenge("Clara", "Solo andata.", "it"),
 
     ("speech_multi", "Clara", [
@@ -80,7 +78,6 @@ SEGMENTS = [
     ]),
     ("speech", "Max", "Da che binario ?", "it"),
     ("speech", "Clara", "Repeat after Max.", "en"),
-    ("silence", 3.0),
     *speaking_challenge("Max", "Da che binario ?", "it"),
     ("speech", "Clara", "Perfetto !", "it"),
     ("silence", 3.0),
@@ -124,5 +121,5 @@ SEGMENTS = [
     ("speech", "Max", "Next time, a practice episode — the phone and the train station together.", "en"),
     ("speech", "Clara", "Ciao !", "it"),
     ("speech", "Max", "Ciao !", "it"),
-    ("sfx", "OUTRO_STING", "podcast outro jingle: same bright acoustic guitar and mandolin melody as the intro, but winding down gently, warm Italian morning cafe feel, friendly close, no vocals", 3.5),
+    ("sfx", "OUTRO_STING", "podcast outro jingle: a single short bright acoustic guitar and mandolin phrase like the intro, played once only, does not loop or repeat, winding down gently, warm Italian morning cafe feel, friendly close, no vocals", 3.5),
 ]

@@ -38,7 +38,7 @@ OUTDOOR_SCENE = {
 }
 
 SEGMENTS = [
-    ("sfx", "INTRO_STING", "podcast intro jingle: bright acoustic guitar and light mandolin melody, warm Italian morning cafe feel, cheerful and inviting, no vocals", 3.5),
+    ("sfx", "INTRO_STING", "podcast intro jingle: a single short bright acoustic guitar and light mandolin phrase, played once only, does not loop or repeat, warm Italian morning cafe feel, cheerful and inviting, no vocals", 3.5),
     ("speech", "Max", "Ciao, Clara!", "it"),
     ("speech_multi", "Clara", [
         ("it", "Ciao, Max!"),
@@ -57,7 +57,6 @@ SEGMENTS = [
         ("en", "followed by the thing. \"I like it.\" Literally closer to \"it's pleasing to me,\" but just use it like \"I like.\""),
     ]),
     ("speech", "Clara", "Repeat after Max.", "en"),
-    ("silence", 3.0),
     *speaking_challenge("Max", "Mi piace il gelato.", "it"),
 
     ("speech_multi", "Max", [
@@ -67,7 +66,6 @@ SEGMENTS = [
     ]),
     ("speech", "Clara", "Non mi piace.", "it"),
     ("speech", "Max", "Your turn. Repeat after Clara.", "en"),
-    ("silence", 3.0),
     *speaking_challenge("Clara", "Non mi piace.", "it"),
 
     ("speech_multi", "Clara", [
@@ -77,7 +75,6 @@ SEGMENTS = [
     ]),
     ("speech", "Max", "Ti piace il gelato ?", "it"),
     ("speech", "Clara", "Repeat after Max.", "en"),
-    ("silence", 3.0),
     *speaking_challenge("Max", "Ti piace il gelato ?", "it"),
     ("speech", "Clara", "Perfetto !", "it"),
     ("silence", 3.0),
@@ -113,5 +110,5 @@ SEGMENTS = [
     ("speech", "Max", "Next time, a practice episode — shopping and preferences together.", "en"),
     ("speech", "Clara", "Ciao !", "it"),
     ("speech", "Max", "Ciao !", "it"),
-    ("sfx", "OUTRO_STING", "podcast outro jingle: same bright acoustic guitar and mandolin melody as the intro, but winding down gently, warm Italian morning cafe feel, friendly close, no vocals", 3.5),
+    ("sfx", "OUTRO_STING", "podcast outro jingle: a single short bright acoustic guitar and mandolin phrase like the intro, played once only, does not loop or repeat, winding down gently, warm Italian morning cafe feel, friendly close, no vocals", 3.5),
 ]
