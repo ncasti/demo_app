@@ -87,9 +87,12 @@ The policy that replaced it, now applied at **every** level:
 - `scripts/a1-it-21-non-capisco.md` through `a1-it-25-prendo-un-taxi.md` — 5 more A1 Italian
   episodes (clarification phrases, family, a practice episode, age/birthdays, taxis).
 - `audio-gen/` — the generation pipeline (ElevenLabs TTS + sound-generation), one manifest per
-  script, and `lesson_segments.py` (shared speaking-challenge / reverse-translate /
-  round-trip block builders, factored out once the pattern proved stable). See
-  `audio-gen/README.md` for how it works and how to add a new language/lesson.
+  script, `lesson_segments.py` (shared speaking-challenge / reverse-translate / round-trip
+  block builders, factored out once the pattern proved stable), and `phrase_registry.json` +
+  `registry_tools.py` (tracks every taught phrase and when it was last reviewed, for planning
+  spaced-repetition practice episodes — see `audio-gen/README.md`'s "Curriculum structure"
+  section). See `audio-gen/README.md` for how it all works and how to add a new
+  language/lesson.
 - `research/tts-options.md` — bilingual TTS vendor research from before we settled on
   ElevenLabs.
 

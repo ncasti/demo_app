@@ -1,0 +1,75 @@
+{
+  "_comment": "Tracks every repertoire phrase taught across the Italian A1 arc, for planning spaced-repetition practice episodes. 'glue' phrases (greetings, courtesy words, meta-communication) get incidental repetition just from being used as connective tissue in normal episode banter -- they don't need dedicated practice slots. 'topical' phrases only occur in their own scenario and need deliberate re-exposure (inline review in the next chapter episode, and/or a practice episode) or they'll be forgotten. reviewed_in lists episodes where the phrase got a DELIBERATE review (a reverse-translate/round-trip drill), not just an incidental appearance in banter. See registry_tools.py for how to query this (e.g. which topical phrases are most overdue) when planning the next practice episode.",
+  "phrases": [
+    {"id": "buongiorno", "it": "Buongiorno", "en": "good day / hello (until early evening)", "category": "glue", "introduced_in": "a1_it_01_bar", "reviewed_in": ["a1_it_04_practice_uno", "a1_it_08_practice_due", "a1_it_20_practice_sei"]},
+    {"id": "un_caffe_per_favore", "it": "Un caffè, per favore", "en": "a coffee, please", "category": "topical", "introduced_in": "a1_it_01_bar", "reviewed_in": ["a1_it_04_practice_uno", "a1_it_08_practice_due", "a1_it_20_practice_sei"]},
+    {"id": "grazie_prego", "it": "Grazie / Prego", "en": "thank you / you're welcome", "category": "glue", "introduced_in": "a1_it_01_bar", "reviewed_in": ["a1_it_04_practice_uno", "a1_it_08_practice_due", "a1_it_20_practice_sei"]},
+
+    {"id": "mi_chiamo", "it": "Mi chiamo...", "en": "my name is...", "category": "topical", "introduced_in": "a1_it_02_piacere", "reviewed_in": ["a1_it_04_practice_uno"]},
+    {"id": "piacere", "it": "Piacere", "en": "nice to meet you", "category": "glue", "introduced_in": "a1_it_02_piacere", "reviewed_in": ["a1_it_04_practice_uno"]},
+    {"id": "io_sono", "it": "Io sono...", "en": "I am... (alt. to mi chiamo)", "category": "topical", "introduced_in": "a1_it_02_piacere", "reviewed_in": ["a1_it_04_practice_uno"]},
+
+    {"id": "vorrei", "it": "Vorrei...", "en": "I would like... (construction, reused across market/restaurant/shopping)", "category": "glue", "introduced_in": "a1_it_03_quanto_costa", "reviewed_in": ["a1_it_04_practice_uno", "a1_it_08_practice_due", "a1_it_20_practice_sei"]},
+    {"id": "quanto_costa", "it": "Quanto costa?", "en": "how much does it cost?", "category": "topical", "introduced_in": "a1_it_03_quanto_costa", "reviewed_in": ["a1_it_04_practice_uno", "a1_it_20_practice_sei"]},
+    {"id": "ecco", "it": "Ecco", "en": "here you go", "category": "glue", "introduced_in": "a1_it_03_quanto_costa", "reviewed_in": ["a1_it_04_practice_uno"]},
+
+    {"id": "scusi", "it": "Scusi", "en": "excuse me (get attention)", "category": "glue", "introduced_in": "a1_it_05_scusi_dove", "reviewed_in": ["a1_it_08_practice_due"]},
+    {"id": "dove", "it": "Dov'è...?", "en": "where is...? (construction)", "category": "topical", "introduced_in": "a1_it_05_scusi_dove", "reviewed_in": ["a1_it_08_practice_due"]},
+    {"id": "sempre_dritto", "it": "Sempre dritto", "en": "straight ahead", "category": "topical", "introduced_in": "a1_it_05_scusi_dove", "reviewed_in": ["a1_it_08_practice_due"]},
+
+    {"id": "che_ore_sono", "it": "Che ore sono?", "en": "what time is it?", "category": "topical", "introduced_in": "a1_it_06_che_ore_sono", "reviewed_in": ["a1_it_08_practice_due"]},
+    {"id": "sono_le_tre", "it": "Sono le tre", "en": "it's three o'clock", "category": "topical", "introduced_in": "a1_it_06_che_ore_sono", "reviewed_in": ["a1_it_08_practice_due"]},
+    {"id": "devo_andare", "it": "Devo andare", "en": "I have to go", "category": "glue", "introduced_in": "a1_it_06_che_ore_sono", "reviewed_in": ["a1_it_08_practice_due"]},
+
+    {"id": "un_tavolo_per_due", "it": "Un tavolo per due, per favore", "en": "a table for two, please", "category": "topical", "introduced_in": "a1_it_07_al_ristorante", "reviewed_in": ["a1_it_08_practice_due"]},
+    {"id": "il_conto_per_favore", "it": "Il conto, per favore", "en": "the check, please", "category": "topical", "introduced_in": "a1_it_07_al_ristorante", "reviewed_in": ["a1_it_08_practice_due"]},
+
+    {"id": "che_tempo_fa", "it": "Che tempo fa?", "en": "what's the weather like?", "category": "topical", "introduced_in": "a1_it_09_il_tempo", "reviewed_in": ["a1_it_11_practice_tre"]},
+    {"id": "fa_caldo", "it": "Fa caldo", "en": "it's hot", "category": "topical", "introduced_in": "a1_it_09_il_tempo", "reviewed_in": ["a1_it_11_practice_tre"]},
+    {"id": "ce_il_sole", "it": "C'è il sole", "en": "it's sunny", "category": "topical", "introduced_in": "a1_it_09_il_tempo", "reviewed_in": ["a1_it_11_practice_tre"]},
+
+    {"id": "mi_puo_aiutare", "it": "Mi può aiutare?", "en": "can you help me?", "category": "glue", "introduced_in": "a1_it_10_mi_puoi_aiutare", "reviewed_in": ["a1_it_11_practice_tre"]},
+    {"id": "cerco", "it": "Cerco...", "en": "I'm looking for... (construction)", "category": "glue", "introduced_in": "a1_it_10_mi_puoi_aiutare", "reviewed_in": ["a1_it_11_practice_tre"]},
+    {"id": "e_qui_vicino", "it": "È qui vicino", "en": "it's nearby", "category": "topical", "introduced_in": "a1_it_10_mi_puoi_aiutare", "reviewed_in": ["a1_it_11_practice_tre"]},
+
+    {"id": "pronto", "it": "Pronto?", "en": "hello? (answering the phone)", "category": "topical", "introduced_in": "a1_it_12_al_telefono", "reviewed_in": ["a1_it_14_practice_quattro"]},
+    {"id": "sono_name", "it": "Sono [nome]", "en": "this is [name] (phone identification)", "category": "topical", "introduced_in": "a1_it_12_al_telefono", "reviewed_in": ["a1_it_14_practice_quattro"]},
+    {"id": "posso_lasciare_messaggio", "it": "Posso lasciare un messaggio?", "en": "can I leave a message?", "category": "topical", "introduced_in": "a1_it_12_al_telefono", "reviewed_in": ["a1_it_14_practice_quattro"]},
+
+    {"id": "biglietto_per_roma", "it": "Un biglietto per Roma, per favore", "en": "a ticket to Rome, please", "category": "topical", "introduced_in": "a1_it_13_alla_stazione", "reviewed_in": ["a1_it_14_practice_quattro"]},
+    {"id": "solo_andata", "it": "Solo andata", "en": "one-way only", "category": "topical", "introduced_in": "a1_it_13_alla_stazione", "reviewed_in": ["a1_it_14_practice_quattro"]},
+    {"id": "da_che_binario", "it": "Da che binario?", "en": "from which platform?", "category": "topical", "introduced_in": "a1_it_13_alla_stazione", "reviewed_in": ["a1_it_14_practice_quattro"]},
+
+    {"id": "vorrei_maglietta", "it": "Vorrei una maglietta", "en": "I'd like a t-shirt", "category": "topical", "introduced_in": "a1_it_15_che_taglia", "reviewed_in": ["a1_it_17_practice_cinque"]},
+    {"id": "che_taglia", "it": "Che taglia?", "en": "what size?", "category": "topical", "introduced_in": "a1_it_15_che_taglia", "reviewed_in": ["a1_it_17_practice_cinque"]},
+    {"id": "taglia_media", "it": "Taglia media", "en": "medium size", "category": "topical", "introduced_in": "a1_it_15_che_taglia", "reviewed_in": ["a1_it_17_practice_cinque"]},
+
+    {"id": "mi_piace", "it": "Mi piace...", "en": "I like...", "category": "topical", "introduced_in": "a1_it_16_mi_piace", "reviewed_in": ["a1_it_17_practice_cinque"]},
+    {"id": "non_mi_piace", "it": "Non mi piace", "en": "I don't like it", "category": "topical", "introduced_in": "a1_it_16_mi_piace", "reviewed_in": ["a1_it_17_practice_cinque"]},
+    {"id": "ti_piace", "it": "Ti piace...?", "en": "do you like...?", "category": "topical", "introduced_in": "a1_it_16_mi_piace", "reviewed_in": ["a1_it_17_practice_cinque"]},
+
+    {"id": "ho_prenotazione", "it": "Ho una prenotazione", "en": "I have a reservation", "category": "topical", "introduced_in": "a1_it_18_in_albergo", "reviewed_in": ["a1_it_20_practice_sei"]},
+    {"id": "a_nome", "it": "A nome...", "en": "under the name... (construction)", "category": "topical", "introduced_in": "a1_it_18_in_albergo", "reviewed_in": ["a1_it_20_practice_sei"]},
+    {"id": "a_che_piano", "it": "A che piano?", "en": "what floor?", "category": "topical", "introduced_in": "a1_it_18_in_albergo", "reviewed_in": []},
+
+    {"id": "come_stai", "it": "Come stai?", "en": "how are you?", "category": "glue", "introduced_in": "a1_it_19_come_stai", "reviewed_in": ["a1_it_20_practice_sei"]},
+    {"id": "sto_bene", "it": "Sto bene", "en": "I'm well", "category": "glue", "introduced_in": "a1_it_19_come_stai", "reviewed_in": ["a1_it_20_practice_sei"]},
+    {"id": "e_tu", "it": "E tu?", "en": "and you?", "category": "glue", "introduced_in": "a1_it_19_come_stai", "reviewed_in": ["a1_it_20_practice_sei"]},
+
+    {"id": "non_capisco", "it": "Non capisco", "en": "I don't understand", "category": "glue", "introduced_in": "a1_it_21_non_capisco", "reviewed_in": ["a1_it_23_practice_sette"]},
+    {"id": "puo_ripetere", "it": "Può ripetere?", "en": "can you repeat?", "category": "glue", "introduced_in": "a1_it_21_non_capisco", "reviewed_in": ["a1_it_23_practice_sette"]},
+    {"id": "piu_lentamente", "it": "Più lentamente, per favore", "en": "more slowly, please", "category": "glue", "introduced_in": "a1_it_21_non_capisco", "reviewed_in": ["a1_it_23_practice_sette"]},
+
+    {"id": "questa_e_mia_sorella", "it": "Questa è mia sorella", "en": "this is my sister", "category": "topical", "introduced_in": "a1_it_22_la_mia_famiglia", "reviewed_in": ["a1_it_23_practice_sette"]},
+    {"id": "ho_un_fratello", "it": "Ho un fratello", "en": "I have a brother", "category": "topical", "introduced_in": "a1_it_22_la_mia_famiglia", "reviewed_in": ["a1_it_23_practice_sette"]},
+    {"id": "hai_fratelli", "it": "Hai fratelli?", "en": "do you have siblings?", "category": "topical", "introduced_in": "a1_it_22_la_mia_famiglia", "reviewed_in": ["a1_it_23_practice_sette"]},
+
+    {"id": "quanti_anni_hai", "it": "Quanti anni hai?", "en": "how old are you?", "category": "topical", "introduced_in": "a1_it_24_quanti_anni_hai", "reviewed_in": []},
+    {"id": "ho_trentanni", "it": "Ho trent'anni", "en": "I'm thirty", "category": "topical", "introduced_in": "a1_it_24_quanti_anni_hai", "reviewed_in": []},
+    {"id": "quando_compleanno", "it": "Quando è il tuo compleanno?", "en": "when's your birthday?", "category": "topical", "introduced_in": "a1_it_24_quanti_anni_hai", "reviewed_in": []},
+
+    {"id": "mi_porta_a", "it": "Mi porta a...?", "en": "can you take me to...?", "category": "topical", "introduced_in": "a1_it_25_prendo_un_taxi", "reviewed_in": []},
+    {"id": "quanto_ci_vuole", "it": "Quanto ci vuole?", "en": "how long does it take?", "category": "topical", "introduced_in": "a1_it_25_prendo_un_taxi", "reviewed_in": []},
+    {"id": "puo_aspettare", "it": "Può aspettare?", "en": "can you wait?", "category": "topical", "introduced_in": "a1_it_25_prendo_un_taxi", "reviewed_in": []}
+  ]
+}

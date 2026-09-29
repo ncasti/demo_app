@@ -164,6 +164,40 @@ synthesize the *whole* word once, then trim the syllable boundary out of that
 single clean take in post, rather than asking the model to speak a bare
 fragment on its own).
 
+## Curriculum structure: chapters, substitution drills, and the phrase registry
+
+Episodes 1-25 each taught 2-3 new phrases once, drilled them, and relied on periodic practice
+episodes (every 2-3 new episodes) for review. Listening feedback on that batch: too much new
+vocabulary too fast, not enough repetition per phrase, and review that's on too loose a
+schedule to stick -- especially for content past the super-basic greetings level. The redesign
+that replaces it, for episode 26 onward:
+
+- **Chapters, not single-shot episodes.** A topic can now span however many episodes it
+  actually needs -- typically 2, sometimes 3 if the back-and-forth genuinely grows that long,
+  sometimes just 1 if there's nothing to split (an episode as simple as "Buongiorno" doesn't
+  need forcing into two parts). Don't pad a topic to a fixed part-count; let the content decide.
+- **Substitution drills within an episode.** Each new phrase gets drilled once as taught, then
+  again with a substitution variant in the same slot (table for two -> also table for three;
+  Roma -> also Parigi) -- production, not just recall of one fixed sentence.
+- **Inline review, not just periodic practice.** A chapter's second (or third) episode opens by
+  reviewing the previous episode's phrases -- with *new* substitution fillers, not the exact
+  phrase heard before, so it tests the pattern rather than rote memory -- before introducing
+  anything new.
+- **`phrase_registry.json`** tracks every taught phrase: which episode introduced it, which
+  episodes have deliberately reviewed it since, and whether it's `"glue"` (greetings, courtesy
+  words, meta-communication like "non capisco" -- gets incidental repetition just from being
+  used as connective tissue in every episode's banter, so it doesn't need scheduled review) or
+  `"topical"` (scenario-specific -- "da che binario?" only ever comes up buying a train ticket,
+  so nothing else naturally re-exposes it). Practice episodes should pull from whichever
+  topical phrases `registry_tools.py overdue` surfaces as least-recently-reviewed, not an
+  arbitrary "last 2-3 episodes" window -- this is also why practice-episode *density* should
+  increase over time rather than staying fixed: the backlog of topical phrases only grows, so
+  eventually one practice episode can't cover what's due and a back-to-back set is warranted.
+- Run `python3 registry_tools.py overdue --top 8` before writing a new practice episode's
+  review section. Record new phrases with `registry_tools.py add` when writing a new episode,
+  and `registry_tools.py review --id X --episode Y` whenever an episode deliberately reviews an
+  existing phrase (inline chapter review or a practice episode) so the registry stays accurate.
+
 ## Adding a new language/lesson
 
 1. Write the script as a `.md` file in `../scripts/`, following the existing
