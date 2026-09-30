@@ -33,8 +33,8 @@ greetings, and ordering a coffee politely at a cafe. A scene every visitor to It
 into on day one: standing at the counter of a bar, ordering your coffee.
 
 **Clara**
-By the way — an Italian "bar" (spoken in Italian) is nothing like an English one. No
-alcohol required — it's just their word for a café.
+By the way — an Italian [it]bar[/it] is nothing like an English one. No alcohol
+required — it's just their word for a café.
 
 **Clara**
 Let's listen in.
@@ -168,7 +168,7 @@ Your turn. Repeat after Clara.
 Ottimo ! And whatever you order, just add "per favore" at the end — it works everywhere.
 
 **Max**
-Try it with anything — "Un tè, per favore." Same idea, any order.
+Try it with anything — for example, "Un tè, per favore." Same idea, any order.
 <END AUDIO FILE>
 
 [3 second silence]
@@ -278,8 +278,8 @@ Italian.
 
 <START AUDIO FILE>
 **Clara**
-Now put it all together — you're at the "bar" (spoken in Italian), and this time you're
-in the conversation.
+Now put it all together — you're at the [it]bar[/it], and this time you're in the
+conversation.
 <END AUDIO FILE>
 
 <START AUDIO FILE>

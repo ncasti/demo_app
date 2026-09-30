@@ -10,6 +10,12 @@ isolation, English/target-language leakage) -- those are mechanical TTS-renderin
 checked automatically by `audio-gen/lint_manifest.py`. This file is about the script's content
 and pedagogy -- judgment calls a linter can't make.
 
+**Notation:** mark a word/phrase that should be spoken in Italian inside otherwise-English text
+as `[it]...[/it]` (e.g. an Italian "bar" is nothing like an English one). This is a script
+annotation only -- it never reaches the manifest or gets read aloud; it just tells whoever
+writes the manifest to isolate that span into its own `("it", ...)` chunk instead of leaving it
+inside an `("en", ...)` chunk.
+
 ## Process
 
 **Every new or edited episode gets written/updated as a script first, reviewed and approved by

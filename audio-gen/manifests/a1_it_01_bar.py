@@ -208,7 +208,7 @@ SEGMENTS = [
         ("en", "at the end — it works everywhere."),
     ]),
     ("speech_multi", "Max", [
-        ("en", "Try it with anything —"),
+        ("en", "Try it with anything — for example,"),
         ("it", "Un tè, per favore"),
         ("en", "Same idea, any order."),
     ]),
