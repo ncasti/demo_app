@@ -34,6 +34,17 @@ FIXED_SFX_ASSETS = {
     # cue. Registered now for when app-side/ASR grading can actually trigger
     # it, so it doesn't need to be re-picked later.
     "INCORRECT_SFX": os.path.join(ASSETS_DIR, "sfx", "incorrect_cue.mp3"),
+    # A single consistent signature sting, used for both intro and outro on
+    # every episode -- replaces the old per-episode AI-generated guitar/
+    # mandolin prompt, which varied episode to episode and occasionally
+    # rendered as a phrase that repeated within the clip. Chosen by the user
+    # from several rounds of A/B'd ElevenLabs sound-generation candidates
+    # (marimba/kalimba/glockenspiel/synth directions, then full-band
+    # arrangements layering marimba, bass, percussion, and pad for texture);
+    # the winning take had ~1.25s of trailing silence padding it out to the
+    # requested duration, trimmed locally with a short fade-out.
+    "INTRO_STING": os.path.join(ASSETS_DIR, "sfx", "intro_sting.mp3"),
+    "OUTRO_STING": os.path.join(ASSETS_DIR, "sfx", "intro_sting.mp3"),
 }
 
 # eleven_v3 with an explicit language_code actually produces correct French
