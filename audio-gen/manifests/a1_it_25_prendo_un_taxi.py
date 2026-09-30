@@ -91,9 +91,9 @@ SEGMENTS = [
     *roundtrip_step("Max", "Ask him to take you to the airport.", "Clara", "Mi porta all'aeroporto, per favore?",
                      char_speaker="Tassista", char_it="Certo, saliamo !"),
     *roundtrip_step("Max", "Ask how long it'll take.", "Clara", "Quanto ci vuole ?",
-                     attempt_gap=3.0, char_speaker="Tassista", char_it="Venti minuti."),
+                     attempt_gap=3.0, char_speaker="Tassista", char_it="Venti minuti"),
     *roundtrip_step("Max", "You need to grab something quickly. Ask him to wait.", "Clara", "Può aspettare, per favore?",
-                     attempt_gap=3.0, char_speaker="Tassista", char_it="Va bene.", tail_gap=2.0),
+                     attempt_gap=3.0, char_speaker="Tassista", char_it="Va bene", tail_gap=2.0),
 
     ("speech", "Clara", "That's it — you can catch a taxi anywhere in Italy now.", "en"),
     ("silence", 2.5),

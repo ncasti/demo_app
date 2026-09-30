@@ -66,7 +66,7 @@ SEGMENTS = [
     ]),
     ("speech", "Clara", "Ho trent'anni", "it"),
     ("speech", "Max", "Your turn. Repeat after Clara.", "en"),
-    *speaking_challenge("Clara", "Ho trent'anni.", "it"),
+    *speaking_challenge("Clara", "Ho trent'anni", "it"),
 
     ("speech_multi", "Clara", [
         ("en", "Third —"),
@@ -81,7 +81,7 @@ SEGMENTS = [
 
     ("speech", "Max", "Now backwards — I'll say it in English, you say it in Italian.", "en"),
     *reverse_translate_item("Clara", "How do you ask someone's age?", "Max", "Quanti anni hai ?"),
-    *reverse_translate_item("Clara", "How do you say you're thirty?", "Max", "Ho trent'anni."),
+    *reverse_translate_item("Clara", "How do you say you're thirty?", "Max", "Ho trent'anni"),
     *reverse_translate_item("Clara", "And how do you ask when someone's birthday is?", "Max", "Quando è il tuo compleanno ?"),
 
     ("speech", "Clara", "Now put it together — Luca's asking you this time.", "en"),

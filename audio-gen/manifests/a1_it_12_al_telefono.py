@@ -56,7 +56,7 @@ SEGMENTS = [
     ]),
     ("speech", "Clara", "Sono Clara", "it"),
     ("speech", "Max", "Your turn. Repeat after Clara.", "en"),
-    *speaking_challenge("Clara", "Sono Clara.", "it"),
+    *speaking_challenge("Clara", "Sono Clara", "it"),
 
     ("speech_multi", "Clara", [
         ("en", "Third — if they're not there:"),
@@ -71,7 +71,7 @@ SEGMENTS = [
 
     ("speech", "Max", "Now backwards — I'll say it in English, you say it in Italian.", "en"),
     *reverse_translate_item("Clara", "How do you answer the phone?", "Max", "Pronto ?"),
-    *reverse_translate_item("Clara", "How do you say who you are, on the phone?", "Max", "Sono..."),
+    *reverse_translate_item("Clara", "How do you say who you are, on the phone?", "Max", "Sono Clara"),
     *reverse_translate_item("Clara", "And how do you ask to leave a message?", "Max", "Posso lasciare un messaggio ?"),
 
     ("speech", "Clara", "Now put it together — the phone's ringing, and this time you pick up.", "en"),
@@ -94,7 +94,7 @@ SEGMENTS = [
     ("silence", 2.5),
 
     ("speech_multi", "Clara", [("en", "So today:"), ("it", "Pronto,"), ("en", "to answer...")]),
-    ("speech_multi", "Max", [("it", "Sono,"), ("en", "to say who you are...")]),
+    ("speech_multi", "Max", [("it", "Sono Clara,"), ("en", "to say who you are...")]),
     ("speech_multi", "Clara", [("en", "And"), ("it", "Posso lasciare un messaggio"), ("en", "— if they're not in.")]),
     ("speech", "Max", "Next time: the train station.", "en"),
     ("speech", "Clara", "Ciao !", "it"),

@@ -173,7 +173,7 @@ SEGMENTS = [
     ("speech", "Clara", "That's it — you just bought something at an Italian market.", "en"),
     ("silence", 2.5),
 
-    ("speech_multi", "Clara", [("en", "So today:"), ("it", "Vorrei,"), ("en", "to ask for something...")]),
+    ("speech_multi", "Clara", [("en", "So today:"), ("it", "Vorrei delle mele,"), ("en", "to ask for something...")]),
     ("speech_multi", "Max", [("it", "Quanto costa,"), ("en", "to ask the price...")]),
     ("speech_multi", "Clara", [("en", "And"), ("it", "Ecco,"), ("en", "when you hand something over.")]),
     ("speech", "Max", "Next time, we'll put a whole day together — everything you've learned so far, in one trip.", "en"),

@@ -21,11 +21,11 @@ SEGMENTS = [
     ("speech", "Max", "Ciao, Clara! Shopping, then talking about what you like. Fast round first.", "en"),
     ("silence", 2.0),
 
-    *reverse_translate_item("Max", "How do you ask for a t-shirt?", "Clara", "Vorrei una maglietta.", attempt_gap=2.0, tail_gap=1.5),
+    *reverse_translate_item("Max", "How do you ask for a t-shirt?", "Clara", "Vorrei una maglietta", attempt_gap=2.0, tail_gap=1.5),
     *reverse_translate_item("Max", "How does someone ask your size?", "Clara", "Che taglia ?", attempt_gap=2.0, tail_gap=1.5),
-    *reverse_translate_item("Max", "How do you say \"medium\"?", "Clara", "Taglia media.", attempt_gap=2.0, tail_gap=1.5),
-    *reverse_translate_item("Max", "How do you say you like something?", "Clara", "Mi piace...", attempt_gap=2.0, tail_gap=1.5),
-    *reverse_translate_item("Max", "How do you say you don't like it?", "Clara", "Non mi piace.", attempt_gap=2.0, tail_gap=1.5),
+    *reverse_translate_item("Max", "How do you say \"medium\"?", "Clara", "Taglia media", attempt_gap=2.0, tail_gap=1.5),
+    *reverse_translate_item("Max", "How do you say you like something?", "Clara", "Mi piace", attempt_gap=2.0, tail_gap=1.5),
+    *reverse_translate_item("Max", "How do you say you don't like it?", "Clara", "Non mi piace", attempt_gap=2.0, tail_gap=1.5),
     *reverse_translate_item("Max", "How do you ask if someone likes something?", "Clara", "Ti piace...?", attempt_gap=2.0, tail_gap=3.0),
 
     ("speech", "Max", "Perfetto! Now put it together.", "en"),

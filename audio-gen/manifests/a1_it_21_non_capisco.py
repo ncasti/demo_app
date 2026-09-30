@@ -58,7 +58,7 @@ SEGMENTS = [
         ("en", "\"I don't understand.\" The most important phrase in this whole series, honestly."),
     ]),
     ("speech", "Clara", "Repeat after Max.", "en"),
-    *speaking_challenge("Max", "Non capisco.", "it"),
+    *speaking_challenge("Max", "Non capisco", "it"),
 
     ("speech_multi", "Max", [
         ("en", "Second —"),
@@ -76,14 +76,14 @@ SEGMENTS = [
     ]),
     ("speech", "Max", "Più lentamente, per favore", "it"),
     ("speech", "Clara", "Repeat after Max.", "en"),
-    *speaking_challenge("Max", "Più lentamente, per favore.", "it"),
+    *speaking_challenge("Max", "Più lentamente, per favore", "it"),
     ("speech", "Clara", "Perfetto !", "it"),
     ("silence", 3.0),
 
     ("speech", "Max", "Now backwards — I'll say it in English, you say it in Italian.", "en"),
-    *reverse_translate_item("Clara", "How do you say you don't understand?", "Max", "Non capisco."),
+    *reverse_translate_item("Clara", "How do you say you don't understand?", "Max", "Non capisco"),
     *reverse_translate_item("Clara", "How do you ask someone to repeat?", "Max", "Può ripetere ?"),
-    *reverse_translate_item("Clara", "And how do you ask them to slow down?", "Max", "Più lentamente, per favore."),
+    *reverse_translate_item("Clara", "And how do you ask them to slow down?", "Max", "Più lentamente, per favore"),
 
     ("speech", "Clara", "Now put it together — Marco's giving you directions again, too fast.", "en"),
     ("silence", 1.0),

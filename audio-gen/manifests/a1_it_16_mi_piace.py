@@ -57,7 +57,7 @@ SEGMENTS = [
         ("en", "followed by the thing. \"I like it.\" Literally closer to \"it's pleasing to me,\" but just use it like \"I like.\""),
     ]),
     ("speech", "Clara", "Repeat after Max.", "en"),
-    *speaking_challenge("Max", "Mi piace il gelato.", "it"),
+    *speaking_challenge("Max", "Mi piace il gelato", "it"),
 
     ("speech_multi", "Max", [
         ("en", "Second — the opposite:"),
@@ -66,7 +66,7 @@ SEGMENTS = [
     ]),
     ("speech", "Clara", "Non mi piace", "it"),
     ("speech", "Max", "Your turn. Repeat after Clara.", "en"),
-    *speaking_challenge("Clara", "Non mi piace.", "it"),
+    *speaking_challenge("Clara", "Non mi piace", "it"),
 
     ("speech_multi", "Clara", [
         ("en", "Third — asking someone else:"),
@@ -80,8 +80,8 @@ SEGMENTS = [
     ("silence", 3.0),
 
     ("speech", "Max", "Now backwards — I'll say it in English, you say it in Italian.", "en"),
-    *reverse_translate_item("Clara", "How do you say you like something?", "Max", "Mi piace..."),
-    *reverse_translate_item("Clara", "How do you say you don't like it?", "Max", "Non mi piace."),
+    *reverse_translate_item("Clara", "How do you say you like something?", "Max", "Mi piace"),
+    *reverse_translate_item("Clara", "How do you say you don't like it?", "Max", "Non mi piace"),
     *reverse_translate_item("Clara", "And how do you ask if someone likes something?", "Max", "Ti piace...?"),
 
     ("speech", "Clara", "Now put it together — Luca's asking you this time.", "en"),

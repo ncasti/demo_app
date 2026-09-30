@@ -21,11 +21,11 @@ SEGMENTS = [
     ("speech", "Clara", "Ciao, Max! Understanding, then family. Fast round first.", "en"),
     ("silence", 2.0),
 
-    *reverse_translate_item("Max", "How do you say you don't understand?", "Clara", "Non capisco.", attempt_gap=2.0, tail_gap=1.5),
+    *reverse_translate_item("Max", "How do you say you don't understand?", "Clara", "Non capisco", attempt_gap=2.0, tail_gap=1.5),
     *reverse_translate_item("Max", "How do you ask someone to repeat?", "Clara", "Può ripetere ?", attempt_gap=2.0, tail_gap=1.5),
-    *reverse_translate_item("Max", "How do you ask someone to slow down?", "Clara", "Più lentamente, per favore.", attempt_gap=2.0, tail_gap=1.5),
-    *reverse_translate_item("Max", "How do you introduce your sister?", "Clara", "Questa è mia sorella.", attempt_gap=2.0, tail_gap=1.5),
-    *reverse_translate_item("Max", "How do you say you have a brother?", "Clara", "Ho un fratello.", attempt_gap=2.0, tail_gap=1.5),
+    *reverse_translate_item("Max", "How do you ask someone to slow down?", "Clara", "Più lentamente, per favore", attempt_gap=2.0, tail_gap=1.5),
+    *reverse_translate_item("Max", "How do you introduce your sister?", "Clara", "Questa è mia sorella", attempt_gap=2.0, tail_gap=1.5),
+    *reverse_translate_item("Max", "How do you say you have a brother?", "Clara", "Ho un fratello", attempt_gap=2.0, tail_gap=1.5),
     *reverse_translate_item("Max", "How do you ask if someone has siblings?", "Clara", "Hai fratelli ?", attempt_gap=2.0, tail_gap=3.0),
 
     ("speech", "Max", "Perfetto! Now put it together.", "en"),

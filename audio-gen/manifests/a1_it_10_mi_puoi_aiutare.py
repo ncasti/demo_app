@@ -66,7 +66,7 @@ SEGMENTS = [
     ]),
     ("speech", "Clara", "Cerco una farmacia", "it"),
     ("speech", "Max", "Your turn. Repeat after Clara.", "en"),
-    *speaking_challenge("Clara", "Cerco una farmacia.", "it"),
+    *speaking_challenge("Clara", "Cerco una farmacia", "it"),
 
     ("speech_multi", "Clara", [
         ("en", "Third — the answer you're hoping for:"),
@@ -75,27 +75,27 @@ SEGMENTS = [
     ]),
     ("speech", "Max", "È qui vicino", "it"),
     ("speech", "Clara", "Repeat after Max.", "en"),
-    *speaking_challenge("Max", "È qui vicino.", "it"),
+    *speaking_challenge("Max", "È qui vicino", "it"),
     ("speech", "Clara", "Perfetto !", "it"),
     ("silence", 3.0),
 
     ("speech", "Max", "Now backwards — I'll say it in English, you say it in Italian.", "en"),
     *reverse_translate_item("Clara", "How do you ask someone to help you?", "Max", "Mi può aiutare ?"),
-    *reverse_translate_item("Clara", "How do you say you're looking for a pharmacy?", "Max", "Cerco una farmacia."),
-    *reverse_translate_item("Clara", "And how do you say \"it's nearby\"?", "Max", "È qui vicino."),
+    *reverse_translate_item("Clara", "How do you say you're looking for a pharmacy?", "Max", "Cerco una farmacia"),
+    *reverse_translate_item("Clara", "And how do you say \"it's nearby\"?", "Max", "È qui vicino"),
 
     ("speech", "Clara", "Now put it together — you need help, and this time you're the one asking.", "en"),
     ("silence", 1.0),
     *roundtrip_step("Max", "Ask him to help you.", "Clara", "Mi può aiutare ?",
-                     narration="He's happy to:", char_speaker="Passante", char_it="Certo, dica pure."),
-    *roundtrip_step("Max", "Tell him you're looking for a pharmacy.", "Clara", "Cerco una farmacia.",
-                     char_speaker="Passante", char_it="È qui vicino.", tail_gap=2.0),
+                     narration="He's happy to:", char_speaker="Passante", char_it="Certo, dica pure"),
+    *roundtrip_step("Max", "Tell him you're looking for a pharmacy.", "Clara", "Cerco una farmacia",
+                     char_speaker="Passante", char_it="È qui vicino", tail_gap=2.0),
 
     ("speech", "Clara", "That's it — you can get help anywhere in Italy now.", "en"),
     ("silence", 2.5),
 
     ("speech_multi", "Clara", [("en", "So today:"), ("it", "Mi può aiutare,"), ("en", "to ask for help...")]),
-    ("speech_multi", "Max", [("it", "Cerco,"), ("en", "to say what you need...")]),
+    ("speech_multi", "Max", [("it", "Cerco una farmacia,"), ("en", "to say what you need...")]),
     ("speech_multi", "Clara", [("en", "And"), ("it", "È qui vicino"), ("en", "— it's nearby.")]),
     ("speech", "Max", "Next time, another practice episode — weather and asking for help, together.", "en"),
     ("speech", "Clara", "Ciao !", "it"),

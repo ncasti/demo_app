@@ -174,7 +174,7 @@ SEGMENTS = [
     ("silence", 2.5),
 
     ("speech_multi", "Clara", [("en", "So today:"), ("it", "Scusi,"), ("en", "to get someone's attention...")]),
-    ("speech_multi", "Max", [("it", "Dov'è,"), ("en", "to ask where something is...")]),
+    ("speech_multi", "Max", [("it", "Dov'è la stazione,"), ("en", "to ask where something is...")]),
     ("speech_multi", "Clara", [("en", "And"), ("it", "Sempre dritto"), ("en", "— straight ahead.")]),
     ("speech", "Max", "Next time, we'll put together a full curriculum's worth of scenarios — this was just the scale test.", "en"),
     ("speech", "Clara", "Ciao !", "it"),

@@ -64,10 +64,10 @@ SEGMENTS = [
         ("en", "\"A ticket to Rome, please.\" Roma is just one destination — swap in any city."),
     ]),
     ("speech", "Clara", "Repeat after Max.", "en"),
-    *speaking_challenge("Max", "Un biglietto per Roma, per favore.", "it"),
+    *speaking_challenge("Max", "Un biglietto per Roma, per favore", "it"),
 
     ("speech", "Clara", "Now the same phrase, different city — this is what actually makes it useful. Say it for Milano this time.", "en"),
-    *speaking_challenge("Max", "Un biglietto per Milano, per favore.", "it"),
+    *speaking_challenge("Max", "Un biglietto per Milano, per favore", "it"),
 
     ("speech_multi", "Max", [
         ("en", "Second — when they ask round-trip or one-way:"),
@@ -76,28 +76,28 @@ SEGMENTS = [
     ]),
     ("speech", "Clara", "Solo andata", "it"),
     ("speech", "Max", "Your turn. Repeat after Clara.", "en"),
-    *speaking_challenge("Clara", "Solo andata.", "it"),
+    *speaking_challenge("Clara", "Solo andata", "it"),
 
     ("speech_multi", "Max", [
         ("en", "And the other way to answer:"),
         ("it", "Andata e ritorno"),
         ("en", "\"Round-trip.\""),
     ]),
-    *speaking_challenge("Clara", "Andata e ritorno.", "it"),
+    *speaking_challenge("Clara", "Andata e ritorno", "it"),
     ("speech", "Clara", "Perfetto !", "it"),
     ("silence", 3.0),
 
     ("speech", "Max", "Now backwards — and I'll mix up the cities and ticket types, not just repeat what you just heard.", "en"),
-    *reverse_translate_item("Clara", "How do you ask for a ticket to Milan?", "Max", "Un biglietto per Milano, per favore."),
-    *reverse_translate_item("Clara", "How do you ask for a round-trip?", "Max", "Andata e ritorno."),
-    *reverse_translate_item("Clara", "And how do you ask for a ticket to Rome, one-way?", "Max", "Un biglietto per Roma, per favore. Solo andata.", attempt_gap=3.5),
+    *reverse_translate_item("Clara", "How do you ask for a ticket to Milan?", "Max", "Un biglietto per Milano, per favore"),
+    *reverse_translate_item("Clara", "How do you ask for a round-trip?", "Max", "Andata e ritorno"),
+    *reverse_translate_item("Clara", "And how do you ask for a ticket to Rome, one-way?", "Max", "Un biglietto per Roma, per favore. Solo andata", attempt_gap=3.5),
 
     ("speech", "Clara", "Now put it together — you're at the window, and this time it's a city we haven't practiced yet: Napoli.", "en"),
     ("silence", 1.0),
-    *roundtrip_step("Max", "Ask for a ticket to Naples.", "Clara", "Un biglietto per Napoli, per favore.",
+    *roundtrip_step("Max", "Ask for a ticket to Naples.", "Clara", "Un biglietto per Napoli, per favore",
                      narration="He asks round-trip or one-way:", char_speaker="Impiegato", char_it="Andata o andata e ritorno ?"),
-    *roundtrip_step("Max", "Your choice — tell him round-trip.", "Clara", "Andata e ritorno.",
-                     attempt_gap=3.0, char_speaker="Impiegato", char_it="Sono trenta euro.", tail_gap=2.0),
+    *roundtrip_step("Max", "Your choice — tell him round-trip.", "Clara", "Andata e ritorno",
+                     attempt_gap=3.0, char_speaker="Impiegato", char_it="Sono trenta euro", tail_gap=2.0),
 
     ("speech", "Clara", "Two phrases, but now you can actually use them anywhere — any city, either way.", "en"),
     ("speech", "Max", "Next time — part two. We'll pick up right at this window, and add the one question everyone forgets to ask.", "en"),

@@ -27,11 +27,11 @@ SEGMENTS = [
     ("speech", "Max", "Fast round first.", "en"),
     ("silence", 2.0),
 
-    *reverse_translate_item("Max", "How do you say you have a reservation?", "Clara", "Ho una prenotazione.", attempt_gap=2.0, tail_gap=1.5),
-    *reverse_translate_item("Max", "How do you say what name it's under?", "Clara", "A nome...", attempt_gap=2.0, tail_gap=1.5),
+    *reverse_translate_item("Max", "How do you say you have a reservation?", "Clara", "Ho una prenotazione", attempt_gap=2.0, tail_gap=1.5),
+    *reverse_translate_item("Max", "How do you say what name it's under?", "Clara", "A nome", attempt_gap=2.0, tail_gap=1.5),
     *reverse_translate_item("Max", "How do you ask what floor?", "Clara", "A che piano ?", attempt_gap=2.0, tail_gap=1.5),
     *reverse_translate_item("Max", "How do you ask how someone's doing?", "Clara", "Come stai ?", attempt_gap=2.0, tail_gap=1.5),
-    *reverse_translate_item("Max", "How do you say you're well?", "Clara", "Sto bene.", attempt_gap=2.0, tail_gap=1.5),
+    *reverse_translate_item("Max", "How do you say you're well?", "Clara", "Sto bene", attempt_gap=2.0, tail_gap=1.5),
     *reverse_translate_item("Max", "And how do you ask them back?", "Clara", "E tu ?", attempt_gap=2.0, tail_gap=3.0),
 
     ("speech", "Max", "Perfetto! Now — the victory lap. One whole trip, start to finish, pulling from everything this run has covered.", "en"),

@@ -58,7 +58,7 @@ SEGMENTS = [
         ("en", "\"I'd like a t-shirt.\""),
     ]),
     ("speech", "Clara", "Repeat after Max.", "en"),
-    *speaking_challenge("Max", "Vorrei una maglietta.", "it"),
+    *speaking_challenge("Max", "Vorrei una maglietta", "it"),
 
     ("speech_multi", "Max", [
         ("en", "Second — she'll ask"),
@@ -76,21 +76,21 @@ SEGMENTS = [
     ]),
     ("speech", "Max", "Taglia media", "it"),
     ("speech", "Clara", "Repeat after Max.", "en"),
-    *speaking_challenge("Max", "Taglia media.", "it"),
+    *speaking_challenge("Max", "Taglia media", "it"),
     ("speech", "Clara", "Perfetto !", "it"),
     ("silence", 3.0),
 
     ("speech", "Max", "Now backwards — I'll say it in English, you say it in Italian.", "en"),
-    *reverse_translate_item("Clara", "How do you ask for a t-shirt?", "Max", "Vorrei una maglietta."),
+    *reverse_translate_item("Clara", "How do you ask for a t-shirt?", "Max", "Vorrei una maglietta"),
     *reverse_translate_item("Clara", "How does she ask your size?", "Max", "Che taglia ?"),
-    *reverse_translate_item("Clara", "And how do you say \"medium\"?", "Max", "Taglia media."),
+    *reverse_translate_item("Clara", "And how do you say \"medium\"?", "Max", "Taglia media"),
 
     ("speech", "Clara", "Now put it together — you're in the shop, and this time you're buying.", "en"),
     ("silence", 1.0),
-    *roundtrip_step("Max", "Ask for a t-shirt.", "Clara", "Vorrei una maglietta.",
+    *roundtrip_step("Max", "Ask for a t-shirt.", "Clara", "Vorrei una maglietta",
                      narration="She asks your size:", char_speaker="Commessa", char_it="Che taglia ?"),
-    *roundtrip_step("Max", "Tell her — medium.", "Clara", "Taglia media.",
-                     attempt_gap=2.5, char_speaker="Commessa", char_it="Ecco a lei.", tail_gap=2.0),
+    *roundtrip_step("Max", "Tell her — medium.", "Clara", "Taglia media",
+                     attempt_gap=2.5, char_speaker="Commessa", char_it="Ecco a lei", tail_gap=2.0),
 
     ("speech", "Clara", "That's it — you just bought clothes in Italian.", "en"),
     ("silence", 2.5),

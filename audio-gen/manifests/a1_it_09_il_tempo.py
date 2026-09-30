@@ -69,7 +69,7 @@ SEGMENTS = [
     ]),
     ("speech", "Clara", "Fa caldo", "it"),
     ("speech", "Max", "Your turn. Repeat after Clara.", "en"),
-    *speaking_challenge("Clara", "Fa caldo.", "it"),
+    *speaking_challenge("Clara", "Fa caldo", "it"),
 
     ("speech_multi", "Clara", [
         ("en", "Third —"),
@@ -78,14 +78,14 @@ SEGMENTS = [
     ]),
     ("speech", "Max", "C'è il sole", "it"),
     ("speech", "Clara", "Repeat after Max.", "en"),
-    *speaking_challenge("Max", "C'è il sole.", "it"),
+    *speaking_challenge("Max", "C'è il sole", "it"),
     ("speech", "Clara", "Perfetto !", "it"),
     ("silence", 3.0),
 
     ("speech", "Max", "Now backwards — I'll say it in English, you say it in Italian.", "en"),
     *reverse_translate_item("Clara", "How do you ask what the weather's like?", "Max", "Che tempo fa ?"),
-    *reverse_translate_item("Clara", "How do you say \"it's hot\"?", "Max", "Fa caldo."),
-    *reverse_translate_item("Clara", "And how do you say \"it's sunny\"?", "Max", "C'è il sole."),
+    *reverse_translate_item("Clara", "How do you say \"it's hot\"?", "Max", "Fa caldo"),
+    *reverse_translate_item("Clara", "And how do you say \"it's sunny\"?", "Max", "C'è il sole"),
 
     ("speech", "Clara", "Now put it together — Sara's asking you about the weather.", "en"),
     ("silence", 1.0),

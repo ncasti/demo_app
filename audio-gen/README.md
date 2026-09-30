@@ -189,6 +189,45 @@ trigger it); `?` and `!` were not reported as having this problem and were
 left alone. This is a text-content fix, not a code fix -- when writing a new
 manifest, don't end a short Italian TTS line with "." at all.
 
+**The first pass at the period fix above had a blind spot: it only matched
+literal `("it", "text.")` tuples written directly in a manifest, not Italian
+text passed as a string argument to `speaking_challenge()`,
+`reverse_translate_item()`, or `roundtrip_step()`** -- every manifest from
+episode 6 onward uses these helpers, so most of the corpus's trailing
+periods were actually untouched by the first pass despite it reporting
+success. Found this by checking episode 14 specifically after a "fixed"
+regen still might have had periods left in helper-call arguments, not by
+assuming the first pass was complete. Second pass targeted the helper-call
+argument positions directly, correctly handling arguments that contain
+escaped quotes (e.g. `"How do you say \"it's hot\"?"` as the English prompt)
+which broke a naive first attempt at this second pass too -- verified by
+grepping for any remaining `.", "..."` / `."\)` patterns inside these calls
+after each pass, not just trusting the regex ran. **Lesson: when a fix is
+implemented as a text/regex transform rather than a single code path,
+verify coverage across every place the pattern can occur, not just the
+place it was first noticed.**
+
+**Fourth rule: some Italian words are grammatically "thin" (a bare verb
+form or preposition that needs a following object to be a complete phrase)
+and are unsafe to isolate even without trailing punctuation, the same way
+French "en"/"va"/"tu" were.** Caught by ear: "Sono" (bare, meaning "I am/this
+is [name]") came out with an English-accented reading in a reverse-translate
+answer. This is different from "Buongiorno," "Grazie," "Scusi," or "Pronto"
+being safe alone -- those are complete, idiomatically whole words on their
+own (a greeting, a thanks, an exclamation), while "Sono," "Vorrei," "Cerco,"
+and "Dov'è" are verb/preposition stems that are grammatically incomplete
+without an object, structurally the same fragility as the original bare-word
+finding. Fixed every `reverse_translate_item`/recap-line occurrence of these
+four words by pairing them with the filler already established in that
+phrase's own teaching episode (`"Sono"` -> `"Sono Clara"`, `"Cerco"` ->
+`"Cerco una farmacia"`, `"Vorrei"` -> the scene-appropriate item, `"Dov'è"` ->
+`"Dov'è la stazione"`). Left alone: the "First -- 'Vorrei,' followed by what
+you want..." style narration-breakdown lines that deliberately isolate the
+bare stem to explain the grammar before showing a filled example -- fixing
+those means restructuring the sentence around them, not a drop-in filler
+swap, and they haven't been reported as broken yet. Worth revisiting in the
+eventual full regen regardless, since the underlying risk is identical.
+
 This constraint does **not** apply to the A1-style phoneme/syllable
 breakdown pattern (e.g. "buon-" / "-giorno") used for true-beginner scripts —
 that's a different, harder problem. The original reference script's A1

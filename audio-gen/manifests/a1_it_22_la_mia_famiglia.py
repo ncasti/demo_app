@@ -57,7 +57,7 @@ SEGMENTS = [
         ("en", "\"This is my sister.\" Swap in any family member."),
     ]),
     ("speech", "Clara", "Repeat after Max.", "en"),
-    *speaking_challenge("Max", "Questa è mia sorella.", "it"),
+    *speaking_challenge("Max", "Questa è mia sorella", "it"),
 
     ("speech_multi", "Max", [
         ("en", "Second —"),
@@ -66,7 +66,7 @@ SEGMENTS = [
     ]),
     ("speech", "Clara", "Ho un fratello", "it"),
     ("speech", "Max", "Your turn. Repeat after Clara.", "en"),
-    *speaking_challenge("Clara", "Ho un fratello.", "it"),
+    *speaking_challenge("Clara", "Ho un fratello", "it"),
 
     ("speech_multi", "Clara", [
         ("en", "Third — asking someone else:"),
@@ -80,15 +80,15 @@ SEGMENTS = [
     ("silence", 3.0),
 
     ("speech", "Max", "Now backwards — I'll say it in English, you say it in Italian.", "en"),
-    *reverse_translate_item("Clara", "How do you introduce your sister?", "Max", "Questa è mia sorella."),
-    *reverse_translate_item("Clara", "How do you say you have a brother?", "Max", "Ho un fratello."),
+    *reverse_translate_item("Clara", "How do you introduce your sister?", "Max", "Questa è mia sorella"),
+    *reverse_translate_item("Clara", "How do you say you have a brother?", "Max", "Ho un fratello"),
     *reverse_translate_item("Clara", "And how do you ask if someone has siblings?", "Max", "Hai fratelli ?"),
 
     ("speech", "Clara", "Now put it together — you're the one introducing your sister to Giulia this time.", "en"),
     ("silence", 1.0),
-    *roundtrip_step("Max", "Introduce your sister.", "Clara", "Giulia, questa è mia sorella.",
+    *roundtrip_step("Max", "Introduce your sister.", "Clara", "Giulia, questa è mia sorella",
                      char_speaker="Giulia", char_it="Piacere! Hai altri fratelli?"),
-    *roundtrip_step("Max", "Tell her — yes, one brother.", "Clara", "Sì, ho un fratello.",
+    *roundtrip_step("Max", "Tell her — yes, one brother.", "Clara", "Sì, ho un fratello",
                      attempt_gap=3.0, tail_gap=2.0),
 
     ("speech", "Clara", "That's it — you can talk about your family in Italian now.", "en"),

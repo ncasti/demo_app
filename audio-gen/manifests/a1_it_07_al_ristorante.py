@@ -61,7 +61,7 @@ SEGMENTS = [
         ("en", "\"A table for two, please.\" Swap in any number."),
     ]),
     ("speech", "Clara", "Repeat after Max.", "en"),
-    *speaking_challenge("Max", "Un tavolo per due, per favore.", "it"),
+    *speaking_challenge("Max", "Un tavolo per due, per favore", "it"),
 
     ("speech_multi", "Max", [
         ("en", "Second — ordering. You already know \"Vorrei\" from the market. Here it's"),
@@ -70,7 +70,7 @@ SEGMENTS = [
     ]),
     ("speech", "Clara", "Vorrei la pasta", "it"),
     ("speech", "Max", "Your turn. Repeat after Clara.", "en"),
-    *speaking_challenge("Clara", "Vorrei la pasta.", "it"),
+    *speaking_challenge("Clara", "Vorrei la pasta", "it"),
 
     ("speech_multi", "Clara", [
         ("en", "Third — when you're done,"),
@@ -79,28 +79,28 @@ SEGMENTS = [
     ]),
     ("speech", "Max", "Il conto, per favore", "it"),
     ("speech", "Clara", "Repeat after Max.", "en"),
-    *speaking_challenge("Max", "Il conto, per favore.", "it"),
+    *speaking_challenge("Max", "Il conto, per favore", "it"),
     ("speech", "Clara", "Perfetto !", "it"),
     ("silence", 3.0),
 
     ("speech", "Max", "Now backwards — I'll say it in English, you say it in Italian.", "en"),
-    *reverse_translate_item("Clara", "How do you ask for a table for two?", "Max", "Un tavolo per due, per favore."),
-    *reverse_translate_item("Clara", "How do you order the pasta?", "Max", "Vorrei la pasta."),
-    *reverse_translate_item("Clara", "And how do you ask for the check?", "Max", "Il conto, per favore."),
+    *reverse_translate_item("Clara", "How do you ask for a table for two?", "Max", "Un tavolo per due, per favore"),
+    *reverse_translate_item("Clara", "How do you order the pasta?", "Max", "Vorrei la pasta"),
+    *reverse_translate_item("Clara", "And how do you ask for the check?", "Max", "Il conto, per favore"),
 
     ("speech", "Clara", "Now put it together — you've just walked into the restaurant.", "en"),
     ("silence", 1.0),
-    *roundtrip_step("Max", "Ask for a table for two.", "Clara", "Un tavolo per due, per favore.",
+    *roundtrip_step("Max", "Ask for a table for two.", "Clara", "Un tavolo per due, per favore",
                      narration="He seats you and asks what you'd like:", char_speaker="Cameriere", char_it="Cosa desidera ?"),
-    *roundtrip_step("Max", "Order the pasta.", "Clara", "Vorrei la pasta.",
+    *roundtrip_step("Max", "Order the pasta.", "Clara", "Vorrei la pasta",
                      narration="He nods:", char_speaker="Cameriere", char_it="Subito !"),
-    *roundtrip_step("Max", "Later, ask for the check.", "Clara", "Il conto, per favore.", tail_gap=2.0),
+    *roundtrip_step("Max", "Later, ask for the check.", "Clara", "Il conto, per favore", tail_gap=2.0),
 
     ("speech", "Clara", "That's it — you just ordered a whole meal in Italian.", "en"),
     ("silence", 2.5),
 
     ("speech_multi", "Clara", [("en", "So today:"), ("it", "Un tavolo per due,"), ("en", "for a table...")]),
-    ("speech_multi", "Max", [("it", "Vorrei,"), ("en", "to order...")]),
+    ("speech_multi", "Max", [("it", "Vorrei la pasta,"), ("en", "to order...")]),
     ("speech_multi", "Clara", [("en", "And"), ("it", "Il conto, per favore,"), ("en", "to close it out.")]),
     ("speech", "Max", "Next time, we're back with a practice episode — directions, time, and dinner, all together.", "en"),
     ("speech", "Clara", "Ciao !", "it"),

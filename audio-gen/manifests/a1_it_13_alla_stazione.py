@@ -60,7 +60,7 @@ SEGMENTS = [
         ("en", "\"A ticket to Rome, please.\" Swap in any city."),
     ]),
     ("speech", "Clara", "Repeat after Max.", "en"),
-    *speaking_challenge("Max", "Un biglietto per Roma, per favore.", "it"),
+    *speaking_challenge("Max", "Un biglietto per Roma, per favore", "it"),
 
     ("speech_multi", "Max", [
         ("en", "Second — when they ask round-trip or one-way:"),
@@ -69,7 +69,7 @@ SEGMENTS = [
     ]),
     ("speech", "Clara", "Solo andata", "it"),
     ("speech", "Max", "Your turn. Repeat after Clara.", "en"),
-    *speaking_challenge("Clara", "Solo andata.", "it"),
+    *speaking_challenge("Clara", "Solo andata", "it"),
 
     ("speech_multi", "Clara", [
         ("en", "Third — the one question everyone forgets to ask:"),
@@ -83,8 +83,8 @@ SEGMENTS = [
     ("silence", 3.0),
 
     ("speech", "Max", "Now backwards — I'll say it in English, you say it in Italian.", "en"),
-    *reverse_translate_item("Clara", "How do you ask for a ticket to Rome?", "Max", "Un biglietto per Roma, per favore."),
-    *reverse_translate_item("Clara", "How do you say \"one-way only\"?", "Max", "Solo andata."),
+    *reverse_translate_item("Clara", "How do you ask for a ticket to Rome?", "Max", "Un biglietto per Roma, per favore"),
+    *reverse_translate_item("Clara", "How do you say \"one-way only\"?", "Max", "Solo andata"),
     *reverse_translate_item("Clara", "And how do you ask which platform?", "Max", "Da che binario ?"),
 
     ("speech", "Clara", "Now put it together — you're at the window, and this time you're buying the ticket.", "en"),

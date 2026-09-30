@@ -22,10 +22,10 @@ SEGMENTS = [
     ("silence", 2.0),
 
     *reverse_translate_item("Max", "How do you answer the phone?", "Clara", "Pronto ?", attempt_gap=2.0, tail_gap=1.5),
-    *reverse_translate_item("Max", "How do you say who you are, on the phone?", "Clara", "Sono...", attempt_gap=2.0, tail_gap=1.5),
+    *reverse_translate_item("Max", "How do you say who you are, on the phone?", "Clara", "Sono Clara", attempt_gap=2.0, tail_gap=1.5),
     *reverse_translate_item("Max", "How do you ask to leave a message?", "Clara", "Posso lasciare un messaggio ?", attempt_gap=2.0, tail_gap=1.5),
-    *reverse_translate_item("Max", "How do you ask for a ticket to Rome?", "Clara", "Un biglietto per Roma, per favore.", attempt_gap=2.0, tail_gap=1.5),
-    *reverse_translate_item("Max", "How do you say \"one-way only\"?", "Clara", "Solo andata.", attempt_gap=2.0, tail_gap=1.5),
+    *reverse_translate_item("Max", "How do you ask for a ticket to Rome?", "Clara", "Un biglietto per Roma, per favore", attempt_gap=2.0, tail_gap=1.5),
+    *reverse_translate_item("Max", "How do you say \"one-way only\"?", "Clara", "Solo andata", attempt_gap=2.0, tail_gap=1.5),
     *reverse_translate_item("Max", "How do you ask which platform?", "Clara", "Da che binario ?", attempt_gap=2.0, tail_gap=3.0),
 
     ("speech", "Max", "Perfetto! Now put it together.", "en"),

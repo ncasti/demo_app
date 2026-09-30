@@ -67,7 +67,7 @@ SEGMENTS = [
     ]),
     ("speech", "Clara", "Sto bene", "it"),
     ("speech", "Max", "Your turn. Repeat after Clara.", "en"),
-    *speaking_challenge("Clara", "Sto bene.", "it"),
+    *speaking_challenge("Clara", "Sto bene", "it"),
 
     ("speech_multi", "Clara", [
         ("en", "Third — and hand it back:"),
@@ -82,7 +82,7 @@ SEGMENTS = [
 
     ("speech", "Max", "Now backwards — I'll say it in English, you say it in Italian.", "en"),
     *reverse_translate_item("Clara", "How do you ask how someone's doing?", "Max", "Come stai ?"),
-    *reverse_translate_item("Clara", "How do you say you're well?", "Max", "Sto bene."),
+    *reverse_translate_item("Clara", "How do you say you're well?", "Max", "Sto bene"),
     *reverse_translate_item("Clara", "And how do you ask them back?", "Max", "E tu ?"),
 
     ("speech", "Clara", "Now put it together — Giulia's the one asking this time.", "en"),

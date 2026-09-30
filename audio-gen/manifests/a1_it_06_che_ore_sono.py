@@ -68,7 +68,7 @@ SEGMENTS = [
     ]),
     ("speech", "Clara", "Sono le tre", "it"),
     ("speech", "Max", "Your turn. Repeat after Clara.", "en"),
-    *speaking_challenge("Clara", "Sono le tre.", "it"),
+    *speaking_challenge("Clara", "Sono le tre", "it"),
 
     ("speech_multi", "Clara", [
         ("en", "Third — Giulia's reaction to the time:"),
@@ -77,19 +77,19 @@ SEGMENTS = [
     ]),
     ("speech", "Max", "Devo andare", "it"),
     ("speech", "Clara", "Repeat after Max.", "en"),
-    *speaking_challenge("Max", "Devo andare.", "it"),
+    *speaking_challenge("Max", "Devo andare", "it"),
     ("speech", "Clara", "Perfetto !", "it"),
     ("silence", 3.0),
 
     ("speech", "Max", "Now backwards — I'll say it in English, you say it in Italian.", "en"),
     *reverse_translate_item("Clara", "How do you ask what time it is?", "Max", "Che ore sono ?"),
-    *reverse_translate_item("Clara", "How do you say \"it's three o'clock\"?", "Max", "Sono le tre."),
-    *reverse_translate_item("Clara", "And how do you say \"I have to go\"?", "Max", "Devo andare."),
+    *reverse_translate_item("Clara", "How do you say \"it's three o'clock\"?", "Max", "Sono le tre"),
+    *reverse_translate_item("Clara", "And how do you say \"I have to go\"?", "Max", "Devo andare"),
 
     ("speech", "Clara", "Now put it together — you're the one Giulia stops in the piazza.", "en"),
     ("silence", 1.0),
-    *roundtrip_step("Max", "Giulia asks you the time. Answer her — it's three o'clock.", "Clara", "Sono le tre.",
-                     narration="And she reacts:", char_speaker="Giulia", char_it="Devo andare! Grazie mille.", tail_gap=2.0),
+    *roundtrip_step("Max", "Giulia asks you the time. Answer her — it's three o'clock.", "Clara", "Sono le tre",
+                     narration="And she reacts:", char_speaker="Giulia", char_it="Devo andare! Grazie mille", tail_gap=2.0),
 
     ("speech", "Clara", "That's it — you can tell anyone the time now.", "en"),
     ("silence", 2.5),

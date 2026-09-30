@@ -59,7 +59,7 @@ SEGMENTS = [
         ("en", "\"I have a reservation.\" The first thing to say at any front desk."),
     ]),
     ("speech", "Clara", "Repeat after Max.", "en"),
-    *speaking_challenge("Max", "Ho una prenotazione.", "it"),
+    *speaking_challenge("Max", "Ho una prenotazione", "it"),
 
     ("speech_multi", "Max", [
         ("en", "Second — when he asks the name:"),
@@ -68,7 +68,7 @@ SEGMENTS = [
     ]),
     ("speech", "Clara", "A nome Clara", "it"),
     ("speech", "Max", "Your turn. Repeat after Clara.", "en"),
-    *speaking_challenge("Clara", "A nome Clara.", "it"),
+    *speaking_challenge("Clara", "A nome Clara", "it"),
 
     ("speech_multi", "Clara", [
         ("en", "Third — once you have the key:"),
@@ -82,8 +82,8 @@ SEGMENTS = [
     ("silence", 3.0),
 
     ("speech", "Max", "Now backwards — I'll say it in English, you say it in Italian.", "en"),
-    *reverse_translate_item("Clara", "How do you say you have a reservation?", "Max", "Ho una prenotazione."),
-    *reverse_translate_item("Clara", "How do you say what name it's under?", "Max", "A nome..."),
+    *reverse_translate_item("Clara", "How do you say you have a reservation?", "Max", "Ho una prenotazione"),
+    *reverse_translate_item("Clara", "How do you say what name it's under?", "Max", "A nome"),
     *reverse_translate_item("Clara", "And how do you ask what floor?", "Max", "A che piano ?"),
 
     ("speech", "Clara", "Now put it together — you've just arrived at the front desk.", "en"),

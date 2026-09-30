@@ -24,11 +24,11 @@ SEGMENTS = [
     ("silence", 2.0),
 
     *reverse_translate_item("Max", "How do you ask what the weather's like?", "Clara", "Che tempo fa ?", attempt_gap=2.0, tail_gap=1.5),
-    *reverse_translate_item("Max", "How do you say \"it's hot\"?", "Clara", "Fa caldo.", attempt_gap=2.0, tail_gap=1.5),
-    *reverse_translate_item("Max", "How do you say \"it's sunny\"?", "Clara", "C'è il sole.", attempt_gap=2.0, tail_gap=1.5),
+    *reverse_translate_item("Max", "How do you say \"it's hot\"?", "Clara", "Fa caldo", attempt_gap=2.0, tail_gap=1.5),
+    *reverse_translate_item("Max", "How do you say \"it's sunny\"?", "Clara", "C'è il sole", attempt_gap=2.0, tail_gap=1.5),
     *reverse_translate_item("Max", "How do you ask someone to help you?", "Clara", "Mi può aiutare ?", attempt_gap=2.0, tail_gap=1.5),
-    *reverse_translate_item("Max", "How do you say you're looking for something?", "Clara", "Cerco...", attempt_gap=2.0, tail_gap=1.5),
-    *reverse_translate_item("Max", "How do you say \"it's nearby\"?", "Clara", "È qui vicino.", attempt_gap=2.0, tail_gap=3.0),
+    *reverse_translate_item("Max", "How do you say you're looking for something?", "Clara", "Cerco una farmacia", attempt_gap=2.0, tail_gap=1.5),
+    *reverse_translate_item("Max", "How do you say \"it's nearby\"?", "Clara", "È qui vicino", attempt_gap=2.0, tail_gap=3.0),
 
     ("speech", "Max", "Perfetto! Now put it together.", "en"),
     ("silence", 2.0),
