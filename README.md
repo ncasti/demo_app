@@ -8,6 +8,14 @@ Started as B1 French; now also includes a 25-episode A1 Italian arc (new-scenari
 plus a spaced-repetition practice episode after every 2-3 new ones) to test that the format
 and production pipeline generalize across level, language, and episode count.
 
+## Script review gate
+
+Every new or edited episode is written/updated as a script (`scripts/<name>.md`) and reviewed
+by the user **before** any audio gets generated -- no speculative generation to "see how it
+sounds." Feedback from that review gets applied to the script, and the generalizable rule
+behind it goes into `scripts/GUIDELINES.md` so future scripts don't repeat the same correction.
+See that file for the accumulated pedagogy/content rules and the full process note.
+
 ## Pedagogy: no proactive phonetics, at any level
 
 The original reference script (A1 French: bonjour/bonsoir/au revoir) uses phoneme-level

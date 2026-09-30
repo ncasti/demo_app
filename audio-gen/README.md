@@ -3,6 +3,11 @@
 Rough-voice-pass generator used to render lesson scripts (`../scripts/*.md`) into
 listenable audio, via ElevenLabs (TTS + sound-generation for SFX/ambience).
 
+**Before running any of this on a new or edited episode:** the script must already be
+reviewed and approved by the user -- see `../README.md`'s "Script review gate" and
+`../scripts/GUIDELINES.md`. Don't generate audio to let the user review the script; that's
+what the `.md` review step is for.
+
 ## Usage
 
 ```bash
