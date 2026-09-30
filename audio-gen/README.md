@@ -55,6 +55,20 @@ wording added below) does nothing on a rerun unless that cached file is deleted 
   a line is still controlled by `GAP_AFTER_TARGET`/`GAP_BEFORE_TARGET`/`MIN_TURN_GAP`, so a
   line may now carry a little untrimmed raw tail (observed up to ~600ms on one long-decay
   sample) instead of any risk of a clipped ending.
+- **Scene dialogue synthesized with the wrong `language_code`**: `build_scene()`'s per-line
+  TTS call picked the language with `[("fr", text)] if scene.get("lang", "fr") else
+  [(scene["lang"], text)]`. `scene.get("lang", "fr")` is truthy whether the scene's `lang` is
+  `"it"` or the `"fr"` default, so the `else` branch was unreachable -- every scene's dialogue,
+  in every episode regardless of its actual language, was sent to ElevenLabs with
+  `language_code: "fr"`. Found while investigating a reported cutoff in episode 13's cold-open
+  ("solo andata" trailing off) -- the affected line ran under 1s versus 1.4-1.8s for the same
+  phrase spoken normally elsewhere in the same episode, and it's a scene line, which pointed at
+  `build_scene()` specifically rather than the general TTS/trim path. Fixed to
+  `[(scene.get("lang", "fr"), text)]`. Affects every manifest with an Italian scene (cold opens
+  in most A1 episodes) -- their scene dialogue needs regenerating. Cache files are named by
+  language tag (`..._it.mp3` vs `..._fr.mp3`), so simply rerunning `generate.py` on an affected
+  manifest is enough: the old `_fr`-tagged scene lines miss cache and regenerate correctly,
+  everything else (non-scene lines) is unaffected and stays cached.
 
 ## A different class of issue: TTS stutter (not a pipeline bug, no systemic fix)
 

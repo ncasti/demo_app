@@ -225,7 +225,7 @@ def build_scene(scene, voices, out_dir, idx, sfx_cache):
 
     line_wavs = []
     for j, (speaker, text) in enumerate(lines):
-        wav = gen_line_wav(speaker, [("fr", text)] if scene.get("lang", "fr") else [(scene["lang"], text)],
+        wav = gen_line_wav(speaker, [(scene.get("lang", "fr"), text)],
                             voices, out_dir, f"{idx:03d}_{key}_L{j}_{speaker}")
         if wav is None:
             return None
