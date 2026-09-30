@@ -39,6 +39,12 @@ import sys
 SAFE_BARE_WORDS = {
     "buongiorno", "grazie", "prego", "scusi", "pronto", "piacere", "ciao",
     "perfetto", "ecco", "ottimo", "certo", "sì", "subito",
+    # Not greetings/courtesy words like the rest of this list -- "bar" is a
+    # complete noun (not a verb/preposition stem needing an object), added
+    # when episode 1's script review asked for it to be spoken in Italian
+    # specifically because it's a false-friend vocabulary word under
+    # discussion, not translated English.
+    "bar",
 }
 
 REGISTRY_PATH = os.path.join(os.path.dirname(os.path.abspath(__file__)), "phrase_registry.json")

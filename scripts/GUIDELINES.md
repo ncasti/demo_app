@@ -42,6 +42,15 @@ time both cost more than a text review round does.
 - **Practice-episode density should track the registry, not a fixed cadence.** Run
   `audio-gen/registry_tools.py overdue --top 8` before writing a practice episode's review
   section, rather than defaulting to "the last 2-3 episodes."
+- **The very first episode needs more upfront framing than later ones.** Jumping straight into
+  the scene works once the listener already knows the show's format; episode 1 should tell
+  them what they're about to learn first (e.g. "this is our first episode, so today we'll
+  start with the basics — greetings, and ordering a coffee") before cutting to the dialogue.
+- **Generalizations need one concrete example, not just an assertion.** "Add 'per favore' and
+  it works everywhere" is abstract -- follow it with an actual substitution using a
+  recognizable word or cognate the listener can map onto anything else ("Try it with
+  anything — 'Un tè, per favore.'"). This is the same substitution-drill instinct as the
+  chapter structure, applied to a one-line aside, not just a full drilled phrase.
 
 ## Content consistency
 
@@ -49,6 +58,26 @@ time both cost more than a text review round does.
   two different names in adjacent lines (caught: an episode said "Florence" in one line and
   "Firenze" in the next; another said "Rome" and "Roma" for the same destination). Pick one
   name per language context and stick to it for the whole episode.
+- **The "next time" preview must match the actual next episode's topic.** Don't preview a
+  topic from a later episode, and don't invent unsupported framing to justify it (caught:
+  episode 1's outro said "next time, the part everyone forgets to learn — asking prices,"
+  which was episode 3's topic, not episode 2's, and "everyone forgets to learn this" wasn't
+  grounded in anything). Check the very next episode's actual scope before writing this line.
+- **A vocabulary word under discussion is spoken in its own language, not translated.** When
+  a line explains a false-friend or loanword (e.g. Italian "bar" isn't an English bar), the
+  word itself should be spoken in the target language even inside English narration, not
+  read with English phonetics -- it's the word being taught, not an English word that happens
+  to be spelled the same. Isolate it into its own chunk like any other target-language
+  mention (see `audio-gen/README.md`'s production rules); add it to `lint_manifest.py`'s
+  `SAFE_BARE_WORDS` if it's a standalone noun the linter would otherwise flag.
+
+## Process notes
+
+- **Revisit old workarounds when their underlying constraint changes.** Episode 1 doubled
+  "Ottimo" and "Prego" in narration to dodge the bare-single-word isolation rule, before
+  `SAFE_BARE_WORDS` existed. Once both words were added to that allowlist, the doubling was
+  obsolete and just sounded redundant on a listen -- worth a periodic check for other
+  workarounds that outlived the reason they were added, not just new violations.
 
 ## Open items
 

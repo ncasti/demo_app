@@ -28,12 +28,13 @@ more Italian content instead: three repertoire phrases this episode instead of o
 Ciao, Max!
 
 **Max**
-Ciao, Clara! Today: a scene every visitor to Italy runs into on day one — standing at the
-counter of a bar, ordering your coffee.
+Ciao, Clara! This is our very first episode, so today we'll start with the basics —
+greetings, and ordering a coffee politely at a cafe. A scene every visitor to Italy runs
+into on day one: standing at the counter of a bar, ordering your coffee.
 
 **Clara**
-Quick note — an Italian "bar" isn't an English one. No alcohol required; it's just their
-word for a café.
+By the way — an Italian "bar" (spoken in Italian) is nothing like an English one. No
+alcohol required — it's just their word for a café.
 
 **Clara**
 Let's listen in.
@@ -74,7 +75,7 @@ It just means "good day."
 
 <START AUDIO FILE>
 **Clara [to listeners]**
-Repeat after Max.
+Let's practice it — repeat after Max.
 <END AUDIO FILE>
 
 [3 second silence]
@@ -125,8 +126,9 @@ Buongiorno, signora !
 
 <START AUDIO FILE>
 **Max**
-Second — how she ordered. "Un caffè, per favore." "Un caffè" is simply "a coffee." And
-"per favore" means "please" — you can stick it onto almost anything you order.
+Second — pay attention to how she ordered. "Un caffè, per favore." "Un caffè" is simply
+"a coffee." And "per favore" means "please" — you can stick it onto almost anything you
+order.
 
 **Clara**
 Un caffè, per favore.
@@ -164,6 +166,9 @@ Your turn. Repeat after Clara.
 <START AUDIO FILE>
 **Max**
 Ottimo ! And whatever you order, just add "per favore" at the end — it works everywhere.
+
+**Max**
+Try it with anything — "Un tè, per favore." Same idea, any order.
 <END AUDIO FILE>
 
 [3 second silence]
@@ -185,7 +190,7 @@ Prego.
 
 <START AUDIO FILE>
 **Clara [to listeners]**
-Repeat after Max.
+Let's practice — repeat after Max.
 <END AUDIO FILE>
 
 [3 second silence]
@@ -273,7 +278,8 @@ Italian.
 
 <START AUDIO FILE>
 **Clara**
-Now put it all together — you're at the bar, and this time you're in the conversation.
+Now put it all together — you're at the "bar" (spoken in Italian), and this time you're
+in the conversation.
 <END AUDIO FILE>
 
 <START AUDIO FILE>
@@ -354,7 +360,7 @@ Un caffè, per favore to order, politely...
 And Grazie — Prego to finish it off.
 
 **Max**
-Next time, we'll handle the part everyone forgets to learn — asking what something costs.
+Next time, we'll learn how to introduce yourself in Italian.
 
 **Clara**
 Ciao !
@@ -410,3 +416,16 @@ Ciao !
   handing the listener the answer before they'd had a chance to attempt it. Fixed order:
   prompt → SPEAKER SFX → pause (attempt) → CORRECT SFX → answer (a host's "That's right —
   ..." for reverse-translate, Clara's in-scene line for the round-trip).
+- **Script review pass** (first episode reviewed through the new script-review-gate
+  process — see `scripts/GUIDELINES.md`): since this is the very first episode, Max's
+  opening line now previews what the episode actually covers instead of jumping straight
+  into the scene. Both mentions of "bar" as the false-friend vocabulary word are now
+  spoken in Italian, not read with English phonetics — it's the word being taught, not
+  translated ("bar" added to `lint_manifest.py`'s `SAFE_BARE_WORDS`). Reverted an obsolete
+  "Ottimo, ottimo"/"Prego, prego" doubling that was a workaround from before either word
+  was on that allowlist. Added a concrete substitution example ("Un tè, per favore") after
+  the "per favore... it works everywhere" generalization instead of leaving it abstract.
+  Added "Let's practice" transitions before two of the three speaking challenges. Fixed the
+  closing "next time" line, which previewed episode 3's topic (asking prices) instead of
+  episode 2's (introducing yourself) and invented an unsupported "everyone forgets to learn
+  this" claim.

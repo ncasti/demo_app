@@ -56,7 +56,10 @@ Two later revisions:
   narration ("Ottimo !" -> "Ottimo, ottimo !", "Prego" -> "Prego, prego !")
   per the project's own isolation rule -- these were incidental narration
   insertions, not core teaching content, so doubling them costs nothing
-  pedagogically while giving the model more signal.
+  pedagogically while giving the model more signal. Reverted in the script
+  review pass below: both words were added to SAFE_BARE_WORDS in
+  lint_manifest.py once that allowlist existed, so the doubling workaround
+  is obsolete and the user flagged it as sounding redundant on a listen.
 - Reordered the reverse-translate and round-trip sections: SPEAKER_SFX now
   comes right after the prompt (before any silence), so it functions as a
   cue to speak, not a cue that speaking is already over. The old order
@@ -66,6 +69,24 @@ Two later revisions:
   (a host's "That's right -- ..." for reverse-translate, Clara's in-scene
   line for the round-trip, since the barista's response depends on it
   having been said).
+
+Script review pass (via the Claude Docs review flow, see scripts/GUIDELINES.md):
+- Opening now flags this as the very first episode and previews its actual
+  content (greetings, ordering coffee) before jumping into the scene --
+  later episodes can jump straight in, this one couldn't.
+- Both mentions of "bar" as the false-friend vocabulary word (the opening
+  aside and the round-trip intro) are now spoken in Italian, not read with
+  English "bar" phonetics -- it's the word being taught, not translated.
+- Reverted the obsolete "Ottimo, ottimo"/"Prego, prego" doubling (see above).
+- Added a concrete substitution example ("Un tè, per favore") after "per
+  favore... it works everywhere" instead of leaving the generalization
+  abstract.
+- Added "Let's practice" transitions before two of the three speaking
+  challenges.
+- Fixed the closing "next time" preview: it previewed episode 3's topic
+  (asking prices) instead of episode 2's (introducing yourself), and
+  invented an unsupported "everyone forgets to learn this" claim -- now
+  correctly previews episode 2.
 """
 
 NAME = "a1_it_01_bar"
@@ -122,9 +143,13 @@ SEGMENTS = [
     ("speech", "Clara", "Ciao, Max!", "it"),
     ("speech_multi", "Max", [
         ("it", "Ciao, Clara!"),
-        ("en", "Today: a scene every visitor to Italy runs into on day one — standing at the counter of a bar, ordering your coffee."),
+        ("en", "This is our very first episode, so today we'll start with the basics — greetings, and ordering a coffee politely at a cafe. A scene every visitor to Italy runs into on day one: standing at the counter of a bar, ordering your coffee."),
     ]),
-    ("speech", "Clara", "Quick note — an Italian \"bar\" isn't an English one. No alcohol required; it's just their word for a café.", "en"),
+    ("speech_multi", "Clara", [
+        ("en", "By the way — an Italian"),
+        ("it", "bar"),
+        ("en", "is nothing like an English one. No alcohol required — it's just their word for a café."),
+    ]),
     ("speech", "Clara", "Let's listen in.", "en"),
     ("silence", 0.8),
 
@@ -137,7 +162,7 @@ SEGMENTS = [
         ("it", "Buongiorno"),
         ("en", "You'll hear it constantly, any time from morning until early evening. It just means \"good day.\""),
     ]),
-    ("speech", "Clara", "Repeat after Max.", "en"),
+    ("speech", "Clara", "Let's practice it — repeat after Max.", "en"),
 
     ("speech", "Max", "Buongiorno !", "it"),
     ("sfx", "SPEAKER_SFX", "loud clear electronic beep, short attention tone, like a recording-start alert, bright and audible", 0.7),
@@ -155,7 +180,7 @@ SEGMENTS = [
     ("silence", 2.0),
 
     ("speech_multi", "Max", [
-        ("en", "Second — how she ordered."),
+        ("en", "Second — pay attention to how she ordered."),
         ("it", "Un caffè, per favore"),
         ("it", "Un caffè"),
         ("en", "is simply \"a coffee.\" And"),
@@ -177,10 +202,15 @@ SEGMENTS = [
     ("silence", 1.8),
 
     ("speech_multi", "Max", [
-        ("it", "Ottimo, ottimo !"),
+        ("it", "Ottimo !"),
         ("en", "And whatever you order, just add"),
         ("it", "per favore"),
         ("en", "at the end — it works everywhere."),
+    ]),
+    ("speech_multi", "Max", [
+        ("en", "Try it with anything —"),
+        ("it", "Un tè, per favore"),
+        ("en", "Same idea, any order."),
     ]),
     ("silence", 2.0),
 
@@ -191,12 +221,12 @@ SEGMENTS = [
     ]),
     ("speech_multi", "Max", [
         ("en", "And he answers"),
-        ("it", "Prego, prego !"),
+        ("it", "Prego !"),
         ("en", "— you're welcome. That pair goes together everywhere in Italy, not just at the bar."),
     ]),
     ("speech", "Clara", "Grazie", "it"),
     ("speech", "Max", "Prego", "it"),
-    ("speech", "Clara", "Repeat after Max.", "en"),
+    ("speech", "Clara", "Let's practice — repeat after Max.", "en"),
 
     ("speech", "Max", "Grazie !", "it"),
     ("sfx", "SPEAKER_SFX", "", 0.7),
@@ -234,7 +264,11 @@ SEGMENTS = [
     ("speech_multi", "Max", [("en", "That's right —"), ("it", "Grazie !")]),
     ("silence", 2.0),
 
-    ("speech", "Clara", "Now put it all together — you're at the bar, and this time you're in the conversation.", "en"),
+    ("speech_multi", "Clara", [
+        ("en", "Now put it all together — you're at the"),
+        ("it", "bar"),
+        ("en", ", and this time you're in the conversation."),
+    ]),
     ("silence", 1.0),
 
     ("speech", "Max", "Greet the barista.", "en"),
@@ -270,7 +304,7 @@ SEGMENTS = [
     ("speech_multi", "Clara", [("en", "So today:"), ("it", "Buongiorno"), ("en", "to greet...")]),
     ("speech_multi", "Max", [("it", "Un caffè, per favore"), ("en", "to order, politely...")]),
     ("speech_multi", "Clara", [("en", "And"), ("it", "Grazie — Prego"), ("en", "to finish it off.")]),
-    ("speech", "Max", "Next time, we'll handle the part everyone forgets to learn — asking what something costs.", "en"),
+    ("speech", "Max", "Next time, we'll learn how to introduce yourself in Italian.", "en"),
     ("speech", "Clara", "Ciao !", "it"),
     ("speech", "Max", "Ciao !", "it"),
     ("sfx", "OUTRO_STING", "podcast outro jingle: a single short bright acoustic guitar and mandolin phrase like the intro, played once only, does not loop or repeat, winding down gently, warm Italian morning cafe feel, friendly close, no vocals", 3.5),
