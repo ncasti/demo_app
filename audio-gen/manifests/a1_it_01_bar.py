@@ -110,8 +110,8 @@ BAR_SCENE = {
     "turn_gap": 0.5,
     "lines": [
         ("Barista", "Buongiorno !"),
-        ("Cliente", "Buongiorno ! Un caffè, per favore."),
-        ("Barista", "Ecco a lei."),
+        ("Cliente", "Buongiorno ! Un caffè, per favore"),
+        ("Barista", "Ecco a lei"),
         ("Cliente", "Grazie !"),
         ("Barista", "Prego !"),
     ],
@@ -134,7 +134,7 @@ SEGMENTS = [
     ("speech", "Max", "Three things in there you'll use every single day in Italy. Let's take them one at a time.", "en"),
     ("speech_multi", "Clara", [
         ("en", "First —"),
-        ("it", "Buongiorno."),
+        ("it", "Buongiorno"),
         ("en", "You'll hear it constantly, any time from morning until early evening. It just means \"good day.\""),
     ]),
     ("speech", "Clara", "Repeat after Max.", "en"),
@@ -156,18 +156,18 @@ SEGMENTS = [
 
     ("speech_multi", "Max", [
         ("en", "Second — how she ordered."),
-        ("it", "Un caffè, per favore."),
+        ("it", "Un caffè, per favore"),
         ("en", "\"Un caffè\" is simply \"a coffee.\" And \"per favore\" means \"please\" — you can stick it onto almost anything you order."),
     ]),
-    ("speech", "Clara", "Un caffè, per favore.", "it"),
+    ("speech", "Clara", "Un caffè, per favore", "it"),
     ("speech", "Max", "Your turn. Repeat after Clara.", "en"),
 
-    ("speech", "Clara", "Un caffè, per favore.", "it"),
+    ("speech", "Clara", "Un caffè, per favore", "it"),
     ("sfx", "SPEAKER_SFX", "", 0.7),
     ("silence", 2.5),
     ("sfx", "CORRECT_SFX", "", 0.7),
     ("silence", 1.5),
-    ("speech", "Clara", "Un caffè, per favore.", "it"),
+    ("speech", "Clara", "Un caffè, per favore", "it"),
     ("sfx", "SPEAKER_SFX", "", 0.7),
     ("silence", 2.5),
     ("sfx", "CORRECT_SFX", "", 0.7),
@@ -183,7 +183,7 @@ SEGMENTS = [
 
     ("speech_multi", "Clara", [
         ("en", "Third — after the barista hands it over, she says"),
-        ("it", "Grazie."),
+        ("it", "Grazie"),
         ("en", "Thank you."),
     ]),
     ("speech_multi", "Max", [
@@ -191,8 +191,8 @@ SEGMENTS = [
         ("it", "Prego, prego !"),
         ("en", "— you're welcome. That pair goes together everywhere in Italy, not just at the bar."),
     ]),
-    ("speech", "Clara", "Grazie.", "it"),
-    ("speech", "Max", "Prego.", "it"),
+    ("speech", "Clara", "Grazie", "it"),
+    ("speech", "Max", "Prego", "it"),
     ("speech", "Clara", "Repeat after Max.", "en"),
 
     ("speech", "Max", "Grazie !", "it"),
@@ -221,7 +221,7 @@ SEGMENTS = [
     ("sfx", "SPEAKER_SFX", "", 0.7),
     ("silence", 3.0),
     ("sfx", "CORRECT_SFX", "", 0.7),
-    ("speech_multi", "Max", [("en", "That's right —"), ("it", "Un caffè, per favore.")]),
+    ("speech_multi", "Max", [("en", "That's right —"), ("it", "Un caffè, per favore")]),
     ("silence", 1.8),
 
     ("speech", "Clara", "And how do you say thank you?", "en"),
@@ -247,9 +247,9 @@ SEGMENTS = [
     ("sfx", "SPEAKER_SFX", "", 0.7),
     ("silence", 3.5),
     ("sfx", "CORRECT_SFX", "", 0.7),
-    ("speech", "Clara", "Un caffè, per favore.", "it"),
+    ("speech", "Clara", "Un caffè, per favore", "it"),
     ("speech", "Max", "He gets it ready and hands it over:", "en"),
-    ("speech", "Barista", "Ecco a lei.", "it"),
+    ("speech", "Barista", "Ecco a lei", "it"),
     ("silence", 1.2),
 
     ("speech", "Max", "What do you say?", "en"),

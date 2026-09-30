@@ -33,7 +33,7 @@ OUTDOOR_SCENE = {
     "lines": [
         ("Sara", "Quanti anni hai?"),
         ("Luca", "Ho trent'anni. E tu?"),
-        ("Sara", "Ho ventotto anni."),
+        ("Sara", "Ho ventotto anni"),
     ],
 }
 
@@ -61,10 +61,10 @@ SEGMENTS = [
 
     ("speech_multi", "Max", [
         ("en", "Second — the answer:"),
-        ("it", "Ho trent'anni."),
+        ("it", "Ho trent'anni"),
         ("en", "\"I'm thirty.\" Same \"ho\" you already know — \"I have thirty years.\""),
     ]),
-    ("speech", "Clara", "Ho trent'anni.", "it"),
+    ("speech", "Clara", "Ho trent'anni", "it"),
     ("speech", "Max", "Your turn. Repeat after Clara.", "en"),
     *speaking_challenge("Clara", "Ho trent'anni.", "it"),
 
@@ -92,7 +92,7 @@ SEGMENTS = [
     ("sfx", "SPEAKER_SFX", "", 0.7),
     ("silence", 3.0),
     ("sfx", "CORRECT_SFX", "", 0.7),
-    ("speech", "Clara", "Ho trent'anni.", "it"),
+    ("speech", "Clara", "Ho trent'anni", "it"),
     ("speech", "Max", "Now ask him when his birthday is.", "en"),
     ("sfx", "SPEAKER_SFX", "", 0.7),
     ("silence", 3.0),

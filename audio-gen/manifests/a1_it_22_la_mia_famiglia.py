@@ -31,9 +31,9 @@ PIAZZA_SCENE = {
     "tail": 1.0,
     "turn_gap": 0.5,
     "lines": [
-        ("Marco", "Giulia, questa è mia sorella."),
+        ("Marco", "Giulia, questa è mia sorella"),
         ("Giulia", "Piacere! Hai altri fratelli?"),
-        ("Marco", "Sì, ho un fratello."),
+        ("Marco", "Sì, ho un fratello"),
     ],
 }
 
@@ -53,7 +53,7 @@ SEGMENTS = [
     ("speech", "Max", "Three phrases in there. Let's break them down.", "en"),
     ("speech_multi", "Clara", [
         ("en", "First —"),
-        ("it", "Questa è mia sorella."),
+        ("it", "Questa è mia sorella"),
         ("en", "\"This is my sister.\" Swap in any family member."),
     ]),
     ("speech", "Clara", "Repeat after Max.", "en"),
@@ -61,10 +61,10 @@ SEGMENTS = [
 
     ("speech_multi", "Max", [
         ("en", "Second —"),
-        ("it", "Ho un fratello."),
+        ("it", "Ho un fratello"),
         ("en", "\"I have a brother.\" Same pattern as \"Ho una prenotazione\" from the hotel — \"ho\" just means \"I have.\""),
     ]),
-    ("speech", "Clara", "Ho un fratello.", "it"),
+    ("speech", "Clara", "Ho un fratello", "it"),
     ("speech", "Max", "Your turn. Repeat after Clara.", "en"),
     *speaking_challenge("Clara", "Ho un fratello.", "it"),
 

@@ -38,15 +38,15 @@ SEGMENTS = [
     ("silence", 3.0),
     ("sfx", "CORRECT_SFX", "", 0.7),
     ("speech", "Sara", "Che tempo fa oggi ?", "it"),
-    ("speech", "Clara", "Fa caldo! C'è il sole.", "it"),
+    ("speech", "Clara", "Fa caldo! C'è il sole", "it"),
     ("silence", 1.5),
 
     ("speech", "Max", "Now you need a pharmacy. Ask a passerby for help.", "en"),
     ("sfx", "SPEAKER_SFX", "", 0.7),
     ("silence", 3.0),
     ("sfx", "CORRECT_SFX", "", 0.7),
-    ("speech", "Clara", "Mi può aiutare? Cerco una farmacia.", "it"),
-    ("speech", "Passante", "È qui vicino.", "it"),
+    ("speech", "Clara", "Mi può aiutare? Cerco una farmacia", "it"),
+    ("speech", "Passante", "È qui vicino", "it"),
     ("silence", 2.0),
 
     ("speech", "Clara", "Good instincts either way — small talk, and a favor, both handled.", "en"),

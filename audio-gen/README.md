@@ -174,6 +174,21 @@ into its own `("it", ...)` (or whatever the language is) chunk via
 whole script before generating, not reactively per complaint — it's the
 same fix every time.
 
+**Third rule: a short, isolated Italian phrase ending in a literal period
+risks the model reading the period aloud as "dot."** Caught by ear in a
+practice episode ("dot. Da che binario?"): the reverse-translate answer line
+was `("it", "Solo andata.")` fed to eleven_v3 as its own short isolated call,
+same fragility class as the bare-word problem above but triggered by
+trailing punctuation instead of word count. Confirmed this pattern is
+widespread, not a one-off — every short declarative Italian line across
+every manifest ended the same way, since a trailing period is the default
+way to punctuate a written sentence. Fixed by stripping the trailing
+period(s) from every Italian `speech`/`speech_multi`/scene-line string
+across all manifests (a phrase with no ending punctuation at all doesn't
+trigger it); `?` and `!` were not reported as having this problem and were
+left alone. This is a text-content fix, not a code fix -- when writing a new
+manifest, don't end a short Italian TTS line with "." at all.
+
 This constraint does **not** apply to the A1-style phoneme/syllable
 breakdown pattern (e.g. "buon-" / "-giorno") used for true-beginner scripts —
 that's a different, harder problem. The original reference script's A1

@@ -33,8 +33,8 @@ PIAZZA_SCENE = {
     "turn_gap": 0.5,
     "lines": [
         ("Giulia", "Scusi, che ore sono?"),
-        ("Marco", "Sono le tre."),
-        ("Giulia", "Devo andare! Grazie mille."),
+        ("Marco", "Sono le tre"),
+        ("Giulia", "Devo andare! Grazie mille"),
         ("Marco", "Prego!"),
     ],
 }
@@ -63,19 +63,19 @@ SEGMENTS = [
 
     ("speech_multi", "Max", [
         ("en", "Second — the answer:"),
-        ("it", "Sono le tre."),
+        ("it", "Sono le tre"),
         ("en", "\"It's three o'clock.\" Swap in any number for the time."),
     ]),
-    ("speech", "Clara", "Sono le tre.", "it"),
+    ("speech", "Clara", "Sono le tre", "it"),
     ("speech", "Max", "Your turn. Repeat after Clara.", "en"),
     *speaking_challenge("Clara", "Sono le tre.", "it"),
 
     ("speech_multi", "Clara", [
         ("en", "Third — Giulia's reaction to the time:"),
-        ("it", "Devo andare."),
+        ("it", "Devo andare"),
         ("en", "\"I have to go.\" Perfect for wrapping up any conversation."),
     ]),
-    ("speech", "Max", "Devo andare.", "it"),
+    ("speech", "Max", "Devo andare", "it"),
     ("speech", "Clara", "Repeat after Max.", "en"),
     *speaking_challenge("Max", "Devo andare.", "it"),
     ("speech", "Clara", "Perfetto !", "it"),

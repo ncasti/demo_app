@@ -52,9 +52,9 @@ SEGMENTS = [
         ("en", "Second —"),
         ("it", "Sono,"),
         ("en", "followed by your name. You already know \"Io sono\" from introducing yourself — on the phone, Italians just say"),
-        ("it", "Sono Marco."),
+        ("it", "Sono Marco"),
     ]),
-    ("speech", "Clara", "Sono Clara.", "it"),
+    ("speech", "Clara", "Sono Clara", "it"),
     ("speech", "Max", "Your turn. Repeat after Clara.", "en"),
     *speaking_challenge("Clara", "Sono Clara.", "it"),
 
@@ -86,7 +86,7 @@ SEGMENTS = [
     ("sfx", "SPEAKER_SFX", "", 0.7),
     ("silence", 3.5),
     ("sfx", "CORRECT_SFX", "", 0.7),
-    ("speech", "Clara", "Sono Clara.", "it"),
+    ("speech", "Clara", "Sono Clara", "it"),
     ("speech", "Elena", "Ciao, Clara !", "it"),
     ("silence", 2.0),
 

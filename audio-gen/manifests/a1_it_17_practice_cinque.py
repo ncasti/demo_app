@@ -35,9 +35,9 @@ SEGMENTS = [
     ("sfx", "SPEAKER_SFX", "", 0.7),
     ("silence", 4.0),
     ("sfx", "CORRECT_SFX", "", 0.7),
-    ("speech", "Clara", "Vorrei una maglietta.", "it"),
+    ("speech", "Clara", "Vorrei una maglietta", "it"),
     ("speech", "Commessa", "Che taglia ?", "it"),
-    ("speech", "Clara", "Taglia media.", "it"),
+    ("speech", "Clara", "Taglia media", "it"),
     ("silence", 1.5),
 
     ("speech", "Luca", "Ti piace ?", "it"),

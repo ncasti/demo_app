@@ -31,12 +31,12 @@ STATION_SCENE = {
     "tail": 1.0,
     "turn_gap": 0.5,
     "lines": [
-        ("Cliente", "Un biglietto per Roma, per favore."),
+        ("Cliente", "Un biglietto per Roma, per favore"),
         ("Impiegato", "Andata o andata e ritorno?"),
-        ("Cliente", "Solo andata."),
-        ("Impiegato", "Sono quindici euro."),
+        ("Cliente", "Solo andata"),
+        ("Impiegato", "Sono quindici euro"),
         ("Cliente", "Da che binario?"),
-        ("Impiegato", "Binario cinque."),
+        ("Impiegato", "Binario cinque"),
     ],
 }
 
@@ -56,7 +56,7 @@ SEGMENTS = [
     ("speech", "Max", "Three phrases in there. Let's break them down.", "en"),
     ("speech_multi", "Clara", [
         ("en", "First —"),
-        ("it", "Un biglietto per Roma, per favore."),
+        ("it", "Un biglietto per Roma, per favore"),
         ("en", "\"A ticket to Rome, please.\" Swap in any city."),
     ]),
     ("speech", "Clara", "Repeat after Max.", "en"),
@@ -64,10 +64,10 @@ SEGMENTS = [
 
     ("speech_multi", "Max", [
         ("en", "Second — when they ask round-trip or one-way:"),
-        ("it", "Solo andata."),
+        ("it", "Solo andata"),
         ("en", "\"One-way only.\""),
     ]),
-    ("speech", "Clara", "Solo andata.", "it"),
+    ("speech", "Clara", "Solo andata", "it"),
     ("speech", "Max", "Your turn. Repeat after Clara.", "en"),
     *speaking_challenge("Clara", "Solo andata.", "it"),
 
@@ -94,7 +94,7 @@ SEGMENTS = [
     ("sfx", "SPEAKER_SFX", "", 0.7),
     ("silence", 3.5),
     ("sfx", "CORRECT_SFX", "", 0.7),
-    ("speech", "Clara", "Un biglietto per Roma, per favore.", "it"),
+    ("speech", "Clara", "Un biglietto per Roma, per favore", "it"),
     ("speech", "Max", "He asks round-trip or one-way:", "en"),
     ("speech", "Impiegato", "Andata o andata e ritorno ?", "it"),
     ("silence", 1.0),
@@ -103,13 +103,13 @@ SEGMENTS = [
     ("sfx", "SPEAKER_SFX", "", 0.7),
     ("silence", 3.0),
     ("sfx", "CORRECT_SFX", "", 0.7),
-    ("speech", "Clara", "Solo andata.", "it"),
+    ("speech", "Clara", "Solo andata", "it"),
     ("speech", "Max", "And now, the question everyone forgets:", "en"),
     ("sfx", "SPEAKER_SFX", "", 0.7),
     ("silence", 2.5),
     ("sfx", "CORRECT_SFX", "", 0.7),
     ("speech", "Clara", "Da che binario ?", "it"),
-    ("speech", "Impiegato", "Binario cinque.", "it"),
+    ("speech", "Impiegato", "Binario cinque", "it"),
     ("silence", 2.0),
 
     ("speech", "Clara", "That's it — you've got your ticket and your platform.", "en"),

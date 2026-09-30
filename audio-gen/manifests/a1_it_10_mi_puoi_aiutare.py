@@ -31,9 +31,9 @@ STREET_SCENE = {
     "turn_gap": 0.5,
     "lines": [
         ("Turista", "Mi scusi, mi può aiutare?"),
-        ("Passante", "Certo, dica pure."),
-        ("Turista", "Cerco una farmacia."),
-        ("Passante", "È qui vicino."),
+        ("Passante", "Certo, dica pure"),
+        ("Turista", "Cerco una farmacia"),
+        ("Passante", "È qui vicino"),
     ],
 }
 
@@ -64,16 +64,16 @@ SEGMENTS = [
         ("it", "Cerco,"),
         ("en", "followed by what you're looking for. \"I'm looking for.\""),
     ]),
-    ("speech", "Clara", "Cerco una farmacia.", "it"),
+    ("speech", "Clara", "Cerco una farmacia", "it"),
     ("speech", "Max", "Your turn. Repeat after Clara.", "en"),
     *speaking_challenge("Clara", "Cerco una farmacia.", "it"),
 
     ("speech_multi", "Clara", [
         ("en", "Third — the answer you're hoping for:"),
-        ("it", "È qui vicino."),
+        ("it", "È qui vicino"),
         ("en", "\"It's nearby.\" Good news either way."),
     ]),
-    ("speech", "Max", "È qui vicino.", "it"),
+    ("speech", "Max", "È qui vicino", "it"),
     ("speech", "Clara", "Repeat after Max.", "en"),
     *speaking_challenge("Max", "È qui vicino.", "it"),
     ("speech", "Clara", "Perfetto !", "it"),

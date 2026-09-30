@@ -40,8 +40,8 @@ PIAZZA_SCENE = {
     "tail": 1.0,
     "turn_gap": 0.5,
     "lines": [
-        ("Marco", "Ciao, mi chiamo Marco."),
-        ("Giulia", "Piacere, Marco! Io sono Giulia."),
+        ("Marco", "Ciao, mi chiamo Marco"),
+        ("Giulia", "Piacere, Marco! Io sono Giulia"),
         ("Marco", "Piacere, Giulia!"),
     ],
 }
@@ -67,12 +67,12 @@ SEGMENTS = [
     ]),
     ("speech", "Clara", "Repeat after Max.", "en"),
 
-    ("speech", "Max", "Mi chiamo Max.", "it"),
+    ("speech", "Max", "Mi chiamo Max", "it"),
     ("sfx", "SPEAKER_SFX", "", 0.7),
     ("silence", 2.5),
     ("sfx", "CORRECT_SFX", "", 0.7),
     ("silence", 1.5),
-    ("speech", "Max", "Mi chiamo Max.", "it"),
+    ("speech", "Max", "Mi chiamo Max", "it"),
     ("sfx", "SPEAKER_SFX", "", 0.7),
     ("silence", 2.5),
     ("sfx", "CORRECT_SFX", "", 0.7),
@@ -80,10 +80,10 @@ SEGMENTS = [
 
     ("speech_multi", "Max", [
         ("en", "Second —"),
-        ("it", "Piacere."),
+        ("it", "Piacere"),
         ("en", "You heard both Marco and Giulia say it. It means \"nice to meet you\" — or literally, \"pleasure.\""),
     ]),
-    ("speech", "Clara", "Piacere.", "it"),
+    ("speech", "Clara", "Piacere", "it"),
     ("speech", "Max", "Your turn. Repeat after Clara.", "en"),
 
     ("speech", "Clara", "Piacere !", "it"),
@@ -99,18 +99,18 @@ SEGMENTS = [
 
     ("speech_multi", "Clara", [
         ("en", "Third — Giulia also said"),
-        ("it", "Io sono Giulia."),
+        ("it", "Io sono Giulia"),
         ("en", "Same meaning as \"mi chiamo,\" just a different way to say it — \"I am Giulia.\" Italians use both, so you'll hear this one just as often."),
     ]),
-    ("speech", "Max", "Io sono Max.", "it"),
+    ("speech", "Max", "Io sono Max", "it"),
     ("speech", "Clara", "Repeat after Max.", "en"),
 
-    ("speech", "Max", "Io sono Max.", "it"),
+    ("speech", "Max", "Io sono Max", "it"),
     ("sfx", "SPEAKER_SFX", "", 0.7),
     ("silence", 2.5),
     ("sfx", "CORRECT_SFX", "", 0.7),
     ("silence", 1.5),
-    ("speech", "Max", "Io sono Max.", "it"),
+    ("speech", "Max", "Io sono Max", "it"),
     ("sfx", "SPEAKER_SFX", "", 0.7),
     ("silence", 2.5),
     ("sfx", "CORRECT_SFX", "", 0.7),
@@ -124,7 +124,7 @@ SEGMENTS = [
     ("sfx", "SPEAKER_SFX", "", 0.7),
     ("silence", 3.0),
     ("sfx", "CORRECT_SFX", "", 0.7),
-    ("speech_multi", "Max", [("en", "That's right —"), ("it", "Mi chiamo.")]),
+    ("speech_multi", "Max", [("en", "That's right —"), ("it", "Mi chiamo")]),
     ("silence", 1.8),
 
     ("speech", "Clara", "How do you say \"nice to meet you\"?", "en"),
@@ -138,7 +138,7 @@ SEGMENTS = [
     ("sfx", "SPEAKER_SFX", "", 0.7),
     ("silence", 3.0),
     ("sfx", "CORRECT_SFX", "", 0.7),
-    ("speech_multi", "Max", [("en", "That's right —"), ("it", "Io sono.")]),
+    ("speech_multi", "Max", [("en", "That's right —"), ("it", "Io sono")]),
     ("silence", 2.0),
 
     ("speech", "Clara", "Now put it together — you've just walked up to someone in a piazza.", "en"),
@@ -148,9 +148,9 @@ SEGMENTS = [
     ("sfx", "SPEAKER_SFX", "", 0.7),
     ("silence", 3.5),
     ("sfx", "CORRECT_SFX", "", 0.7),
-    ("speech", "Clara", "Mi chiamo Clara.", "it"),
+    ("speech", "Clara", "Mi chiamo Clara", "it"),
     ("speech", "Max", "And Giulia answers:", "en"),
-    ("speech", "Giulia", "Piacere, Clara! Io sono Giulia.", "it"),
+    ("speech", "Giulia", "Piacere, Clara! Io sono Giulia", "it"),
     ("silence", 1.2),
 
     ("speech", "Max", "Now say it back to her — \"nice to meet you.\"", "en"),

@@ -33,11 +33,11 @@ RESTAURANT_SCENE = {
     "turn_gap": 0.5,
     "lines": [
         ("Cameriere", "Buonasera! Un tavolo per due?"),
-        ("Cliente", "Sì, per favore."),
+        ("Cliente", "Sì, per favore"),
         ("Cameriere", "Cosa desidera?"),
-        ("Cliente", "Vorrei la pasta."),
+        ("Cliente", "Vorrei la pasta"),
         ("Cameriere", "Subito!"),
-        ("Cliente", "Il conto, per favore."),
+        ("Cliente", "Il conto, per favore"),
     ],
 }
 
@@ -57,7 +57,7 @@ SEGMENTS = [
     ("speech", "Clara", "Three phrases in there. Let's break them down.", "en"),
     ("speech_multi", "Max", [
         ("en", "First —"),
-        ("it", "Un tavolo per due, per favore."),
+        ("it", "Un tavolo per due, per favore"),
         ("en", "\"A table for two, please.\" Swap in any number."),
     ]),
     ("speech", "Clara", "Repeat after Max.", "en"),
@@ -68,16 +68,16 @@ SEGMENTS = [
         ("it", "Vorrei la pasta"),
         ("en", "— \"I'd like the pasta.\" Swap in whatever you're having."),
     ]),
-    ("speech", "Clara", "Vorrei la pasta.", "it"),
+    ("speech", "Clara", "Vorrei la pasta", "it"),
     ("speech", "Max", "Your turn. Repeat after Clara.", "en"),
     *speaking_challenge("Clara", "Vorrei la pasta.", "it"),
 
     ("speech_multi", "Clara", [
         ("en", "Third — when you're done,"),
-        ("it", "Il conto, per favore."),
+        ("it", "Il conto, per favore"),
         ("en", "\"The check, please.\" The phrase that ends every meal."),
     ]),
-    ("speech", "Max", "Il conto, per favore.", "it"),
+    ("speech", "Max", "Il conto, per favore", "it"),
     ("speech", "Clara", "Repeat after Max.", "en"),
     *speaking_challenge("Max", "Il conto, per favore.", "it"),
     ("speech", "Clara", "Perfetto !", "it"),

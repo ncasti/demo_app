@@ -30,12 +30,12 @@ HOTEL_SCENE = {
     "tail": 1.0,
     "turn_gap": 0.5,
     "lines": [
-        ("Clara", "Buonasera. Ho una prenotazione."),
+        ("Clara", "Buonasera. Ho una prenotazione"),
         ("Receptionist", "A che nome?"),
-        ("Clara", "A nome Clara."),
-        ("Receptionist", "Ecco la chiave. Camera trecento."),
+        ("Clara", "A nome Clara"),
+        ("Receptionist", "Ecco la chiave. Camera trecento"),
         ("Clara", "A che piano?"),
-        ("Receptionist", "Terzo piano."),
+        ("Receptionist", "Terzo piano"),
     ],
 }
 
@@ -55,7 +55,7 @@ SEGMENTS = [
     ("speech", "Clara", "Three phrases in there. Let's break them down.", "en"),
     ("speech_multi", "Max", [
         ("en", "First —"),
-        ("it", "Ho una prenotazione."),
+        ("it", "Ho una prenotazione"),
         ("en", "\"I have a reservation.\" The first thing to say at any front desk."),
     ]),
     ("speech", "Clara", "Repeat after Max.", "en"),
@@ -66,7 +66,7 @@ SEGMENTS = [
         ("it", "A nome,"),
         ("en", "followed by your name. \"Under the name...\""),
     ]),
-    ("speech", "Clara", "A nome Clara.", "it"),
+    ("speech", "Clara", "A nome Clara", "it"),
     ("speech", "Max", "Your turn. Repeat after Clara.", "en"),
     *speaking_challenge("Clara", "A nome Clara.", "it"),
 
@@ -93,7 +93,7 @@ SEGMENTS = [
     ("sfx", "SPEAKER_SFX", "", 0.7),
     ("silence", 3.5),
     ("sfx", "CORRECT_SFX", "", 0.7),
-    ("speech", "Clara", "Ho una prenotazione.", "it"),
+    ("speech", "Clara", "Ho una prenotazione", "it"),
     ("speech", "Max", "He asks the name:", "en"),
     ("speech", "Receptionist", "A che nome ?", "it"),
     ("silence", 1.0),
@@ -102,8 +102,8 @@ SEGMENTS = [
     ("sfx", "SPEAKER_SFX", "", 0.7),
     ("silence", 3.0),
     ("sfx", "CORRECT_SFX", "", 0.7),
-    ("speech", "Clara", "A nome Clara.", "it"),
-    ("speech", "Receptionist", "Ecco la chiave.", "it"),
+    ("speech", "Clara", "A nome Clara", "it"),
+    ("speech", "Receptionist", "Ecco la chiave", "it"),
     ("silence", 1.0),
 
     ("speech", "Max", "Ask what floor.", "en"),
@@ -111,7 +111,7 @@ SEGMENTS = [
     ("silence", 2.5),
     ("sfx", "CORRECT_SFX", "", 0.7),
     ("speech", "Clara", "A che piano ?", "it"),
-    ("speech", "Receptionist", "Terzo piano.", "it"),
+    ("speech", "Receptionist", "Terzo piano", "it"),
     ("silence", 2.0),
 
     ("speech", "Clara", "That's it — you're checked in.", "en"),

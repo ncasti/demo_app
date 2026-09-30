@@ -33,9 +33,9 @@ TAXI_SCENE = {
         ("Clara", "Mi porta all'aeroporto, per favore?"),
         ("Tassista", "Certo, saliamo!"),
         ("Clara", "Quanto ci vuole?"),
-        ("Tassista", "Venti minuti."),
+        ("Tassista", "Venti minuti"),
         ("Clara", "Può aspettare, per favore?"),
-        ("Tassista", "Va bene."),
+        ("Tassista", "Va bene"),
     ],
 }
 

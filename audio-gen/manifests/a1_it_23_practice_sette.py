@@ -31,13 +31,13 @@ SEGMENTS = [
     ("speech", "Max", "Perfetto! Now put it together.", "en"),
     ("silence", 2.0),
 
-    ("speech", "Marco", "Allora, questa è mia sorella, e questo è mio fratello, e...", "it"),
+    ("speech", "Marco", "Allora, questa è mia sorella, e questo è mio fratello, e", "it"),
     ("speech", "Max", "Too much at once. Tell him you don't understand, and ask him to slow down.", "en"),
     ("sfx", "SPEAKER_SFX", "", 0.7),
     ("silence", 3.5),
     ("sfx", "CORRECT_SFX", "", 0.7),
-    ("speech", "Clara", "Non capisco. Più lentamente, per favore.", "it"),
-    ("speech", "Marco", "Va bene. Questa è mia sorella.", "it"),
+    ("speech", "Clara", "Non capisco. Più lentamente, per favore", "it"),
+    ("speech", "Marco", "Va bene. Questa è mia sorella", "it"),
     ("silence", 1.5),
 
     ("speech", "Max", "Now ask him if he has other siblings.", "en"),
@@ -45,7 +45,7 @@ SEGMENTS = [
     ("silence", 3.0),
     ("sfx", "CORRECT_SFX", "", 0.7),
     ("speech", "Clara", "Hai fratelli ?", "it"),
-    ("speech", "Marco", "Sì, ho un fratello.", "it"),
+    ("speech", "Marco", "Sì, ho un fratello", "it"),
     ("silence", 2.0),
 
     ("speech", "Clara", "Understanding and family — two very different skills, both holding up.", "en"),

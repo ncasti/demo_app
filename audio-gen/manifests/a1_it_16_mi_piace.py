@@ -33,7 +33,7 @@ OUTDOOR_SCENE = {
     "lines": [
         ("Sara", "Ti piace il gelato?"),
         ("Luca", "Sì, mi piace molto!"),
-        ("Sara", "A me piace di più la pizza."),
+        ("Sara", "A me piace di più la pizza"),
     ],
 }
 
@@ -61,10 +61,10 @@ SEGMENTS = [
 
     ("speech_multi", "Max", [
         ("en", "Second — the opposite:"),
-        ("it", "Non mi piace."),
+        ("it", "Non mi piace"),
         ("en", "\"I don't like it.\" Just add \"non\" in front."),
     ]),
-    ("speech", "Clara", "Non mi piace.", "it"),
+    ("speech", "Clara", "Non mi piace", "it"),
     ("speech", "Max", "Your turn. Repeat after Clara.", "en"),
     *speaking_challenge("Clara", "Non mi piace.", "it"),
 

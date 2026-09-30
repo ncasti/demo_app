@@ -37,10 +37,10 @@ STATION_SCENE = {
     "tail": 1.0,
     "turn_gap": 0.5,
     "lines": [
-        ("Cliente", "Un biglietto per Roma, per favore."),
+        ("Cliente", "Un biglietto per Roma, per favore"),
         ("Impiegato", "Andata o andata e ritorno?"),
-        ("Cliente", "Solo andata."),
-        ("Impiegato", "Sono quindici euro."),
+        ("Cliente", "Solo andata"),
+        ("Impiegato", "Sono quindici euro"),
     ],
 }
 
@@ -60,7 +60,7 @@ SEGMENTS = [
     ("speech", "Max", "Two phrases in there. Let's break them down — and this time, we'll practice each one two different ways.", "en"),
     ("speech_multi", "Clara", [
         ("en", "First —"),
-        ("it", "Un biglietto per Roma, per favore."),
+        ("it", "Un biglietto per Roma, per favore"),
         ("en", "\"A ticket to Rome, please.\" Roma is just one destination — swap in any city."),
     ]),
     ("speech", "Clara", "Repeat after Max.", "en"),
@@ -71,16 +71,16 @@ SEGMENTS = [
 
     ("speech_multi", "Max", [
         ("en", "Second — when they ask round-trip or one-way:"),
-        ("it", "Solo andata."),
+        ("it", "Solo andata"),
         ("en", "\"One-way only.\""),
     ]),
-    ("speech", "Clara", "Solo andata.", "it"),
+    ("speech", "Clara", "Solo andata", "it"),
     ("speech", "Max", "Your turn. Repeat after Clara.", "en"),
     *speaking_challenge("Clara", "Solo andata.", "it"),
 
     ("speech_multi", "Max", [
         ("en", "And the other way to answer:"),
-        ("it", "Andata e ritorno."),
+        ("it", "Andata e ritorno"),
         ("en", "\"Round-trip.\""),
     ]),
     *speaking_challenge("Clara", "Andata e ritorno.", "it"),

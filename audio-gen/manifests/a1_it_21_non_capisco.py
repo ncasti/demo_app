@@ -30,11 +30,11 @@ STREET_SCENE = {
     "tail": 1.0,
     "turn_gap": 0.5,
     "lines": [
-        ("Marco", "Allora, deve andare sempre dritto, poi a sinistra."),
+        ("Marco", "Allora, deve andare sempre dritto, poi a sinistra"),
         ("Turista", "Scusi, non capisco. Può ripetere, per favore?"),
-        ("Marco", "Certo! Sempre dritto, poi a sinistra."),
-        ("Turista", "Più lentamente, per favore."),
-        ("Marco", "Va bene. Sempre... dritto."),
+        ("Marco", "Certo! Sempre dritto, poi a sinistra"),
+        ("Turista", "Più lentamente, per favore"),
+        ("Marco", "Va bene. Sempre... dritto"),
     ],
 }
 
@@ -54,7 +54,7 @@ SEGMENTS = [
     ("speech", "Clara", "Three phrases in there. Let's break them down.", "en"),
     ("speech_multi", "Max", [
         ("en", "First —"),
-        ("it", "Non capisco."),
+        ("it", "Non capisco"),
         ("en", "\"I don't understand.\" The most important phrase in this whole series, honestly."),
     ]),
     ("speech", "Clara", "Repeat after Max.", "en"),
@@ -71,10 +71,10 @@ SEGMENTS = [
 
     ("speech_multi", "Clara", [
         ("en", "Third — if it's still too fast:"),
-        ("it", "Più lentamente, per favore."),
+        ("it", "Più lentamente, per favore"),
         ("en", "\"More slowly, please.\""),
     ]),
-    ("speech", "Max", "Più lentamente, per favore.", "it"),
+    ("speech", "Max", "Più lentamente, per favore", "it"),
     ("speech", "Clara", "Repeat after Max.", "en"),
     *speaking_challenge("Max", "Più lentamente, per favore.", "it"),
     ("speech", "Clara", "Perfetto !", "it"),
@@ -88,21 +88,21 @@ SEGMENTS = [
     ("speech", "Clara", "Now put it together — Marco's giving you directions again, too fast.", "en"),
     ("silence", 1.0),
 
-    ("speech", "Marco", "Allora, deve andare sempre dritto, poi a sinistra, poi a destra, poi...", "it"),
+    ("speech", "Marco", "Allora, deve andare sempre dritto, poi a sinistra, poi a destra, poi", "it"),
     ("speech", "Max", "Stop him. Tell him you don't understand, and ask him to repeat.", "en"),
     ("sfx", "SPEAKER_SFX", "", 0.7),
     ("silence", 3.5),
     ("sfx", "CORRECT_SFX", "", 0.7),
     ("speech", "Clara", "Non capisco. Può ripetere?", "it"),
-    ("speech", "Marco", "Certo! Sempre dritto, poi a sinistra.", "it"),
+    ("speech", "Marco", "Certo! Sempre dritto, poi a sinistra", "it"),
     ("silence", 1.0),
 
     ("speech", "Max", "Still too fast. Ask him to slow down.", "en"),
     ("sfx", "SPEAKER_SFX", "", 0.7),
     ("silence", 3.0),
     ("sfx", "CORRECT_SFX", "", 0.7),
-    ("speech", "Clara", "Più lentamente, per favore.", "it"),
-    ("speech", "Marco", "Va bene. Sempre... dritto.", "it"),
+    ("speech", "Clara", "Più lentamente, per favore", "it"),
+    ("speech", "Marco", "Va bene. Sempre... dritto", "it"),
     ("silence", 2.0),
 
     ("speech", "Clara", "That's it — now you can survive any conversation, even the ones that go too fast.", "en"),

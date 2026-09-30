@@ -31,10 +31,10 @@ SHOP_SCENE = {
     "tail": 1.0,
     "turn_gap": 0.5,
     "lines": [
-        ("Clara", "Vorrei una maglietta."),
+        ("Clara", "Vorrei una maglietta"),
         ("Commessa", "Che taglia?"),
-        ("Clara", "Taglia media."),
-        ("Commessa", "Ecco a lei."),
+        ("Clara", "Taglia media"),
+        ("Commessa", "Ecco a lei"),
     ],
 }
 
@@ -54,7 +54,7 @@ SEGMENTS = [
     ("speech", "Max", "Three phrases in there. Let's break them down.", "en"),
     ("speech_multi", "Clara", [
         ("en", "First — you already know \"Vorrei\" from the market and the restaurant. Here:"),
-        ("it", "Vorrei una maglietta."),
+        ("it", "Vorrei una maglietta"),
         ("en", "\"I'd like a t-shirt.\""),
     ]),
     ("speech", "Clara", "Repeat after Max.", "en"),
@@ -71,10 +71,10 @@ SEGMENTS = [
 
     ("speech_multi", "Clara", [
         ("en", "Third — your answer:"),
-        ("it", "Taglia media."),
+        ("it", "Taglia media"),
         ("en", "\"Medium size.\" Swap in small or large just as easily."),
     ]),
-    ("speech", "Max", "Taglia media.", "it"),
+    ("speech", "Max", "Taglia media", "it"),
     ("speech", "Clara", "Repeat after Max.", "en"),
     *speaking_challenge("Max", "Taglia media.", "it"),
     ("speech", "Clara", "Perfetto !", "it"),

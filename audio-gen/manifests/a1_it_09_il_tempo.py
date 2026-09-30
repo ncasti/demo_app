@@ -35,8 +35,8 @@ OUTDOOR_SCENE = {
     "turn_gap": 0.5,
     "lines": [
         ("Luca", "Che tempo fa oggi?"),
-        ("Sara", "Fa caldo! C'è il sole."),
-        ("Luca", "Perfetto per una passeggiata."),
+        ("Sara", "Fa caldo! C'è il sole"),
+        ("Luca", "Perfetto per una passeggiata"),
     ],
 }
 
@@ -64,19 +64,19 @@ SEGMENTS = [
 
     ("speech_multi", "Max", [
         ("en", "Second —"),
-        ("it", "Fa caldo."),
+        ("it", "Fa caldo"),
         ("en", "\"It's hot.\" The opposite is \"Fa freddo\" — good to recognize even if we don't drill it today."),
     ]),
-    ("speech", "Clara", "Fa caldo.", "it"),
+    ("speech", "Clara", "Fa caldo", "it"),
     ("speech", "Max", "Your turn. Repeat after Clara.", "en"),
     *speaking_challenge("Clara", "Fa caldo.", "it"),
 
     ("speech_multi", "Clara", [
         ("en", "Third —"),
-        ("it", "C'è il sole."),
+        ("it", "C'è il sole"),
         ("en", "\"It's sunny.\" Literally \"there's the sun.\""),
     ]),
-    ("speech", "Max", "C'è il sole.", "it"),
+    ("speech", "Max", "C'è il sole", "it"),
     ("speech", "Clara", "Repeat after Max.", "en"),
     *speaking_challenge("Max", "C'è il sole.", "it"),
     ("speech", "Clara", "Perfetto !", "it"),
@@ -95,7 +95,7 @@ SEGMENTS = [
     ("sfx", "SPEAKER_SFX", "", 0.7),
     ("silence", 3.5),
     ("sfx", "CORRECT_SFX", "", 0.7),
-    ("speech", "Clara", "Fa caldo! C'è il sole.", "it"),
+    ("speech", "Clara", "Fa caldo! C'è il sole", "it"),
     ("speech", "Sara", "Perfetto per una passeggiata !", "it"),
     ("silence", 2.0),
 

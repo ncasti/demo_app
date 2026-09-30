@@ -34,7 +34,7 @@ PIAZZA_SCENE = {
     "lines": [
         ("Marco", "Ciao Giulia, come stai?"),
         ("Giulia", "Sto bene, grazie! E tu?"),
-        ("Marco", "Non c'è male."),
+        ("Marco", "Non c'è male"),
     ],
 }
 
@@ -62,10 +62,10 @@ SEGMENTS = [
 
     ("speech_multi", "Max", [
         ("en", "Second — the easy answer:"),
-        ("it", "Sto bene."),
+        ("it", "Sto bene"),
         ("en", "\"I'm well.\""),
     ]),
-    ("speech", "Clara", "Sto bene.", "it"),
+    ("speech", "Clara", "Sto bene", "it"),
     ("speech", "Max", "Your turn. Repeat after Clara.", "en"),
     *speaking_challenge("Clara", "Sto bene.", "it"),
 

@@ -35,7 +35,7 @@ SEGMENTS = [
     ("sfx", "SPEAKER_SFX", "", 0.7),
     ("silence", 3.5),
     ("sfx", "CORRECT_SFX", "", 0.7),
-    ("speech", "Clara", "Pronto? Sono Clara.", "it"),
+    ("speech", "Clara", "Pronto? Sono Clara", "it"),
     ("speech", "Elena", "Ciao, Clara !", "it"),
     ("silence", 1.5),
 
@@ -44,7 +44,7 @@ SEGMENTS = [
     ("silence", 4.0),
     ("sfx", "CORRECT_SFX", "", 0.7),
     ("speech", "Clara", "Un biglietto per Roma, per favore. Solo andata. Da che binario?", "it"),
-    ("speech", "Impiegato", "Binario cinque.", "it"),
+    ("speech", "Impiegato", "Binario cinque", "it"),
     ("silence", 2.0),
 
     ("speech", "Clara", "A call and a ticket, back to back — you're moving fast now.", "en"),
