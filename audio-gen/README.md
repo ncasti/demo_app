@@ -24,6 +24,12 @@ The same applies to `sfx_cache/INTRO_STING.mp3`/`OUTRO_STING.mp3` specifically: 
 is the fixed filename, not the prompt text, so changing the prompt (e.g. the anti-repeat
 wording added below) does nothing on a rerun unless that cached file is deleted too.
 
+**Before regenerating many episodes for one fix, verify on one first.** When a fix affects
+several episodes at once (a pipeline change, a systemic bug like the scene-language one
+below), regenerate a single representative episode and get it confirmed before spending API
+calls -- and the user's time reviewing -- on the rest of the batch. Bulk-regenerating first and
+asking for feedback after wastes both if the fix needs another iteration.
+
 ## Known fixes worth knowing about
 
 - **Dead air after "Repeat after Max/Clara."**: episodes 1 through 25 all had a manually
