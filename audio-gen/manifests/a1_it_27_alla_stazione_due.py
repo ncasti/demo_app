@@ -43,7 +43,7 @@ SEGMENTS = [
 
     *reverse_translate_item("Max", "How do you ask which platform?", "Clara", "Da che binario ?"),
 
-    ("speech", "Clara", "Now everything together — a city we haven't used at all yet: Firenze. One trip, start to finish.", "en"),
+    ("speech", "Clara", "Now everything together — a city we haven't used at all yet: Florence. One trip, start to finish.", "en"),
     ("silence", 1.0),
     *roundtrip_step("Max", "Ask for a ticket to Florence.", "Clara", "Un biglietto per Firenze, per favore",
                      narration="He asks round-trip or one-way:", char_speaker="Impiegato", char_it="Andata o andata e ritorno ?"),

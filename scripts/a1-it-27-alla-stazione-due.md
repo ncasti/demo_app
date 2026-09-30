@@ -130,7 +130,7 @@ Perfetto!
 
 <START AUDIO FILE>
 **Clara**
-Now everything together — a city we haven't used at all yet: Firenze. One trip, start to
+Now everything together — a city we haven't used at all yet: Florence. One trip, start to
 finish.
 <END AUDIO FILE>
 
@@ -218,6 +218,12 @@ Ciao!
   round-trip. Every single production of "un biglietto per..." used a different destination —
   the only way to actually confirm the pattern generalized instead of a sentence being
   memorized whole.
+- **Fixed a Florence/Firenze inconsistency**: Clara's line introducing the round-trip
+  originally said "Firenze" (Italian name, inside an English sentence) while Max's next line
+  said "Florence" (English name) — same city, two names, in the same episode. Caught by ear,
+  not by any mechanical rule; fixed to "Florence" throughout the English narration, matching
+  the established convention (Rome/Roma, Milan/Milano, Naples/Napoli, Turin/Torino — English
+  name in English narration, Italian name in the Italian answer).
 - **Registry updates**: `un_biglietto_per_roma` and `solo_andata` (both introduced in episode
   26) get a `review` recorded at `a1_it_27_alla_stazione_due`. `da_che_binario` is a new
   `topical` entry introduced here.
