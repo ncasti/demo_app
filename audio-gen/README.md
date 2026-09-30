@@ -56,6 +56,28 @@ wording added below) does nothing on a rerun unless that cached file is deleted 
   line may now carry a little untrimmed raw tail (observed up to ~600ms on one long-decay
   sample) instead of any risk of a clipped ending.
 
+## A different class of issue: TTS stutter (not a pipeline bug, no systemic fix)
+
+Separately from the three fixes above, episode 1's regen still came back with eleven_v3
+repeating a word within a single generated line ("a scene... a scene every visitor..." instead
+of "a scene every visitor..."). This is not caused by any code in this pipeline -- it's the
+TTS model itself producing a stutter/repetition artifact on that specific API call, and it's
+stochastic: regenerating the exact same text can come back clean. There's no filter or prompt
+change that fixes this the way the three bugs above got fixed, because there's no consistent
+wrong setting to correct -- it's inherent TTS unreliability, not a bug in how this pipeline
+calls it.
+
+**What to do when this happens**: identify the exact segment (search the manifest's `SEGMENTS`
+for the offending text to get its index `i`), delete that segment's cached files --
+`out/<name>/<i>_<speaker>_<chunk>_<lang>.mp3`, the matching `.wav`, and
+`out/<name>/<i>_<speaker>_combo.wav` if it's a `speech_multi` line -- and rerun `generate.py`
+on the whole manifest; only the missing files get regenerated, everything else stays cached
+(see the caution note above), so this is cheap. There is currently no automated detection for
+this class of error -- it has to be caught by listening. A longer-term option worth
+considering if it keeps recurring: an automated re-listen pass (e.g. feeding each generated
+clip back through speech-to-text and diff-checking against the script text) rather than relying
+entirely on a human listener to catch it.
+
 ## How a manifest works
 
 Each file in `manifests/` defines three things:
