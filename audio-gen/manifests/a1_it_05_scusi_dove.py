@@ -79,7 +79,7 @@ SEGMENTS = [
 
     ("speech_multi", "Max", [
         ("en", "Second —"),
-        ("it", "Dov'è,"),
+        ("it", "Dov'è la stazione,"),
         ("en", "followed by whatever you're looking for. It means \"where is.\""),
     ]),
     ("speech", "Clara", "Dov'è la stazione ?", "it"),

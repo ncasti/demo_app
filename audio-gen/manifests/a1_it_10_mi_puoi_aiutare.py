@@ -54,14 +54,16 @@ SEGMENTS = [
     ("speech_multi", "Max", [
         ("en", "First —"),
         ("it", "Mi può aiutare?"),
-        ("en", "\"Can you help me?\" One step up from just \"Scusi\" — this actually asks for something."),
+        ("en", "\"Can you help me?\" One step up from just"),
+        ("it", "Scusi"),
+        ("en", "— this actually asks for something."),
     ]),
     ("speech", "Clara", "Repeat after Max.", "en"),
     *speaking_challenge("Max", "Mi può aiutare ?", "it"),
 
     ("speech_multi", "Max", [
         ("en", "Second — say what you need:"),
-        ("it", "Cerco,"),
+        ("it", "Cerco una farmacia,"),
         ("en", "followed by what you're looking for. \"I'm looking for.\""),
     ]),
     ("speech", "Clara", "Cerco una farmacia", "it"),

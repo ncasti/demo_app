@@ -62,7 +62,9 @@ SEGMENTS = [
     ("speech_multi", "Max", [
         ("en", "Second —"),
         ("it", "Ho un fratello"),
-        ("en", "\"I have a brother.\" Same pattern as \"Ho una prenotazione\" from the hotel — \"ho\" just means \"I have.\""),
+        ("en", "\"I have a brother.\" Same pattern as"),
+        ("it", "Ho una prenotazione"),
+        ("en", "from the hotel — \"ho\" just means \"I have.\""),
     ]),
     ("speech", "Clara", "Ho un fratello", "it"),
     ("speech", "Max", "Your turn. Repeat after Clara.", "en"),

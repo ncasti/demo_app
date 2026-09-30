@@ -73,7 +73,11 @@ SEGMENTS = [
     ("silence", 2.0),
 
     ("speech", "Clara", "Checked in, caffeinated, caught up with a friend, and shopped at the market — a whole trip, entirely in Italian.", "en"),
-    ("speech", "Max", "Twenty episodes ago, this was one word: Buongiorno. Look how far that's gone.", "en"),
+    ("speech_multi", "Max", [
+        ("en", "Twenty episodes ago, this was one word:"),
+        ("it", "Buongiorno"),
+        ("en", "Look how far that's gone."),
+    ]),
     ("speech", "Clara", "That's the sample. From here — real feedback, real speech recognition, and a full curriculum.", "en"),
     ("speech", "Max", "Ciao !", "it"),
     ("speech", "Clara", "Ciao !", "it"),

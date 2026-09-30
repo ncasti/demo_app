@@ -157,7 +157,10 @@ SEGMENTS = [
     ("speech_multi", "Max", [
         ("en", "Second — how she ordered."),
         ("it", "Un caffè, per favore"),
-        ("en", "\"Un caffè\" is simply \"a coffee.\" And \"per favore\" means \"please\" — you can stick it onto almost anything you order."),
+        ("it", "Un caffè"),
+        ("en", "is simply \"a coffee.\" And"),
+        ("it", "per favore"),
+        ("en", "means \"please\" — you can stick it onto almost anything you order."),
     ]),
     ("speech", "Clara", "Un caffè, per favore", "it"),
     ("speech", "Max", "Your turn. Repeat after Clara.", "en"),

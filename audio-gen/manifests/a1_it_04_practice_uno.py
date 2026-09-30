@@ -81,7 +81,7 @@ SEGMENTS = [
     ("sfx", "SPEAKER_SFX", "", 0.7),
     ("silence", 2.0),
     ("sfx", "CORRECT_SFX", "", 0.7),
-    ("speech_multi", "Clara", [("en", "That's right —"), ("it", "Vorrei")]),
+    ("speech_multi", "Clara", [("en", "That's right —"), ("it", "Vorrei delle mele")]),
     ("silence", 1.5),
 
     ("speech", "Max", "How do you ask the price?", "en"),

@@ -53,7 +53,7 @@ SEGMENTS = [
     ("silence", 2.0),
     ("speech", "Max", "Three phrases in there. Let's break them down.", "en"),
     ("speech_multi", "Clara", [
-        ("en", "First — you already know \"Vorrei\" from the market and the restaurant. Here:"),
+        ("en", "First — same word as the market and the restaurant. Here:"),
         ("it", "Vorrei una maglietta"),
         ("en", "\"I'd like a t-shirt.\""),
     ]),

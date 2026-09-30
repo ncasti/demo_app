@@ -64,7 +64,7 @@ SEGMENTS = [
     *speaking_challenge("Max", "Un tavolo per due, per favore", "it"),
 
     ("speech_multi", "Max", [
-        ("en", "Second — ordering. You already know \"Vorrei\" from the market. Here it's"),
+        ("en", "Second — ordering. Same word as the market —"),
         ("it", "Vorrei la pasta"),
         ("en", "— \"I'd like the pasta.\" Swap in whatever you're having."),
     ]),

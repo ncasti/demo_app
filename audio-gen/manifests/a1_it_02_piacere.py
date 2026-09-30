@@ -100,7 +100,9 @@ SEGMENTS = [
     ("speech_multi", "Clara", [
         ("en", "Third — Giulia also said"),
         ("it", "Io sono Giulia"),
-        ("en", "Same meaning as \"mi chiamo,\" just a different way to say it — \"I am Giulia.\" Italians use both, so you'll hear this one just as often."),
+        ("en", "Same meaning as"),
+        ("it", "mi chiamo,"),
+        ("en", "just a different way to say it — \"I am Giulia.\" Italians use both, so you'll hear this one just as often."),
     ]),
     ("speech", "Max", "Io sono Max", "it"),
     ("speech", "Clara", "Repeat after Max.", "en"),

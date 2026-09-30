@@ -274,6 +274,42 @@ that replaces it, for episode 26 onward:
   and `registry_tools.py review --id X --episode Y` whenever an episode deliberately reviews an
   existing phrase (inline chapter review or a practice episode) so the registry stays accurate.
 
+## Pre-generation linter (`lint_manifest.py`)
+
+Deterministic checks for the mechanical production rules above, run against manifest
+*source* before generating audio -- catches mistakes cheaply, before spending TTS calls on
+them. Run it against one or many manifests:
+
+```
+python3 lint_manifest.py manifests/*.py
+python3 lint_manifest.py manifests/a1_it_26_alla_stazione_uno.py --strict
+```
+
+It checks:
+
+1. **Trailing periods on isolated Italian TTS text** -- a literal `.` at the end of a short
+   spoken line gets read aloud as "dot" (see "Known fixes" above). Flags both literal
+   `("it", "text.")` tuples and Italian text passed as a string argument to
+   `speaking_challenge()` / `reverse_translate_item()` / `roundtrip_step()`.
+2. **Bare single-word Italian isolation** -- a grammatically "thin" word (a verb or
+   preposition stem needing an object, like `Vorrei`/`Cerco`/`Sono`/`Dov'è`) spoken alone
+   gets an English-accented reading. Flags any isolated single Italian word not on the
+   `SAFE_BARE_WORDS` allowlist (complete standalone words like `Buongiorno`, `Grazie`,
+   `Ciao`, `Perfetto`, `Sì` that are fine alone).
+3. **Target-language leakage into English-tagged chunks** -- an Italian word quoted inside
+   an `("en", ...)` chunk instead of pulled into its own `("it", ...)` chunk reads with the
+   wrong voice/accent. Checked against the vocabulary in `phrase_registry.json`.
+
+Known limitation: the vocabulary check in #3 is sourced from `phrase_registry.json`, which
+is Italian-only, so it produces false positives on French manifests (e.g. flagging the
+French word "come" as Italian in `b1_fr_01_cafe.py`). Not yet worth fixing given there's
+only one French chapter so far -- re-visit if/when B1 French grows.
+
+This linter catches the mechanical, rule-based bugs. It does *not* catch content
+consistency issues (the same place named two different ways in one episode, like
+Firenze/Florence or Roma/Rome) -- that class of bug needs a judgment-call editorial
+pass, not a regex.
+
 ## Adding a new language/lesson
 
 1. Write the script as a `.md` file in `../scripts/`, following the existing

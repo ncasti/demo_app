@@ -61,8 +61,8 @@ SEGMENTS = [
     ("speech", "Max", "Three useful phrases in there. Let's take them one at a time.", "en"),
     ("speech_multi", "Clara", [
         ("en", "First —"),
-        ("it", "Vorrei,"),
-        ("en", "followed by what you want. It means \"I would like\" — much more polite than just naming the thing."),
+        ("it", "Vorrei delle mele,"),
+        ("en", "\"I would like some apples\" — much more polite than just naming the thing. Swap in whatever you want after that first word."),
     ]),
     ("speech", "Clara", "Repeat after Max.", "en"),
 
@@ -123,7 +123,7 @@ SEGMENTS = [
     ("sfx", "SPEAKER_SFX", "", 0.7),
     ("silence", 3.0),
     ("sfx", "CORRECT_SFX", "", 0.7),
-    ("speech_multi", "Max", [("en", "That's right —"), ("it", "Vorrei")]),
+    ("speech_multi", "Max", [("en", "That's right —"), ("it", "Vorrei delle mele")]),
     ("silence", 1.8),
 
     ("speech", "Clara", "How do you ask how much something costs?", "en"),

@@ -61,7 +61,7 @@ SEGMENTS = [
     ("speech_multi", "Clara", [
         ("en", "First —"),
         ("it", "Un biglietto per Roma, per favore"),
-        ("en", "\"A ticket to Rome, please.\" Roma is just one destination — swap in any city."),
+        ("en", "\"A ticket to Rome, please.\" Rome is just one destination — swap in any city."),
     ]),
     ("speech", "Clara", "Repeat after Max.", "en"),
     *speaking_challenge("Max", "Un biglietto per Roma, per favore", "it"),
